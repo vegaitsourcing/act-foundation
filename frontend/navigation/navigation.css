@@ -1,0 +1,71 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation.is-open {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.hamburger {
+  padding: calc(var(--default-spacing) / 2) var(--default-spacing);
+}
+.hamburger > p {
+  height: 0.3rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-yellow);
+}
+nav img {
+  height: 6rem;
+  width: 6rem;
+  margin-bottom: 3rem;
+}
+.is-open nav {
+  display: flex;
+}
+nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--default-spacing) / 2) var(--default-spacing);
+  width: 100%;
+}
+nav a {
+  margin-bottom: 1rem;
+}
+nav button {
+  margin-top: 2rem;
+}
+.hero {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav a,
+  nav img,
+  nav button {
+    margin: 0;
+  }
+  nav a {
+    margin-right: 4rem;
+  }
+  nav img {
+    margin-right: 8rem;
+  }
+  nav button {
+    position: absolute;
+    right: var(--default-spacing);
+  }
+}

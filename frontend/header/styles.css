@@ -13,7 +13,6 @@ button {
 
 .header-btn-donate {
   background-color: var(--color-yellow);
-  padding: 0.8rem 1.6rem;
   font-size: var(--m-text);
   text-transform: uppercase;
   border-radius: 0;
