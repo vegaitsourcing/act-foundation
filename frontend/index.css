@@ -33,14 +33,18 @@
 }
 button {
   border-radius: 10rem;
+  border: none;
+  outline: none;
+  padding: 1rem 4rem;
+  cursor: pointer;
 }
 :root {
   /* FONT SIZES */
   font-size: 10px;
   --xl-text: 4.4rem;
   --l-text: 2.2rem;
-  --m-text: 2rem;
-  --regular-text: 1.2rem;
+  --m-text: 1.7rem;
+  --regular-text: 1.4rem;
   --small-text: 1rem;
 
   /* COLORS */
@@ -54,7 +58,12 @@ button {
   /* SPACINGS */
   --default-spacing: 4rem;
 }
-
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.cl-white {
+  color: var(--color-white);
+}
 /* TABLETS */
 @media screen and (min-width: 786px) {
 }
