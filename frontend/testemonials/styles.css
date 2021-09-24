@@ -1,0 +1,44 @@
+.testemonials {
+  padding: 92px;
+  background-color: rgb(255, 239, 168, 0.4);
+}
+
+.testemonials-subtitle {
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.testemonials-title {
+  text-transform: uppercase;
+}
+
+.testemonials-content {
+  opacity: 0.4;
+}
+
+.testemonials-profiles {
+  margin-top: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.testemonials-profile-img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.testemonial-profile {
+  max-width: 300px;
+  text-align: center;
+}
+
+.testemonial-profile-description {
+  margin-top: 40px;
+  opacity: 70%;
+}
+
+.testemonial-profile-name {
+  margin-top: 25px;
+}
