@@ -13,14 +13,12 @@
 		Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
 		Html.RenderAction<LayoutController>(c => nameof(c.OpenGraph), new { viewModel = Model.OpenGraph });
 	}
-	@PrintCode(Model.GoogleTagManagerScriptCode)
 	@if (!string.IsNullOrWhiteSpace(Model.CookieScript))
 	{
 		@Html.Raw(Model.CookieScript)
 	}
 </head>
 <body>
-@PrintCode(Model.GoogleTagManagerNonScriptCode)
 @{
 	Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
 }
@@ -30,14 +28,5 @@
 @{
 	Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
 }
-@PrintCode(Model.GoogleAnalyticsCode)
 </body>
 </html>
-
-@helper PrintCode(string code)
-{
-	if (!string.IsNullOrWhiteSpace(code))
-	{
-		@Html.Raw(code)
-	}
-}
