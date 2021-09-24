@@ -6,5 +6,11 @@
 {
     <h2>
         @Model.Title
+
     </h2>
+}
+
+@foreach (var buttonLink in Model.ButtonLinks)
+{
+    Html.RenderNestedContent(buttonLink);
 }
