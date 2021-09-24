@@ -1,0 +1,6 @@
+{
+    "IIS-Site-Name": "umbracostarter",
+    "App-Pool-Name": "umbracostarter",
+    "IIS-App-Pool-Dot-Net-Version": "v4.0",
+    "bindings": ["umbracostarter.local"]
+}
