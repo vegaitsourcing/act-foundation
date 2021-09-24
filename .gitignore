@@ -77,3 +77,5 @@ dist
 html/*.html
 
 /ACTFoundation.Web/ConnectionStrings.config
+
+.DS_Store
