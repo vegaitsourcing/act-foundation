@@ -34,6 +34,15 @@
 button {
   border-radius: 10rem;
 }
+.color-yellow {
+  color: var(--color-yellow);
+}
+.color-orange {
+  color: var(--color-orange);
+}
+.color-blue {
+  color: var(--color-blue);
+}
 :root {
   /* FONT SIZES */
   font-size: 10px;
@@ -50,6 +59,7 @@ button {
   --color-black: #000000;
   --color-white: #e5e5e5;
   --color-green: #2e8b38;
+  --color-blue: #0156A3;
 
   /* SPACINGS */
   --default-spacing: 4rem;
