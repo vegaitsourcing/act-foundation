@@ -37,6 +37,7 @@ button {
   outline: none;
   padding: 1rem 4rem;
   cursor: pointer;
+  font-weight: 700;
 }
 :root {
   /* FONT SIZES */
