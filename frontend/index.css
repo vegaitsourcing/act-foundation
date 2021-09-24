@@ -60,11 +60,20 @@ button {
 .bg-orange {
   background-color: var(--color-orange);
 }
+.bg-white{
+  background-color: var(--color-white);
+}
 .bg-yellow{
   background-color: var(--color-yellow);
 }
 .cl-white {
   color: var(--color-white);
+}
+.cl-black{
+color: var(--color-black);
+}
+.border-black{
+  border: 1px solid var(--color-black);
 }
 .bg-blue {
   background-color: var(--color-blue);
