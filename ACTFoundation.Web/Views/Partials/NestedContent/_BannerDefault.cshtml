@@ -1,0 +1,10 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.BannerDefault>
+
+@*HTML FOR BANNER DEFAULT*@
+
+@if (!string.IsNullOrWhiteSpace(Model.Title))
+{
+    <h2>
+        @Model.Title
+    </h2>
+}

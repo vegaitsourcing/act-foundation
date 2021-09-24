@@ -1,5 +1,7 @@
 ﻿using System.Web.Mvc;
 using ACTFoundation.Core.ViewModels.Partials.Layout;
+using ACTFoundation.Models.Generated;
+using Umbraco.Core.Models.PublishedContent;
 
 namespace ACTFoundation.Core.Controllers.Surface.Partials
 {

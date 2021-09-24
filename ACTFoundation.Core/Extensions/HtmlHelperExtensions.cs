@@ -27,5 +27,23 @@ namespace ACTFoundation.Core.Extensions
 
 			htmlHelper.RenderAction(actionName, controllerName, routeValues);
 		}
+
+		#region [Render Partial]
+		public static void RenderNestedContent<TNestedContent>(this HtmlHelper html, TNestedContent model, string partialViewName = null)
+		{
+			string partialName = !string.IsNullOrWhiteSpace(partialViewName)
+				? partialViewName
+				: (model?.GetType() ?? typeof(TNestedContent)).Name;
+
+			html.RenderPartial(partialName,
+							model,
+							new ViewDataDictionary(html.ViewData) { Model = model }); // ViewDataDictionary parameter is necessary to allow passing null for model value.
+		}
+
+		public static MvcHtmlString NestedContent<TNestedContent>(this HtmlHelper html, TNestedContent model, string partialViewName = null) where TNestedContent : class
+			=> html.Partial(!string.IsNullOrWhiteSpace(partialViewName) ? partialViewName : (model?.GetType() ?? typeof(TNestedContent)).Name,
+							model,
+							new ViewDataDictionary(html.ViewData) { Model = model });   // ViewDataDictionary parameter is necessary to allow passing null for model value.
+		#endregion
 	}
 }

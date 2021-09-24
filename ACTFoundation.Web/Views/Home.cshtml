@@ -1,3 +1,10 @@
 ﻿@inherits UmbracoViewPage<HomeViewModel>
 
-<p>Homepage</p>
+@if (Model.MainContent != null && Model.MainContent.Any())
+{
+    foreach (var mainContentElement in Model.MainContent)
+    {
+        Html.RenderNestedContent(mainContentElement);
+    }
+}
+ 

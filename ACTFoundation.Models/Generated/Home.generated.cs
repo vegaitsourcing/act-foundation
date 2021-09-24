@@ -46,6 +46,13 @@ namespace ACTFoundation.Models.Generated
 		// properties
 
 		///<summary>
+		/// Main Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mainContent")]
+		public IEnumerable<IPublishedElement> MainContent => this.Value<IEnumerable<IPublishedElement>>("mainContent");
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
