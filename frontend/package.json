@@ -1,0 +1,11 @@
+{
+  "name": "act-foundation-frontend",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-pug": "5.0.0"
+  }
+}
