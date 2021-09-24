@@ -1,6 +1,6 @@
 @font-face {
   font-family: poppins-regular;
-  src: url('./assets/fonts/Poppins-Regular.ttf');
+  src: url("./assets/fonts/Poppins-Regular.ttf");
 }
 
 * {
@@ -31,8 +31,8 @@
 .italic {
   font-style: italic;
 }
-button{
-  border-radius: 10rem
+button {
+  border-radius: 10rem;
 }
 :root {
   /* FONT SIZES */
