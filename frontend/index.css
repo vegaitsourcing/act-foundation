@@ -1,0 +1,80 @@
+@font-face {
+  font-family: poppins-regular;
+  src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins-regular;
+}
+
+.xl-text {
+  font-size: var(--xl-text);
+}
+.l-text {
+  font-size: var(--l-text);
+}
+.m-text {
+  font-size: var(--m-text);
+}
+.regular-text {
+  font-size: var(--regular-text);
+}
+.small-text {
+  font-size: var(--small-text);
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+button{
+  border-radius: 10rem
+}
+:root {
+  /* FONT SIZES */
+  font-size: 10px;
+  --xl-text: 4.4rem;
+  --l-text: 2.2rem;
+  --m-text: 2rem;
+  --regular-text: 1.2rem;
+  --small-text: 1rem;
+
+  /* COLORS */
+  --color-yellow: #f6d335;
+  --color-yellow-light: rgba(255, 239, 168, 0.4);
+  --color-orange: #f15e24;
+  --color-black: #000000;
+  --color-white: #e5e5e5;
+  --color-green: #2e8b38;
+
+  /* SPACINGS */
+  --default-spacing: 4rem;
+}
+
+/* TABLETS */
+@media screen and (min-width: 786px) {
+}
+/* LAPTOP SMALL SCREEN */
+@media screen and (min-width: 992px) {
+  :root {
+    /* FONT SIZES */
+    --xl-text: 8.4rem;
+    --l-text: 4.2rem;
+    --m-text: 2.4rem;
+    --regular-text: 1.6rem;
+    --small-text: 1.4rem;
+
+    /* SPACINGS */
+    --default-spacing: 8rem;
+  }
+}
+/* LAPTOP DISPLAYS*/
+@media screen and (min-width: 1366px) {
+}
+/* DESKTOP DISPLAYS	 */
+@media screen and (min-width: 1920px) {
+}
