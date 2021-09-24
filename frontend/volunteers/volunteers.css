@@ -23,10 +23,29 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 280px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: transparent;
+  width: 250px;
 }
 .volunteer-card img {
-  width: 20rem;
-  height: 20rem;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   align-self: center;
 }
@@ -36,4 +55,23 @@
   gap: 4rem;
   padding: 0 var(--default-spacing);
   margin-top: -10rem;
+}
+.swiper {
+  width: 100%;
+  position: relative;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: block !important;
+}
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
 }
