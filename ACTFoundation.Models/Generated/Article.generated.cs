@@ -20,107 +20,65 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
-	/// <summary>Home</summary>
-	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooter, IHeader, IPage, ITopBottomSocialLinks
+	/// <summary>Article</summary>
+	[PublishedModel("article")]
+	public partial class Article : PublishedContentModel, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "home";
+		public new const string ModelTypeAlias = "article";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Article, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Home(IPublishedContent content)
+		public Article(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Main Content
+		/// Author
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mainContent")]
-		public IEnumerable<IPublishedElement> MainContent => this.Value<IEnumerable<IPublishedElement>>("mainContent");
+		[ImplementPropertyType("author")]
+		public string Author => this.Value<string>("author");
 
 		///<summary>
-		/// Footer Company Description: Footer Company Description
+		/// Main image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerCompanyDescription")]
-		public IHtmlString FooterCompanyDescription => Footer.GetFooterCompanyDescription(this);
+		[ImplementPropertyType("mainImage")]
+		public Image MainImage => this.Value<Image>("mainImage");
 
 		///<summary>
-		/// Footer Company Logo: Footer Company Logo
+		/// Tags
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerCompanyLogo")]
-		public Image FooterCompanyLogo => Footer.GetFooterCompanyLogo(this);
+		[ImplementPropertyType("tags")]
+		public IEnumerable<IPublishedContent> Tags => this.Value<IEnumerable<IPublishedContent>>("tags");
 
 		///<summary>
-		/// Footer Company Moto: Footer Company Moto
+		/// Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerCompanyMoto")]
-		public string FooterCompanyMoto => Footer.GetFooterCompanyMoto(this);
+		[ImplementPropertyType("text")]
+		public IHtmlString Text => this.Value<IHtmlString>("text");
 
 		///<summary>
-		/// Footer Company Name: Footer Company Name
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerCompanyName")]
-		public string FooterCompanyName => Footer.GetFooterCompanyName(this);
-
-		///<summary>
-		/// Footer Find Out More Button: Footer Find Out More Button
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerFindOutMoreButton")]
-		public Umbraco.Web.Models.Link FooterFindOutMoreButton => Footer.GetFooterFindOutMoreButton(this);
-
-		///<summary>
-		/// Footer Partner Logos
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerPartnerLogos")]
-		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> FooterPartnerLogos => Footer.GetFooterPartnerLogos(this);
-
-		///<summary>
-		/// Show Newsletter Box: Show Newsletter Box
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("showNewsletterBox")]
-		public bool ShowNewsletterBox => Footer.GetShowNewsletterBox(this);
-
-		///<summary>
-		/// Logo: The site logo image.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("logo")]
-		public Image Logo => Header.GetLogo(this);
-
-		///<summary>
-		/// Main navigation Button
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mainNavigationButton")]
-		public Umbraco.Web.Models.Link MainNavigationButton => Header.GetMainNavigationButton(this);
-
-		///<summary>
-		/// Main navigation Links
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mainNavigationLinks")]
-		public IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks => Header.GetMainNavigationLinks(this);
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
@@ -261,33 +219,5 @@ namespace ACTFoundation.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("umbracoUrlName")]
 		public string UmbracoUrlName => Page.GetUmbracoUrlName(this);
-
-		///<summary>
-		/// Donate link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("donateLink")]
-		public Umbraco.Web.Models.Link DonateLink => TopBottomSocialLinks.GetDonateLink(this);
-
-		///<summary>
-		/// Facebook link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("facebookLink")]
-		public string FacebookLink => TopBottomSocialLinks.GetFacebookLink(this);
-
-		///<summary>
-		/// Instagram link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("instagramLink")]
-		public string InstagramLink => TopBottomSocialLinks.GetInstagramLink(this);
-
-		///<summary>
-		/// Linkedin link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("linkedinLink")]
-		public string LinkedinLink => TopBottomSocialLinks.GetLinkedinLink(this);
 	}
 }

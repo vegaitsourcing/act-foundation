@@ -20,51 +20,51 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
-	/// <summary>Project</summary>
-	[PublishedModel("project")]
-	public partial class Project : PublishedContentModel, IAccountInformation
+	/// <summary>Donate block</summary>
+	[PublishedModel("donateBlock")]
+	public partial class DonateBlock : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "project";
+		public new const string ModelTypeAlias = "donateBlock";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Project, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<DonateBlock, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Project(IPublishedContent content)
+		public DonateBlock(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Main image
+		/// Picture
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mainImage")]
-		public Image MainImage => this.Value<Image>("mainImage");
+		[ImplementPropertyType("picture")]
+		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> Picture => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("picture");
 
 		///<summary>
-		/// Project Content
+		/// See more link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("projectContent")]
-		public IEnumerable<IPublishedElement> ProjectContent => this.Value<IEnumerable<IPublishedElement>>("projectContent");
+		[ImplementPropertyType("seeMoreLink")]
+		public Umbraco.Web.Models.Link SeeMoreLink => this.Value<Umbraco.Web.Models.Link>("seeMoreLink");
 
 		///<summary>
 		/// Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("text")]
-		public IHtmlString Text => this.Value<IHtmlString>("text");
+		public string Text => this.Value<string>("text");
 
 		///<summary>
 		/// Title
@@ -72,33 +72,5 @@ namespace ACTFoundation.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]
 		public string Title => this.Value<string>("title");
-
-		///<summary>
-		/// Account: Racun
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("account")]
-		public string Account => AccountInformation.GetAccount(this);
-
-		///<summary>
-		/// Calling Model: Model
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("callingModel")]
-		public string CallingModel => AccountInformation.GetCallingModel(this);
-
-		///<summary>
-		/// Call number: Poziv na broj
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("callNumber")]
-		public string CallNumber => AccountInformation.GetCallNumber(this);
-
-		///<summary>
-		/// Recepient: Primalac
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("recepient")]
-		public string Recepient => AccountInformation.GetRecepient(this);
 	}
 }
