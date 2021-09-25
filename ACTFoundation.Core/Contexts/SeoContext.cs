@@ -17,6 +17,5 @@ namespace ACTFoundation.Core.Contexts
 		public T Seo { get; }
 		public IPage CurrentPage => _siteContext.CurrentPage;
 		public Home Home => _siteContext.Home;
-		public ISiteSettings SiteSettings => _siteContext.SiteSettings;
 	}
 }

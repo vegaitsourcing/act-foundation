@@ -24,9 +24,33 @@ namespace ACTFoundation.Models.Generated
 	/// <summary>Footer</summary>
 	public partial interface IFooter : IPublishedContent
 	{
-		/// <summary>Copyright Text</summary>
+		/// <summary>Footer Company Description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string CopyrightText { get; }
+		IHtmlString FooterCompanyDescription { get; }
+
+		/// <summary>Footer Company Logo</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		Image FooterCompanyLogo { get; }
+
+		/// <summary>Footer Company Moto</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string FooterCompanyMoto { get; }
+
+		/// <summary>Footer Company Name</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string FooterCompanyName { get; }
+
+		/// <summary>Footer Find Out More Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		Umbraco.Web.Models.Link FooterFindOutMoreButton { get; }
+
+		/// <summary>Footer Partner Logos</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<Umbraco.Core.Models.MediaWithCrops> FooterPartnerLogos { get; }
+
+		/// <summary>Show Newsletter Box</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		bool ShowNewsletterBox { get; }
 	}
 
 	/// <summary>Footer</summary>
@@ -55,14 +79,80 @@ namespace ACTFoundation.Models.Generated
 		// properties
 
 		///<summary>
-		/// Copyright Text: The site copyright text.
+		/// Footer Company Description: Footer Company Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("copyrightText")]
-		public string CopyrightText => GetCopyrightText(this);
+		[ImplementPropertyType("footerCompanyDescription")]
+		public IHtmlString FooterCompanyDescription => GetFooterCompanyDescription(this);
 
-		/// <summary>Static getter for Copyright Text</summary>
+		/// <summary>Static getter for Footer Company Description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetCopyrightText(IFooter that) => that.Value<string>("copyrightText");
+		public static IHtmlString GetFooterCompanyDescription(IFooter that) => that.Value<IHtmlString>("footerCompanyDescription");
+
+		///<summary>
+		/// Footer Company Logo: Footer Company Logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerCompanyLogo")]
+		public Image FooterCompanyLogo => GetFooterCompanyLogo(this);
+
+		/// <summary>Static getter for Footer Company Logo</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static Image GetFooterCompanyLogo(IFooter that) => that.Value<Image>("footerCompanyLogo");
+
+		///<summary>
+		/// Footer Company Moto: Footer Company Moto
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerCompanyMoto")]
+		public string FooterCompanyMoto => GetFooterCompanyMoto(this);
+
+		/// <summary>Static getter for Footer Company Moto</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetFooterCompanyMoto(IFooter that) => that.Value<string>("footerCompanyMoto");
+
+		///<summary>
+		/// Footer Company Name: Footer Company Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerCompanyName")]
+		public string FooterCompanyName => GetFooterCompanyName(this);
+
+		/// <summary>Static getter for Footer Company Name</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetFooterCompanyName(IFooter that) => that.Value<string>("footerCompanyName");
+
+		///<summary>
+		/// Footer Find Out More Button: Footer Find Out More Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerFindOutMoreButton")]
+		public Umbraco.Web.Models.Link FooterFindOutMoreButton => GetFooterFindOutMoreButton(this);
+
+		/// <summary>Static getter for Footer Find Out More Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static Umbraco.Web.Models.Link GetFooterFindOutMoreButton(IFooter that) => that.Value<Umbraco.Web.Models.Link>("footerFindOutMoreButton");
+
+		///<summary>
+		/// Footer Partner Logos
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerPartnerLogos")]
+		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> FooterPartnerLogos => GetFooterPartnerLogos(this);
+
+		/// <summary>Static getter for Footer Partner Logos</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<Umbraco.Core.Models.MediaWithCrops> GetFooterPartnerLogos(IFooter that) => that.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("footerPartnerLogos");
+
+		///<summary>
+		/// Show Newsletter Box: Show Newsletter Box
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("showNewsletterBox")]
+		public bool ShowNewsletterBox => GetShowNewsletterBox(this);
+
+		/// <summary>Static getter for Show Newsletter Box</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static bool GetShowNewsletterBox(IFooter that) => that.Value<bool>("showNewsletterBox");
 	}
 }

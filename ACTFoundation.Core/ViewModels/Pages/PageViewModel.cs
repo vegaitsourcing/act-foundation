@@ -16,10 +16,10 @@ namespace ACTFoundation.Core.ViewModels.Pages
 			OpenGraphLazy = new Lazy<OpenGraphViewModel>(() => new OpenGraphViewModel(context, context.Page));
 			HeaderLazy = new Lazy<HeaderViewModel>(() => new HeaderViewModel(context.Home));
 			FooterLazy = new Lazy<FooterViewModel>(() => new FooterViewModel(context.Home));
-			CookieScriptLazy = new Lazy<string>(() => context.Home.CookieScript);
-			GoogleTagManagerScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerScriptCode);
-			GoogleTagManagerNonScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerNonScriptCode);
-			GoogleAnalyticsCodeLazy = new Lazy<string>(() => context.Home.GoogleAnalyticsScriptCode);
+			//CookieScriptLazy = new Lazy<string>(() => context.Home.CookieScript);
+			//GoogleTagManagerScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerScriptCode);
+			//GoogleTagManagerNonScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerNonScriptCode);
+			//GoogleAnalyticsCodeLazy = new Lazy<string>(() => context.Home.GoogleAnalyticsScriptCode);
 		}
 
 		public MetaTagsViewModel MetaTags => MetaTagsLazy.Value;

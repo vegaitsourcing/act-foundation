@@ -28,6 +28,9 @@
 .italic {
   font-style: italic;
 }
+.uppercase {
+  text-transform: uppercase;
+}
 button {
   border-radius: 10rem;
   border: none;
@@ -69,23 +72,31 @@ button {
 .bg-orange {
   background-color: var(--color-orange);
 }
-.bg-white{
+.bg-white {
   background-color: var(--color-white);
 }
-.bg-yellow{
+.bg-yellow {
   background-color: var(--color-yellow);
 }
 .cl-white {
   color: var(--color-white);
 }
-.cl-black{
-color: var(--color-black);
+.cl-black {
+  color: var(--color-black);
 }
-.border-black{
+.border-black {
   border: 1px solid var(--color-black);
 }
 .bg-blue {
   background-color: var(--color-blue);
+}
+.input {
+  background-color: rgba(112, 112, 112, 0.67);
+  border: none;
+  padding: 13px 16px;
+}
+.input:focus-visible {
+  outline: none;
 }
 /* TABLETS */
 @media screen and (min-width: 786px) {
