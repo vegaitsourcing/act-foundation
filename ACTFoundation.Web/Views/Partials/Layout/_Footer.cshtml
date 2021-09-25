@@ -1,36 +1,42 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Layout.FooterViewModel>
-    <footer class="footer">
-        <div class="footer-left">
-            <div class="footer-branding">
-                <img class="footer-logo" src=@Model.FooterCompanyLogo.Url />
-                <span>
-                    <h3 class="footer-branding-title">@Umbraco.GetDictionaryValue("Footer.BrandingTitle")</h3>
-                    <div class="footer-branding-title-subtext">
-                        @Model.FooterCompanyMoto
-                    </div>
-                </span>
-            </div>
-            <div class="footer-description">
-                @Html.Raw(Model.FooterCompanyDescription)
-            </div>
-            <a href=@Model.FooterFindOutMoreButton.Url>
-                <div class="footer-cta-more-button">@Umbraco.GetDictionaryValue("Footer.FindOutMore")</div>
-            </a>
-        </div>
-        <div class="footer-right">
-            <h3 class="footer-partners-title">@Umbraco.GetDictionaryValue("OurPartners.Title")</h3>
-            <div class="footer-partners-wrapper">
-                @foreach (var element in Model.FooterPartnerLogos)
-                {
-                    <img class="footer-partner" src="@element.Url()" />
-                }
-            </div>
-            @if (Model.ShowNewsletterBox)
-            {
-                <div>
-                    <h4>@Umbraco.GetDictionaryValue("Footer.Newsletter.SignMe")</h4>
-                    <input /><button>@Umbraco.GetDictionaryValue("Newsletter.Title")</button>
+<footer class="footer">
+    <div class="footer-left">
+        <div class="footer-branding">
+            <img class="footer-logo"
+                 src="@Model.FooterCompanyLogo.Url" />
+            <span>
+                <h3 class="footer-branding-title uppercase m-text">@Model.FooterCompanyName</h3>
+                <div class="footer-branding-title-subtext uppercase">
+                    @Model.FooterCompanyMoto
                 </div>
+            </span>
+        </div>
+        <div class="footer-description">
+            @Html.Raw(Model.FooterCompanyDescription)
+        </div>
+        <a href="@Model.FooterFindOutMoreButton.Url">
+            <div class="footer-cta-more-button uppercase small-text bold">
+                @Umbraco.GetDictionaryValue("Footer.FindOutMore")
+            </div>
+        </a>
+    </div>
+    <div class="footer-right">
+        <h3 class="footer-partners-title uppercase m-text">@Umbraco.GetDictionaryValue("OurPartners.Title")</h3>
+        <div class="footer-partners-wrapper">
+            @foreach (var element in Model.FooterPartnerLogos)
+            {
+                <img class="footer-partner" src="@element.Url()" />
             }
         </div>
-    </footer>
+        @if (Model.ShowNewsletterBox)
+        {
+            <div class="footer-newsletter">
+                <h4 class="uppercase m-text">@Umbraco.GetDictionaryValue("Newsletter.Title")</h4>
+                <div class="footer-form">
+                    <input class="input small-text cl-white" placeholder = "@Umbraco.GetDictionaryValue("Footer.Newsletter.EmailPlaceholder")"/>
+                    <button class="small-text uppercase">@Umbraco.GetDictionaryValue("Footer.Newsletter.SignMe")</button>
+                </div>
+            </div>
+        }
+    </div>
+</footer>
