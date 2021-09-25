@@ -22,7 +22,7 @@ namespace ACTFoundation.Models.Generated
 {
 	/// <summary>Our Mission Block</summary>
 	[PublishedModel("ourMissionBlock")]
-	public partial class OurMissionBlock : PublishedContentModel
+	public partial class OurMissionBlock : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -39,10 +39,45 @@ namespace ACTFoundation.Models.Generated
 #pragma warning restore 0109
 
 		// ctor
-		public OurMissionBlock(IPublishedContent content)
+		public OurMissionBlock(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Bottom text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("bottomText")]
+		public IHtmlString BottomText => this.Value<IHtmlString>("bottomText");
+
+		///<summary>
+		/// Gallery
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("gallery")]
+		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> Gallery => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("gallery");
+
+		///<summary>
+		/// Subtitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("subtitle")]
+		public string Subtitle => this.Value<string>("subtitle");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
+
+		///<summary>
+		/// Top text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topText")]
+		public IHtmlString TopText => this.Value<IHtmlString>("topText");
 	}
 }

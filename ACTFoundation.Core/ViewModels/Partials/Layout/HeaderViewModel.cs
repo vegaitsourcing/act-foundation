@@ -10,7 +10,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Layout
 {
 	public class HeaderViewModel
 	{
-		public HeaderViewModel(MainNavigationButton header)
+		public HeaderViewModel(IHeader header)
 		{
 			if (header == null) throw new ArgumentNullException(nameof(header));
 

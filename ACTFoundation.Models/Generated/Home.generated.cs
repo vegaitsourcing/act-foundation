@@ -22,7 +22,7 @@ namespace ACTFoundation.Models.Generated
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooter, MainNavigationButton, IPage, ITopBottomSocialLinks
+	public partial class Home : PublishedContentModel, IFooter, IHeader, IPage, ITopBottomSocialLinks
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
