@@ -23,7 +23,6 @@ namespace ACTFoundation.Core.ViewModels.Partials.Layout
 		public string FooterCompanyName { get; }
 		public string FooterCompanyMoto { get; }
 		public IHtmlString FooterCompanyDescription { get; }
-		public string CopyrightText { get; }
 		public LinkViewModel FooterFindOutMoreButton { get; }
 		public IEnumerable<MediaWithCrops> FooterPartnerLogos { get; }
 		public bool ShowNewsletterBox { get; }
