@@ -20,64 +20,64 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
-	// Mixin Content Type with alias "mainNavigation"
-	/// <summary>Main navigation</summary>
-	public partial interface IMainNavigation : IPublishedContent
-	{
-		/// <summary>Main navigation button</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		Umbraco.Web.Models.Link MainNavigationButton { get; }
-
-		/// <summary>Main Navigation Links</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks { get; }
-	}
-
-	/// <summary>Main navigation</summary>
-	[PublishedModel("mainNavigation")]
-	public partial class MainNavigation : PublishedContentModel, IMainNavigation
+	/// <summary>Volunteers Shared</summary>
+	[PublishedModel("volunteersShared")]
+	public partial class VolunteersShared : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "mainNavigation";
+		public new const string ModelTypeAlias = "volunteersShared";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MainNavigation, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<VolunteersShared, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public MainNavigation(IPublishedContent content)
+		public VolunteersShared(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Main navigation button
+		/// Background Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mainNavigationButton")]
-		public Umbraco.Web.Models.Link MainNavigationButton => GetMainNavigationButton(this);
-
-		/// <summary>Static getter for Main navigation button</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static Umbraco.Web.Models.Link GetMainNavigationButton(IMainNavigation that) => that.Value<Umbraco.Web.Models.Link>("mainNavigationButton");
+		[ImplementPropertyType("backgroundImage")]
+		public Image BackgroundImage => this.Value<Image>("backgroundImage");
 
 		///<summary>
-		/// Main Navigation Links
+		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mainNavigationLinks")]
-		public IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks => GetMainNavigationLinks(this);
+		[ImplementPropertyType("description")]
+		public string Description => this.Value<string>("description");
 
-		/// <summary>Static getter for Main Navigation Links</summary>
+		///<summary>
+		/// Link
+		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IEnumerable<Umbraco.Web.Models.Link> GetMainNavigationLinks(IMainNavigation that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("mainNavigationLinks");
+		[ImplementPropertyType("link")]
+		public Umbraco.Web.Models.Link Link => this.Value<Umbraco.Web.Models.Link>("link");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
+
+		///<summary>
+		/// Volunteers
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("volunteers")]
+		public IEnumerable<VolunteerItem> Volunteers => this.Value<IEnumerable<VolunteerItem>>("volunteers");
 	}
 }

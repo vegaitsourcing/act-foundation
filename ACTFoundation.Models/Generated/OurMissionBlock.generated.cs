@@ -20,36 +20,64 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
-	/// <summary>Volunteers</summary>
-	[PublishedModel("volunteers")]
-	public partial class Volunteers : PublishedElementModel
+	/// <summary>Our Mission Block</summary>
+	[PublishedModel("ourMissionBlock")]
+	public partial class OurMissionBlock : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "volunteers";
+		public new const string ModelTypeAlias = "ourMissionBlock";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Volunteers, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<OurMissionBlock, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Volunteers(IPublishedElement content)
+		public OurMissionBlock(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Volunteers Content
+		/// Bottom text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("volunteersContent")]
-		public IEnumerable<IPublishedContent> VolunteersContent => this.Value<IEnumerable<IPublishedContent>>("volunteersContent");
+		[ImplementPropertyType("bottomText")]
+		public IHtmlString BottomText => this.Value<IHtmlString>("bottomText");
+
+		///<summary>
+		/// Gallery
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("gallery")]
+		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> Gallery => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("gallery");
+
+		///<summary>
+		/// Subtitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("subtitle")]
+		public string Subtitle => this.Value<string>("subtitle");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
+
+		///<summary>
+		/// Top text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topText")]
+		public IHtmlString TopText => this.Value<IHtmlString>("topText");
 	}
 }

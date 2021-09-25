@@ -20,9 +20,30 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
+	// Mixin Content Type with alias "accountInformation"
+	/// <summary>Account information</summary>
+	public partial interface IAccountInformation : IPublishedElement
+	{
+		/// <summary>Account</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string Account { get; }
+
+		/// <summary>Calling Model</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string CallingModel { get; }
+
+		/// <summary>Call number</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string CallNumber { get; }
+
+		/// <summary>Recepient</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string Recepient { get; }
+	}
+
 	/// <summary>Account information</summary>
 	[PublishedModel("accountInformation")]
-	public partial class AccountInformation : PublishedElementModel
+	public partial class AccountInformation : PublishedElementModel, IAccountInformation
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,27 +71,43 @@ namespace ACTFoundation.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("account")]
-		public string Account => this.Value<string>("account");
+		public string Account => GetAccount(this);
+
+		/// <summary>Static getter for Account</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetAccount(IAccountInformation that) => that.Value<string>("account");
 
 		///<summary>
 		/// Calling Model: Model
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("callingModel")]
-		public string CallingModel => this.Value<string>("callingModel");
+		public string CallingModel => GetCallingModel(this);
+
+		/// <summary>Static getter for Calling Model</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetCallingModel(IAccountInformation that) => that.Value<string>("callingModel");
 
 		///<summary>
 		/// Call number: Poziv na broj
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("callNumber")]
-		public string CallNumber => this.Value<string>("callNumber");
+		public string CallNumber => GetCallNumber(this);
+
+		/// <summary>Static getter for Call number</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetCallNumber(IAccountInformation that) => that.Value<string>("callNumber");
 
 		///<summary>
 		/// Recepient: Primalac
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("recepient")]
-		public string Recepient => this.Value<string>("recepient");
+		public string Recepient => GetRecepient(this);
+
+		/// <summary>Static getter for Recepient</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetRecepient(IAccountInformation that) => that.Value<string>("recepient");
 	}
 }

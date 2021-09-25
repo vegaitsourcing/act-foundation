@@ -20,36 +20,50 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
-	/// <summary>Volunteers</summary>
-	[PublishedModel("volunteers")]
-	public partial class Volunteers : PublishedElementModel
+	/// <summary>Our Story block</summary>
+	[PublishedModel("ourStoryBlock")]
+	public partial class OurStoryBlock : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "volunteers";
+		public new const string ModelTypeAlias = "ourStoryBlock";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Volunteers, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<OurStoryBlock, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Volunteers(IPublishedElement content)
+		public OurStoryBlock(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Volunteers Content
+		/// Subtitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("volunteersContent")]
-		public IEnumerable<IPublishedContent> VolunteersContent => this.Value<IEnumerable<IPublishedContent>>("volunteersContent");
+		[ImplementPropertyType("subtitle")]
+		public string Subtitle => this.Value<string>("subtitle");
+
+		///<summary>
+		/// Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("text")]
+		public IHtmlString Text => this.Value<IHtmlString>("text");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 	}
 }
