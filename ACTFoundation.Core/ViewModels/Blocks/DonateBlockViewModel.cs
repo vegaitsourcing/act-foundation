@@ -2,7 +2,7 @@
 using Umbraco.Web.Models;
 using System.Collections.Generic;
 
-namespace ACTFoundation.Core.ViewModels
+namespace ACTFoundation.Core.ViewModels.Blocks
 {
     public class DonateBlockViewModel
     {
