@@ -1,0 +1,27 @@
+﻿@inherits UmbracoViewPage<VolunteerViewModel>
+
+@if (Model.VolunteerContent != null)
+{
+<div class="hero"
+     style="
+        background: linear-gradient(
+            180deg,
+            #000000 -33.39%,
+            rgba(0, 0, 0, 0.4) 23.71%,
+            rgba(0, 0, 0, 0.4) 61.3%,
+            #000000 105.39%
+          ),
+          url('@Model.VolunteerContent.BackgroundImage.Url')
+            no-repeat center / cover;
+      ">
+    <h1 class="hero-title xl-text bold">@Model.VolunteerContent.Title</h1>
+    <p class="hero-content regular-text">
+        @Model.VolunteerContent.Description
+    </p>
+    <p class="hero-buttons reagular-text">
+        @foreach (var buttonLink in Model.VolunteerContent.ButtonLinks)
+        {
+            Html.RenderNestedContent(buttonLink);
+        }
+    </p>
+</div>}

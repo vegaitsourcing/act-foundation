@@ -513,6 +513,7 @@
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
+    <Content Include="Views\Volunteer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

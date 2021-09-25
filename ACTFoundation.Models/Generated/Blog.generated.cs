@@ -44,5 +44,12 @@ namespace ACTFoundation.Models.Generated
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("headline")]
+		public string Headline => this.Value<string>("headline");
 	}
 }
