@@ -46,6 +46,13 @@ namespace ACTFoundation.Models.Generated
 		// properties
 
 		///<summary>
+		/// Cta text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("ctaText")]
+		public string CtaText => this.Value<string>("ctaText");
+
+		///<summary>
 		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
