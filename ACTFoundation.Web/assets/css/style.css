@@ -1401,7 +1401,11 @@ nav button {
   } 
 
 	.article-sidebar {
-	margin-top: 10px;
-	padding: 94px 78px;
+    margin-top: 10px;
+    padding: 94px 78px;
 	}
+}
+
+.heading-project-galleries {
+  padding: var(--default-spacing);
 }
