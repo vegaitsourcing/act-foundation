@@ -4,8 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
-}
+  font-family: 'Poppins', sans-serif;}
 
 a {
   text-decoration: none;
@@ -130,16 +129,6 @@ button {
 /* SHARED HERO STUFF */
 
 .hero {
-  background: linear-gradient(
-      180deg,
-      #000000 -33.39%,
-      rgba(0, 0, 0, 0.4) 23.71%,
-      rgba(0, 0, 0, 0.4) 61.3%,
-      #000000 105.39%
-    ),
-    url("https://ichef.bbci.co.uk/news/976/mcs/media/images/75745000/jpg/_75745654_466377933.jpg")
-      no-repeat center / cover;
-
   color: white;
   padding: var(--default-spacing);
   display: flex;
@@ -147,6 +136,7 @@ button {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  height: 100vh;
 }
 .hero > *:not(:last-child){
   margin-bottom: 2rem;

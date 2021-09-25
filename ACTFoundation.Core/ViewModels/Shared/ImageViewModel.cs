@@ -6,7 +6,7 @@ namespace ACTFoundation.Core.ViewModels.Shared
 {
 	public class ImageViewModel
 	{
-		public ImageViewModel(string url, string urlAbsolute, string type, 
+		public ImageViewModel(string url, string urlAbsolute, string type,
 			int width, int height, string alternateText = null)
 		{
 			Url = url;
