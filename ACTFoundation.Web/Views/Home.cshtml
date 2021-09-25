@@ -12,3 +12,7 @@
 {
     Html.RenderPartial("~/Views/Partials/NestedContent/_Testimonials.cshtml", Model.Testimonials);
 }
+@if (Model.DonateBlock != null)
+{
+    Html.RenderPartial("~/Views/Partials/Blocks/_DonateBlock.cshtml", Model.DonateBlock );
+}
