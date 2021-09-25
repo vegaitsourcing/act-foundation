@@ -21,7 +21,7 @@
     <p class="hero-buttons reagular-text">
         @foreach (var buttonLink in Model.VolunteerContent.ButtonLinks)
         {
-            Html.RenderNestedContent(buttonLink);
+            @Html.Partial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
         }
     </p>
 </div>}
