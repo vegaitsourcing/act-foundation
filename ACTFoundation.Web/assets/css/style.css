@@ -562,7 +562,7 @@ form button {
 .footer {
   color: #fff;
   width: 100%;
-  background: url(../assets/bgFooter.png);
+  background: url(../media/bgFooter.png);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -1232,16 +1232,6 @@ nav button {
 }
 .heading-secondary {
   font-weight: 700;
-}
-.footer {
-  color: #fff;
-  width: 100%;
-  background: url(../assets/bgFooter.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  padding: var(--default-spacing);
 }
 .footer-branding {
   display: flex;
