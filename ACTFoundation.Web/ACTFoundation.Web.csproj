@@ -508,7 +508,8 @@
     <Content Include="Views\Partials\Testimonials.cshtml" />
     <Content Include="Views\Partials\NestedContent\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
-    <Content Include="Views\Partials\Blocks\_WhoWeAreBlock.cshtml" />
+    <Content Include="Views\Partials\Forms\_ContactThankYou.cshtml" />
+    <Content Include="Views\Contact.cshtml" />    <Content Include="Views\Partials\Blocks\_WhoWeAreBlock.cshtml" />
     <Content Include="Views\Partials\DonateBlock.cshtml" />
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
@@ -533,6 +534,7 @@
       <Name>ACTFoundation.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
