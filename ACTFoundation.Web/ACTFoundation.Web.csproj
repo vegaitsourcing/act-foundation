@@ -424,6 +424,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\style.css" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -448,7 +449,6 @@
     <Content Include="CustomError400.aspx" />
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Views\header.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -495,6 +495,11 @@
     <Content Include="Views\Partials\NestedContent\_BannerCarousel.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BannerDefault.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ButtonLinkItem.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Volunteers.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_VolunteersShared.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_VolunteerItem.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_PartnertLogos.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
     <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
     <Content Include="Views\Partials\PublishedElement.cshtml" />
     <Content Include="Views\Partials\Testimonials.cshtml" />
