@@ -148,7 +148,6 @@ button {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
 }
 
 .hero--article {
@@ -190,10 +189,7 @@ button {
 
 .hero__buttons {
   display: flex;
-}
-
-.hero__buttons > * + * {
-  margin-left: 26px;
+  flex-direction: column;
 }
 
 .hero__buttons a {
@@ -221,6 +217,15 @@ button {
 
 .hero__buttons--green {
   background-color: var(--color-green);
+}
+
+@media screen and (min-width: 410px) {
+  .hero__buttons {
+    flex-direction: row;
+  }
+  .hero__buttons > * + * {
+    margin-left: 26px;
+  }
 }
 
 /* CHIPS */
@@ -361,7 +366,7 @@ button {
 
 .row {
   display: grid;
-  gap: 20px 35px;
+  gap: 30px;
 }
 
 .articles-list-item {
@@ -414,7 +419,6 @@ button {
 .heading-secondary {
   font-weight: bold;
 }
-
 @media screen and (min-width: 768px) {
   .row {
     grid-template-columns: repeat(2, 1fr);
@@ -431,7 +435,6 @@ button {
   .row {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .articles-list-item:nth-child(even) {
     flex-direction: column-reverse;
   }
@@ -699,9 +702,15 @@ form button {
 .footer-partners-wrapper {
   display: grid;
   margin-bottom: 18px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: flex-start;
   gap: 1rem;
+}
+
+@media only screen and (min-width: 720px) {
+  .footer-partners-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .footer-partner {
@@ -732,7 +741,8 @@ form button {
 }
 .footer-form button {
   background-color: var(--color-yellow);
-  width: max-content;
+  flex-shrink: 0;
+  width: 180px;
 }
 
 .footer-description,
@@ -756,7 +766,7 @@ form button {
   display: flex;
   align-items: center;
   margin-top: 20px;
-  font-size: var(--m-text);
+  font-size: 13px;
 }
 
 .bd-yellow {
@@ -771,13 +781,16 @@ form button {
 
 .footer-left {
   margin-bottom: var(--default-spacing);
-  width: 50%;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1150px) {
   .footer-additional-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media only screen and (min-width: 992px) {
   .footer {
     flex-direction: row;
   }
@@ -828,7 +841,7 @@ form button {
   font-size: var(--regular-text);
 }
 .hero {
-  height: 100vh;
+  height: calc(100vh - 55px - 20px);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -910,12 +923,6 @@ nav a:hover {
 
 nav button {
   margin-top: 2rem;
-}
-.hero {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 @media screen and (min-width: 992px) {
@@ -1051,9 +1058,9 @@ nav button {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.row {
-  display: grid;
-  gap: 30px;
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-list-item {
@@ -1063,6 +1070,9 @@ nav button {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
+}
+.projects-list-item + .projects-list-item {
+  margin-top: 27px;
 }
 
 .project-body {
@@ -1376,7 +1386,7 @@ nav button {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 100%;
   margin-bottom: 25px;
 }
 

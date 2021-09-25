@@ -456,6 +456,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\scripts\projectsListing.js" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -516,8 +517,8 @@
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_GetMoreProjects.cshtml" />
     <Content Include="Views\Donate.cshtml" />
-    <Content Include="Views\Partials\DonateBlock.cshtml" />
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Volunteer.cshtml" />
     <None Include="Web.Debug.config">
