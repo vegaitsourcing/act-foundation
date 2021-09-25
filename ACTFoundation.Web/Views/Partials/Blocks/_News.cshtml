@@ -1,0 +1,7 @@
+﻿@using ACTFoundation.Core.Controllers.Surface
+@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.NewsViewModel>
+
+@if (Model.BlogId.HasValue)
+{
+    Html.RenderAction<NewsController>(c => nameof(c.GetMoreNews), new { blogId = Model.BlogId.Value });
+}
