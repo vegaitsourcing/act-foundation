@@ -1,0 +1,6 @@
+﻿@inherits UmbracoViewPage<ProjectsViewModel>
+
+@if (Model.DonateAccountsBlock != null)
+{
+    Html.RenderPartial("_DonateAccountsBlock", Model.DonateAccountsBlock);
+}

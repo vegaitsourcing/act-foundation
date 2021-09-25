@@ -1,0 +1,32 @@
+﻿@inherits UmbracoViewPage<ArticleViewModel>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300&display=swap"
+      rel="stylesheet" />
+
+<header class="hero hero--article"
+        style="
+        background: linear-gradient(
+        180deg,
+        #000000 -33.39%,
+        rgba(0, 0, 0, 0.4) 23.71%,
+        rgba(0, 0, 0, 0.4) 61.3%,
+        #000000 105.39%
+      ),
+      url(@Model.MainImage.Url) no-repeat center;">
+    <div class="chips">
+        @foreach (var tag in @Model.Tags)
+        {
+        <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+        }
+        <div class="chips__author">
+            <p>by <span>@Model.Author</span><br />@Model.CreateDate</p>
+        </div>
+    </div>
+</header>
+
+<div class="article">
+    <h1>@Model.Title</h1>
+    @Html.Raw(Model.Text)
+</div>
