@@ -425,6 +425,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\scripts\donateAccountsBlock.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -495,6 +496,8 @@
     <Content Include="Views\Partials\NestedContent\_BannerCarousel.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BannerDefault.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ButtonLinkItem.cshtml" />
+    <Content Include="Views\Projects.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_DonateAccountsBlock.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_VolunteersShared.cshtml" />
     <Content Include="Views\Partials\NestedContent\_VolunteerItem.cshtml" />
@@ -503,14 +506,18 @@
     <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
     <Content Include="Views\Partials\PublishedElement.cshtml" />
     <Content Include="Views\Partials\Testimonials.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
-    <Content Include="Views\Partials\Blocks\_WhoWeAreBlock.cshtml" />
-    <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
+    <Content Include="Views\Partials\Forms\_ContactThankYou.cshtml" />
+    <Content Include="Views\Contact.cshtml" />    <Content Include="Views\Partials\Blocks\_WhoWeAreBlock.cshtml" />
     <Content Include="Views\Partials\DonateBlock.cshtml" />
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
     <Content Include="Views\Donate.cshtml" />
+    <Content Include="Views\Partials\DonateBlock.cshtml" />
+    <Content Include="Views\Article.cshtml" />
+    <Content Include="Views\Volunteer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -528,6 +535,7 @@
       <Name>ACTFoundation.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

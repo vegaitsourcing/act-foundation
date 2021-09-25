@@ -55,7 +55,7 @@ namespace ACTFoundation.Models.Generated
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("UFmbraco.ModelsBuilder", "8.1.6")]
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("alternateLanguages")]
 		public IEnumerable<string> AlternateLanguages => Page.GetAlternateLanguages(this);
 

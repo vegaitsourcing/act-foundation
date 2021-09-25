@@ -1,6 +1,4 @@
-﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.BannerDefault>
-
-@*HTML FOR BANNER DEFAULT*@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Items.BannerCarouselItemViewModel>
 
 @if (!string.IsNullOrWhiteSpace(Model.Title))
 {
@@ -24,5 +22,5 @@
 
 @foreach (var buttonLink in Model.ButtonLinks)
 {
-    Html.RenderNestedContent(buttonLink);
+    Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
 }

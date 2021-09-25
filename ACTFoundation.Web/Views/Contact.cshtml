@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactViewModel>
+
+@{Html.RenderNestedContent(Model.MainContent);}
+
+@if (Model.IsSubmitted)
+{
+    <h2>@Umbraco.GetDictionaryValue("Contact.Form.ThankYouMessage")</h2>
+}
+else
+{
+    <form method="post" action="/contact" name="RenderMvcPost" id="RenderMvcPost">
+        {
+        <input type="text" name="name" placeholder="Vaše Ime">
+        <input type="text" name="email" placeholder="Vaš Email">
+        <input type="text" name="contactReason" placeholder="Razlog kontaktiranja">
+        <textarea name="text" id="" rows="5"></textarea>
+        <button class="bg-yellow" type="submit">@Umbraco.GetDictionaryValue("Contact.Form.SendButton")</button>
+        }
+    </form>
+}
