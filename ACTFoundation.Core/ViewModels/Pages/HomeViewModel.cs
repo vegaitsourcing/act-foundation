@@ -21,10 +21,18 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
 				Testimonials = new TestimonialsViewModel(testimonials as Testimonials);
             }
+
+			var volunteers = context.Page.MainContent.FirstOrDefault(item => item is Volunteers);
+			if (volunteers != null)
+			{
+				Volunteers = new VolunteersViewModel(volunteers as VolunteersShared);
+			}
 		}
 
 		public BannerCarouselViewModel BannerCarousel { get; set; }
 
 		public TestimonialsViewModel Testimonials { get; }
+
+		public VolunteersViewModel Volunteers { get; }
     }
 }

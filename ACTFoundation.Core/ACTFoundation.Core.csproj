@@ -344,6 +344,7 @@
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\TestimonialItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Items\VolunteerItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\FooterViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\CurrentProjectsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\HeaderViewModel.cs" />
@@ -361,6 +362,7 @@
     <Compile Include="ViewModels\Shared\ButtonLinkItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\VolunteersViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACTFoundation.Common\ACTFoundation.Common.csproj">

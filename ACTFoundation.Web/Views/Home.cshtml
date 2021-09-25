@@ -9,3 +9,8 @@
 {
     Html.RenderPartial("~/Views/Partials/NestedContent/_Testimonials.cshtml", Model.Testimonials);
 }
+
+@if (Model.Volunteers != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_VolunteersShared.cshtml", Model.Volunteers);
+}
