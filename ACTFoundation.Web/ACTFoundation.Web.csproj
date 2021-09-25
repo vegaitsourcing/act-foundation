@@ -502,7 +502,8 @@
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
     <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
     <Content Include="Views\Partials\PublishedElement.cshtml" />
-    <Content Include="Views\Partials\Testimonials.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
+    <Content Include="Views\Volunteers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

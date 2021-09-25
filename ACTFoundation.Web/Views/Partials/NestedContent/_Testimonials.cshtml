@@ -1,0 +1,25 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Testimonials.TestimonialsViewModel>
+
+<div class="testemonials">
+    <p class="testemonials-subtitle m-text">@Model.Title</p>
+    <p class="testemonials-title xl-text bold">@Model.Subtitle</p>
+    <p class="testemonials-content m-text">
+        @Html.Raw(Model.Description)
+    </p>
+    <div class="testemonials-profiles">
+        @foreach (var item in Model.TestimonialItems)
+        {
+            <div class="testemonial-profile">
+                <img class="testemonials-profile-img"
+                     alt="@item.Picture.AlternateText"
+                     src="@item.Picture.Url" />
+                <p class="testemonial-profile-description regular-text">
+                    @item.TestimonialText
+                </p>
+                <p class="testemonial-profile-name m-text">
+                    @item.FullName
+                </p>
+            </div>
+        }
+    </div>
+</div>

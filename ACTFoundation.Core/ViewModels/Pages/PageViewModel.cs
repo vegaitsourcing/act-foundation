@@ -2,6 +2,7 @@
 using ACTFoundation.Core.Contexts;
 using ACTFoundation.Core.Extensions;
 using ACTFoundation.Core.ViewModels.Partials.Layout;
+using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Models.Generated;
 
 namespace ACTFoundation.Core.ViewModels.Pages
@@ -39,9 +40,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
 		private Lazy<OpenGraphViewModel> OpenGraphLazy { get; }
 		private Lazy<HeaderViewModel> HeaderLazy { get; }
 		private Lazy<FooterViewModel> FooterLazy { get; }
-
 		private Lazy<TopBottomSocialLinksViewModel> TopBottomSocialLinksLazy { get; }
-		
 		private Lazy<string> CookieScriptLazy { get; }
 		private Lazy<string> GoogleTagManagerScriptCodeLazy { get; }
 		private Lazy<string> GoogleTagManagerNonScriptCodeLazy { get; }
