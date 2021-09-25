@@ -110,3 +110,80 @@ color: var(--color-black);
 /* DESKTOP DISPLAYS	 */
 @media screen and (min-width: 1920px) {
 }
+
+/* SHARED HERO STUFF */
+
+.hero {
+  background: linear-gradient(
+      180deg,
+      #000000 -33.39%,
+      rgba(0, 0, 0, 0.4) 23.71%,
+      rgba(0, 0, 0, 0.4) 61.3%,
+      #000000 105.39%
+    ),
+    url("https://ichef.bbci.co.uk/news/976/mcs/media/images/75745000/jpg/_75745654_466377933.jpg")
+      no-repeat center / cover;
+
+  color: white;
+
+  height: 900px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 84px;
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.hero p {
+  max-width: 900px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.hero__buttons {
+  display: flex;
+}
+
+.hero__buttons > * + * {
+  margin-left: 26px;
+}
+
+.hero__buttons a {
+  display: block;
+  width: 180px;
+  margin-top: 60px;
+  padding: 13px 0;
+  border-radius: 9999px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+}
+
+.hero__buttons--primary {
+  background-color: var(--color-blue);
+}
+
+.hero__buttons--secondary {
+  border: 1px solid white;
+}
+
+.hero__buttons--green {
+  background-color: var(--color-green);
+}
+
+/*********************/
