@@ -697,9 +697,15 @@ form button {
 .footer-partners-wrapper {
   display: grid;
   margin-bottom: 18px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: flex-start;
   gap: 1rem;
+}
+
+@media only screen and (min-width: 720px) {
+  .footer-partners-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .footer-partner {
@@ -730,7 +736,8 @@ form button {
 }
 .footer-form button {
   background-color: var(--color-yellow);
-  width: max-content;
+  flex-shrink: 0;
+  width: 180px;
 }
 
 .footer-description,
@@ -754,7 +761,7 @@ form button {
   display: flex;
   align-items: center;
   margin-top: 20px;
-  font-size: var(--m-text);
+  font-size: 13px;
 }
 
 .bd-yellow {
@@ -769,13 +776,16 @@ form button {
 
 .footer-left {
   margin-bottom: var(--default-spacing);
-  width: 50%;
 }
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 1150px) {
   .footer-additional-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media only screen and (min-width: 992px) {
   .footer {
     flex-direction: row;
   }
