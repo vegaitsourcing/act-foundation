@@ -7,6 +7,11 @@
   font-family: "Poppins";
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .xl-text {
   font-size: var(--xl-text);
 }
@@ -27,6 +32,9 @@
 }
 .italic {
   font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
 }
 button {
   border-radius: 10rem;
@@ -69,23 +77,31 @@ button {
 .bg-orange {
   background-color: var(--color-orange);
 }
-.bg-white{
+.bg-white {
   background-color: var(--color-white);
 }
-.bg-yellow{
+.bg-yellow {
   background-color: var(--color-yellow);
 }
 .cl-white {
   color: var(--color-white);
 }
-.cl-black{
-color: var(--color-black);
+.cl-black {
+  color: var(--color-black);
 }
-.border-black{
+.border-black {
   border: 1px solid var(--color-black);
 }
 .bg-blue {
   background-color: var(--color-blue);
+}
+.input {
+  background-color: rgba(112, 112, 112, 0.67);
+  border: none;
+  padding: 13px 16px;
+}
+.input:focus-visible {
+  outline: none;
 }
 /* TABLETS */
 @media screen and (min-width: 786px) {
@@ -125,29 +141,27 @@ color: var(--color-black);
       no-repeat center / cover;
 
   color: white;
-
-  height: 900px;
-
+  padding: var(--default-spacing);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
-
+.hero > *:not(:last-child){
+  margin-bottom: 2rem;
+}
 .hero h1 {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 84px;
+  font-size: var(--xl-text);
   font-weight: 700;
-  letter-spacing: -0.07em;
   text-transform: uppercase;
 }
 
 .hero p {
   max-width: 900px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-size: var(--m-text);
   text-align: center;
 }
 

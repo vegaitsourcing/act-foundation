@@ -1,5 +1,5 @@
 .testemonials {
-  padding: 92px;
+  padding: var(--default-spacing);
   background-color: rgb(255, 239, 168, 0.4);
 }
 
@@ -20,6 +20,7 @@
   margin-top: 75px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .testemonials-profile-img {
@@ -32,6 +33,7 @@
 .testemonial-profile {
   max-width: 300px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .testemonial-profile-description {
@@ -41,4 +43,10 @@
 
 .testemonial-profile-name {
   margin-top: 25px;
+}
+
+@media screen and (min-width:992px) {
+  .testemonials-profiles{
+    flex-direction: row;
+  }
 }

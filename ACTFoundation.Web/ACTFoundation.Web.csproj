@@ -448,6 +448,7 @@
     <Content Include="CustomError400.aspx" />
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Views\header.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -496,6 +497,9 @@
     <Content Include="Views\Partials\NestedContent\_ButtonLinkItem.cshtml" />
     <Content Include="Views\Projects.cshtml" />
     <Content Include="Views\Partials\NestedContent\_DonateAccountsBlock.cshtml" />
+    <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
+    <Content Include="Views\Partials\PublishedElement.cshtml" />
+    <Content Include="Views\Partials\Testimonials.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

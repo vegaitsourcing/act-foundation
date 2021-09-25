@@ -16,6 +16,8 @@ namespace ACTFoundation.Core.ViewModels.Pages
 			OpenGraphLazy = new Lazy<OpenGraphViewModel>(() => new OpenGraphViewModel(context, context.Page));
 			HeaderLazy = new Lazy<HeaderViewModel>(() => new HeaderViewModel(context.Home));
 			FooterLazy = new Lazy<FooterViewModel>(() => new FooterViewModel(context.Home));
+			TopBottomSocialLinksLazy = new Lazy<TopBottomSocialLinksViewModel>(() => new TopBottomSocialLinksViewModel(context.Home));
+
 			//CookieScriptLazy = new Lazy<string>(() => context.Home.CookieScript);
 			//GoogleTagManagerScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerScriptCode);
 			//GoogleTagManagerNonScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerNonScriptCode);
@@ -26,16 +28,19 @@ namespace ACTFoundation.Core.ViewModels.Pages
 		public OpenGraphViewModel OpenGraph => OpenGraphLazy.Value;
 		public HeaderViewModel Header => HeaderLazy.Value;
 		public FooterViewModel Footer => FooterLazy.Value;
+		public TopBottomSocialLinksViewModel TopBottomSocialLinks => TopBottomSocialLinksLazy.Value;
 
-		public string CookieScript => CookieScriptLazy.Value;
-		public string GoogleTagManagerScriptCode => GoogleTagManagerScriptCodeLazy.Value;
-		public string GoogleTagManagerNonScriptCode => GoogleTagManagerNonScriptCodeLazy.Value;
-		public string GoogleAnalyticsCode => GoogleAnalyticsCodeLazy.Value;
+		public string CookieScript => CookieScriptLazy?.Value;
+		public string GoogleTagManagerScriptCode => GoogleTagManagerScriptCodeLazy?.Value;
+		public string GoogleTagManagerNonScriptCode => GoogleTagManagerNonScriptCodeLazy?.Value;
+		public string GoogleAnalyticsCode => GoogleAnalyticsCodeLazy?.Value;
 
 		private Lazy<MetaTagsViewModel> MetaTagsLazy { get; }
 		private Lazy<OpenGraphViewModel> OpenGraphLazy { get; }
 		private Lazy<HeaderViewModel> HeaderLazy { get; }
 		private Lazy<FooterViewModel> FooterLazy { get; }
+
+		private Lazy<TopBottomSocialLinksViewModel> TopBottomSocialLinksLazy { get; }
 		
 		private Lazy<string> CookieScriptLazy { get; }
 		private Lazy<string> GoogleTagManagerScriptCodeLazy { get; }

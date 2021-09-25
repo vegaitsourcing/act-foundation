@@ -1,17 +1,9 @@
-head
-  style
-    include ../header/styles.css
-    include ../navigation/navigation.css
-    include ../donate/donate.css
-    include ../testemonials/styles.css
-    include ../volunteers/volunteers.css
-    include ../articles/articles.css
-    include ../footer/footer.css
-body
-  include ../header/index.html
+extends layout
+
+block content
   include ../navigation/navigation.html
+  include ../hero/homepage-hero.html
   include ../donate/donate.html
-  include ../testemonials/index.html
+  include ../testemonials/testemonials.html
   include ../volunteers/volunteers.html
   include ../articles/articles.html
-  include ../footer/footer.html

@@ -1,4 +1,4 @@
-.section-articles {
+.articles {
   padding: var(--default-spacing);
 }
 
@@ -41,6 +41,19 @@
 .article-body a {
   font-weight: bold;
   text-decoration: none;
+  color: var(--color-blue);
+}
+
+.articles-list-item:nth-child(n)  a {
+  color: var(--color-blue);
+}
+
+.articles-list-item:nth-child(2n)  a {
+  color: var(--color-orange);
+}
+
+.articles-list-item:nth-child(3n)  a {
+  color: var(--color-yellow);
 }
 
 .article-image img {
