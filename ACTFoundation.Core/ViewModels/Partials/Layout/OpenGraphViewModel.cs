@@ -20,9 +20,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Layout
 			Description = GetDescription(context.Page);
 			//TODO if Open Graph Image is null use banner image
 			Image = context.Page.OpenGraphImage.ToViewModel();
-			CanonicalUrl = seo.GetCanonicalUrl(context.SiteSettings.CanonicalDomain);
 			Locale = context.Page.GetCultureFromDomains();
-			SiteName = context.SiteSettings.SiteName;
 		}
 
 		public string Title { get; }

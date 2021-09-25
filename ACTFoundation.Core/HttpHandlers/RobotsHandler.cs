@@ -44,13 +44,16 @@ namespace ACTFoundation.Core.HttpHandlers
 			{
 				var umbracoContext = contextReference.UmbracoContext;
 				// Lets try and find the robots file contents from Umbraco.
+				/*
 				var siteSettings = umbracoContext
 						.Content
 						.GetAtRoot()
 						.FirstOrDefault(c => context.Request.Url.AbsoluteUri.StartsWith(c.Url(mode: UrlMode.Absolute)))
 					as ISiteSettings;
+				
 
 				contextBase.Response.Write(siteSettings?.Robots ?? string.Empty);
+				*/
 			}
 
 			contextBase.Response.End();

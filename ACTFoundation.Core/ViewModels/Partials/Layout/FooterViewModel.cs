@@ -9,7 +9,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Layout
 		{
 			if (footer == null) throw new ArgumentNullException(nameof(footer));
 
-			CopyrightText = footer.CopyrightText;
+			//CopyrightText = footer.CopyrightText;
 		}
 
 		public string CopyrightText { get; }

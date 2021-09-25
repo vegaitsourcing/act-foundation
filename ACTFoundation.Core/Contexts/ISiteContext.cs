@@ -6,6 +6,5 @@ namespace ACTFoundation.Core.Contexts
 	{
 		IPage CurrentPage { get; }
 		Home Home { get; }
-		ISiteSettings SiteSettings { get; }
 	}
 }
