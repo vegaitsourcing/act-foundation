@@ -347,6 +347,7 @@
     <Compile Include="ViewModels\Partials\Layout\HeaderViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\MetaTagsViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\OpenGraphViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Layout\PartnerLogosViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\TopBottomSocialLinksViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\ProjectViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\ListingViewModel.cs" />
