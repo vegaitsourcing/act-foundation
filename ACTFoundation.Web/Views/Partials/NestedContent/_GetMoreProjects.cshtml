@@ -15,27 +15,26 @@
 {
     foreach (var rowItems in rows)
     {
-        <div class="row">
+    <div class="row">
         @foreach (var item in rowItems)
         {
-            <div class="projects-list-item">
-                <div class="project-image">
+            <div class="articles-list-item">
+                <div class="article-image">
                     <img src="@item.Image.Url" alt="" />
                 </div>
-                <div class="project-body">
+                <div class="article-body">
                     <h4 class="m-text">@item.Title</h4>
                     <p class="regular-text">
                         @item.Description
                     </p>
-                    <a class="small-text uppercase" href="#">@Umbraco.GetDictionaryValue("Project.FindOutMore")</a>
                 </div>
             </div>
         }
-        </div>
+    </div>
     }
 }
 
 @if (Model.HasMore())
 {
-<button id="loadMore" onclick="loadMore(projectId, pageNumber)">@Umbraco.GetDictionaryValue("Projects.LoadMore")</button>
+    <button id="loadMore" class="small-text uppercase" onclick="loadMore(projectId, pageNumber)">@Umbraco.GetDictionaryValue("Projects.LoadMore")</button>
 }
