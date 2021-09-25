@@ -483,9 +483,9 @@ nav button {
 
 .article-image img {
   width: 100%;
-  height: 330px;
   object-fit: cover;
   display: block;
+  height: 100%;
 }
 
 .heading-secondary {
@@ -1050,7 +1050,9 @@ form button {
   .row {
     grid-template-columns: repeat(3, 1fr);
   }
-
+.articles .articles-list-item >*{
+  height: 50%;
+}
   .articles-list-item:nth-child(even) {
     flex-direction: column-reverse;
   }
