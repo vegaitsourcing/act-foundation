@@ -1,0 +1,9 @@
+﻿@inherits UmbracoViewPage<ProjectsViewModel>
+
+@if (Model.ProjectContent != null && Model.ProjectContent.Any())
+{
+    foreach (var projectContentElement in Model.ProjectContent)
+    {
+        Html.RenderNestedContent(projectContentElement);
+    }
+}

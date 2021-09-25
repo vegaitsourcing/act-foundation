@@ -340,8 +340,10 @@
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ProjectsViewModel.cs" />
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\DonateAccountsBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\FooterViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\HeaderViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\MetaTagsViewModel.cs" />
@@ -350,6 +352,7 @@
     <Compile Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\DonateAccountInfoViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
   </ItemGroup>

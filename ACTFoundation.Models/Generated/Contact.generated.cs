@@ -51,5 +51,12 @@ namespace ACTFoundation.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("contactContent")]
 		public BannerDefault ContactContent => this.Value<BannerDefault>("contactContent");
+
+		///<summary>
+		/// test
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("test")]
+		public Newtonsoft.Json.Linq.JToken Test => this.Value<Newtonsoft.Json.Linq.JToken>("test");
 	}
 }

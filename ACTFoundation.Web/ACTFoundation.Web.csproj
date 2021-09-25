@@ -494,6 +494,8 @@
     <Content Include="Views\Partials\NestedContent\_BannerCarousel.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BannerDefault.cshtml" />
     <Content Include="Views\Partials\NestedContent\_ButtonLinkItem.cshtml" />
+    <Content Include="Views\Projects.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_DonateAccountsBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

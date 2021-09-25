@@ -95,6 +95,13 @@ namespace ACTFoundation.Models.Generated
 		public string Password => this.Value<string>("password");
 
 		///<summary>
+		/// Receiver email address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("receiverEmailAddress")]
+		public string ReceiverEmailAddress => this.Value<string>("receiverEmailAddress");
+
+		///<summary>
 		/// Robots: Content that will be served when Robots.txt is requested.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
