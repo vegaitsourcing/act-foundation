@@ -13,16 +13,19 @@ namespace ACTFoundation.Core.ViewModels.Partials.Blocks
             Title = donateAccountsBlock.Title;
             Description = donateAccountsBlock.Description;
             CtaText = donateAccountsBlock.CtaText;
-            DonateAccounts = donateAccountsBlock.Projects.Select(dab => new DonateAccountInfoViewModel
-            {
-                Id = (dab as Project).Id,
-                Account = (dab as Project).Account,
-                Title = (dab as Project).Title,
-                CallingModel = (dab as Project).CallingModel,
-                CallNumber = (dab as Project).CallNumber,
-                Recepient = (dab as Project).Recepient,
-                Url = Current.UmbracoContext.UrlProvider.GetUrl((dab as Project).Id)
-            }); 
+            DonateAccounts = donateAccountsBlock.Projects.Select(dab => {
+                var project = dab as Project;
+                return new DonateAccountInfoViewModel
+                {
+                    Id = project.Id,
+                    Account = project.Account,
+                    Title = project.Title,
+                    CallingModel = project.CallingModel,
+                    CallNumber = project.CallNumber,
+                    Recepient = project.Recepient,
+                    Url = Current.UmbracoContext.UrlProvider.GetUrl(project.Id)
+                };
+            });
         }
 
         public string Title { get; }
