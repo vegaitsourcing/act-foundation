@@ -4,6 +4,7 @@ using ACTFoundation.Core.Contexts;
 using ACTFoundation.Core.Extensions;
 using ACTFoundation.Core.ViewModels.Blocks;
 using ACTFoundation.Core.ViewModels.Partials.Layout;
+using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Models.Generated;
 
 namespace ACTFoundation.Core.ViewModels.Pages
@@ -26,7 +27,6 @@ namespace ACTFoundation.Core.ViewModels.Pages
 		}
 
 		public MetaTagsViewModel MetaTags => MetaTagsLazy.Value;
-		public DonateBlockViewModel DonateBlock => DonateBlockLazy.Value;
 		public OpenGraphViewModel OpenGraph => OpenGraphLazy.Value;
 		public HeaderViewModel Header => HeaderLazy.Value;
 		public FooterViewModel Footer => FooterLazy.Value;
@@ -43,9 +43,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
 		private Lazy<DonateBlockViewModel> DonateBlockLazy { get; }
 		private Lazy<HeaderViewModel> HeaderLazy { get; }
 		private Lazy<FooterViewModel> FooterLazy { get; }
-
 		private Lazy<TopBottomSocialLinksViewModel> TopBottomSocialLinksLazy { get; }
-		
 		private Lazy<string> CookieScriptLazy { get; }
 		private Lazy<string> GoogleTagManagerScriptCodeLazy { get; }
 		private Lazy<string> GoogleTagManagerNonScriptCodeLazy { get; }
