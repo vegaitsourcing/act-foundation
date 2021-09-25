@@ -16,9 +16,12 @@
       ),
       url(@Model.MainImage.Url) no-repeat center;">
     <div class="chips">
-        @foreach (var tag in @Model.Tags)
+        @if (Model.Tags != null)
         {
-        <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+            foreach (var tag in Model.Tags)
+            {
+                <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+            }
         }
         <div class="chips__author">
             <p>by <span>@Model.Author</span><br />@Model.CreateDate</p>
@@ -33,66 +36,19 @@
     </div>
 
     <div class="article-sidebar">
+        @foreach (var article in Model.RelatedArticles) {
         <div class="articles-list-item">
             <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
-                     alt="" />
+                <img src=@article.MainImage.Url alt="" />
             </div>
             <div class="article-body">
-                <h4 class="m-text">Naziv clanka</h4>
+                <h4 class="m-text">@article.Title</h4>
                 <p class="regular-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris...
+                    @Html.Raw(article.TextPreview)
                 </p>
-                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
+                <a class="small-text uppercase" href="@article.Link">PROCITAJ VISE</a>
             </div>
         </div>
-        <div class="articles-list-item">
-            <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
-                     alt="" />
-            </div>
-            <div class="article-body">
-                <h4 class="m-text">Naziv clanka</h4>
-                <p class="regular-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris...
-                </p>
-                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
-            </div>
-        </div>
-        <div class="articles-list-item">
-            <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
-                     alt="" />
-            </div>
-            <div class="article-body">
-                <h4 class="m-text">Naziv clanka</h4>
-                <p class="regular-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris...
-                </p>
-                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
-            </div>
-        </div>
-        <div class="articles-list-item">
-            <div class="article-image">
-                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
-                     alt="" />
-            </div>
-            <div class="article-body">
-                <h4 class="m-text">Naziv clanka</h4>
-                <p class="regular-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris...
-                </p>
-                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
-            </div>
-        </div>
+        }
     </div>
-
  </div>

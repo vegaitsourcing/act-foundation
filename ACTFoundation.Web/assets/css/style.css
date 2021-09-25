@@ -148,7 +148,6 @@ button {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
 }
 
 .hero--article {
@@ -190,10 +189,7 @@ button {
 
 .hero__buttons {
   display: flex;
-}
-
-.hero__buttons > * + * {
-  margin-left: 26px;
+  flex-direction: column;
 }
 
 .hero__buttons a {
@@ -221,6 +217,15 @@ button {
 
 .hero__buttons--green {
   background-color: var(--color-green);
+}
+
+@media screen and (min-width: 410px) {
+  .hero__buttons {
+    flex-direction: row;
+  }
+  .hero__buttons > * + * {
+    margin-left: 26px;
+  }
 }
 
 /* CHIPS */
@@ -836,7 +841,7 @@ form button {
   font-size: var(--regular-text);
 }
 .hero {
-  height: 100vh;
+  height: calc(100vh - 55px - 20px);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -918,12 +923,6 @@ nav a:hover {
 
 nav button {
   margin-top: 2rem;
-}
-.hero {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 @media screen and (min-width: 992px) {

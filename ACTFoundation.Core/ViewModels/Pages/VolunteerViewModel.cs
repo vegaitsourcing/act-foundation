@@ -1,4 +1,5 @@
 ﻿using ACTFoundation.Core.Contexts;
+using ACTFoundation.Core.ViewModels.Partials.Items;
 using ACTFoundation.Models.Generated;
 
 
@@ -8,9 +9,9 @@ namespace ACTFoundation.Core.ViewModels.Pages
 	{
 		public VolunteerViewModel(IPageContext<Volunteer> context) : base(context)
 		{
-			VolunteerContent = context.Page.VolunteerContent;
+			VolunteerContent = new BannerCarouselItemViewModel(context.Page?.VolunteerContent);
 		}
 
-		public BannerDefault VolunteerContent { get; }
+		public BannerCarouselItemViewModel VolunteerContent { get; }
 	}
 }

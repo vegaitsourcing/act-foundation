@@ -1,6 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactViewModel>
 
-@{Html.RenderNestedContent(Model.MainContent);}
+@if (Model.DonateContent != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.DonateContent);
+}
+
 
 @if (Model.IsSubmitted)
 {
