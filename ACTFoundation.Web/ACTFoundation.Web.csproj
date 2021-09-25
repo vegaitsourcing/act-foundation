@@ -504,6 +504,7 @@
     <Content Include="Views\Partials\PublishedElement.cshtml" />
     <Content Include="Views\Partials\Testimonials.cshtml" />
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
+    <Content Include="Views\Partials\Blocks\_WhoWeAreBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\DonateBlock.cshtml" />
     <Content Include="Views\Partials\Volunteers.cshtml" />

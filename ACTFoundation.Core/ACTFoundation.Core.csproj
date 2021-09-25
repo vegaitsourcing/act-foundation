@@ -338,6 +338,7 @@
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
     <Compile Include="ViewModels\Blocks\DonateBlockViewModel.cs" />
+    <Compile Include="ViewModels\Blocks\WhoWeAreBlockViewModel.cs" />
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
