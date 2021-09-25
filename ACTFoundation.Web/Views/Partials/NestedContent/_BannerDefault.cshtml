@@ -4,10 +4,22 @@
 
 @if (!string.IsNullOrWhiteSpace(Model.Title))
 {
-    <h2>
-        @Model.Title
-
-    </h2>
+    <header class="hero" style="
+        background: linear-gradient(
+        180deg,
+        #000000 -33.39%,
+        rgba(0, 0, 0, 0.4) 23.71%,
+        rgba(0, 0, 0, 0.4) 61.3%,
+        #000000 105.39%
+        ),
+    url(@Model.BackgroundImage)
+      no-repeat center / cover;
+  ">
+        <h1>@Model.Title!</h1>
+        <p>
+           @Model.Description
+        </p>
+    </header>
 }
 
 @foreach (var buttonLink in Model.ButtonLinks)

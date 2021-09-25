@@ -48,14 +48,14 @@ namespace ACTFoundation.Models.Generated
 		///<summary>
 		/// Donate Content
 		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuildFer", "8.1.6")]
 		[ImplementPropertyType("donateContent")]
-		public BannerDefault DonateContent => this.Value<BannerDefault>("donateContent");
+		public IPublishedElement DonateContent => this.Value<IPublishedElement>("donateContent");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
 		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("UFmbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("alternateLanguages")]
 		public IEnumerable<string> AlternateLanguages => Page.GetAlternateLanguages(this);
 

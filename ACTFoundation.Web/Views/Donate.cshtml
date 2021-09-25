@@ -1,0 +1,6 @@
+﻿@inherits UmbracoViewPage<DonateViewModel>
+
+@if (Model.DonateContent != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.DonateContent);
+}
