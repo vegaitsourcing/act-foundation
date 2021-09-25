@@ -1,0 +1,36 @@
+.story-box {
+  text-align: center;
+  padding: var(--default-spacing);
+}
+.story-box > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.story-box span {
+  opacity: 0.4;
+}
+.story-wrapper > img {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
+  display: block;
+}
+.story-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--default-spacing) 0;
+}
+.story-logo-wrapper img {
+  height: 20rem;
+  width: 20rem;
+}
+
+
+@media screen and (min-width: 992px) {
+    .story-logo-wrapper img {
+        height: 30rem;
+        width: 30rem;
+      }
+      .story-box p{
+        text-align: start;
+      }
+}
