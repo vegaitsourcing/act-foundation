@@ -6,34 +6,34 @@ using ACTFoundation.Core.Extensions;
 
 namespace ACTFoundation.Core.Controllers.Surface
 {
-	public abstract class BaseSurfaceController : SurfaceController
-	{
-		protected ISiteContext CreateSiteContext()
-			=> Umbraco.CreateSiteContext();
-		
-		/// <summary>
-		/// Called when an unhandled exception occurs on a controller level (during action processing).
-		/// </summary>
-		/// <param name="filterContext">Information about the current request.</param>
-		protected override void OnException(ExceptionContext filterContext)
-		{
-			if (filterContext.ExceptionHandled)
-			{
-				return;
-			}
+    public abstract class BaseSurfaceController : SurfaceController
+    {
+        protected ISiteContext CreateSiteContext()
+            => Umbraco.CreateSiteContext();
 
-			Logger.Error(GetType(), filterContext.Exception, $"An unhandled exception occurred on surface controller action '{filterContext.RouteData.Values["action"]}'!");
+        /// <summary>
+        /// Called when an unhandled exception occurs on a controller level (during action processing).
+        /// </summary>
+        /// <param name="filterContext">Information about the current request.</param>
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            if (filterContext.ExceptionHandled)
+            {
+                return;
+            }
 
-			filterContext.ExceptionHandled = true;
+            Logger.Error(GetType(), filterContext.Exception, $"An unhandled exception occurred on surface controller action '{filterContext.RouteData.Values["action"]}'!");
 
-			if (filterContext.IsChildAction)
-	        {
-				// Return empty result, to prevent the whole page failure.
-		        filterContext.Result = new EmptyResult();
-		        return;
-	        }
+            filterContext.ExceptionHandled = true;
 
-			filterContext.Result = new HttpStatusCodeResult(HttpStatusCode.InternalServerError);
-		}
-	}
+            if (filterContext.IsChildAction)
+            {
+                // Return empty result, to prevent the whole page failure.
+                filterContext.Result = new EmptyResult();
+                return;
+            }
+
+            filterContext.Result = new HttpStatusCodeResult(HttpStatusCode.InternalServerError);
+        }
+    }
 }

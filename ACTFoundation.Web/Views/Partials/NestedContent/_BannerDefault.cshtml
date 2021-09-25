@@ -1,26 +1,25 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Items.BannerCarouselItemViewModel>
 
-@if (!string.IsNullOrWhiteSpace(Model.Title))
-{
-    <header class="hero" style="
-        background: linear-gradient(
-        180deg,
-        #000000 -33.39%,
-        rgba(0, 0, 0, 0.4) 23.71%,
-        rgba(0, 0, 0, 0.4) 61.3%,
-        #000000 105.39%
-        ),
-    url(@Model.BackgroundImage)
-      no-repeat center / cover;
-  ">
-        <h1>@Model.Title!</h1>
-        <p>
-           @Model.Description
-        </p>
-    </header>
-}
-
-@foreach (var buttonLink in Model.ButtonLinks)
-{
-    Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
-}
+    @if (!string.IsNullOrWhiteSpace(Model.Title))
+    {
+        <div class="hero swiper-slide" style="
+                background: linear-gradient(
+                180deg,
+                #000000 -33.39%,
+                rgba(0, 0, 0, 0.4) 23.71%,
+                rgba(0, 0, 0, 0.4) 61.3%,
+                #000000 105.39%
+                ),
+            url(@Model.BackgroundImage)
+              no-repeat center / cover;
+          ">
+            <h1>@Model.Title!</h1>
+            <p>
+                @Model.Description
+            </p>
+            @foreach (var buttonLink in Model.ButtonLinks)
+            {
+                Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
+            }
+        </div>
+    }
