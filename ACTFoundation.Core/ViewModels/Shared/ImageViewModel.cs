@@ -17,9 +17,9 @@ namespace ACTFoundation.Core.ViewModels.Shared
 			AlternateText = alternateText;
 		}
 
-		public ImageViewModel(Image image)
-			: this(image.Url(), image.MediaUrl(mode: UrlMode.Absolute), image.Type,
-				  image.Width, image.Height, string.IsNullOrWhiteSpace(image.AlternateText) ? image.Name : image.AlternateText)
+		public ImageViewModel(Image image) 
+			: this(image?.Url(), image?.MediaUrl(mode: UrlMode.Absolute), image?.Type,
+				  image?.Width ?? 0, image?.Height ?? 0, string.IsNullOrWhiteSpace(image?.AlternateText) ? image?.Name : image?.AlternateText)
 		{ }
 
 		public string Url { get; }
