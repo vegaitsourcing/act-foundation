@@ -6,7 +6,7 @@ namespace ACTFoundation.Core.ViewModels.Shared
 {
 	public class ImageViewModel
 	{
-		public ImageViewModel(string url, string urlAbsolute, string type, 
+		public ImageViewModel(string url, string urlAbsolute, string type,
 			int width, int height, string alternateText = null)
 		{
 			Url = url;
@@ -18,8 +18,8 @@ namespace ACTFoundation.Core.ViewModels.Shared
 		}
 
 		public ImageViewModel(Image image) 
-			: this(image.Url(), image.MediaUrl(mode: UrlMode.Absolute), image.Type,
-				  image.Width, image.Height, string.IsNullOrWhiteSpace(image.AlternateText) ? image.Name : image.AlternateText)
+			: this(image?.Url(), image?.MediaUrl(mode: UrlMode.Absolute), image?.Type,
+				  image?.Width ?? 0, image?.Height ?? 0, string.IsNullOrWhiteSpace(image?.AlternateText) ? image?.Name : image?.AlternateText)
 		{ }
 
 		public string Url { get; }

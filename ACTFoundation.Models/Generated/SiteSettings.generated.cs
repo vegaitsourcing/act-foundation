@@ -95,11 +95,25 @@ namespace ACTFoundation.Models.Generated
 		public string Password => this.Value<string>("password");
 
 		///<summary>
+		/// Receiver email address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("receiverEmailAddress")]
+		public string ReceiverEmailAddress => this.Value<string>("receiverEmailAddress");
+
+		///<summary>
 		/// Robots: Content that will be served when Robots.txt is requested.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("robots")]
 		public string Robots => this.Value<string>("robots");
+
+		///<summary>
+		/// Sender email address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("senderEmailAddress")]
+		public string SenderEmailAddress => this.Value<string>("senderEmailAddress");
 
 		///<summary>
 		/// Site Name: The site name.
@@ -121,12 +135,5 @@ namespace ACTFoundation.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("sMTPServer")]
 		public string SMtpserver => this.Value<string>("sMTPServer");
-
-		///<summary>
-		/// Username
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("username")]
-		public string Username => this.Value<string>("username");
 	}
 }

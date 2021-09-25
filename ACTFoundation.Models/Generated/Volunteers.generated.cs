@@ -46,31 +46,10 @@ namespace ACTFoundation.Models.Generated
 		// properties
 
 		///<summary>
-		/// Description
+		/// Volunteers Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public IHtmlString Description => this.Value<IHtmlString>("description");
-
-		///<summary>
-		/// Join link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("joinLink")]
-		public Umbraco.Web.Models.Link JoinLink => this.Value<Umbraco.Web.Models.Link>("joinLink");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
-
-		///<summary>
-		/// Volunteer Items
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("volunteerItems")]
-		public IEnumerable<VolunteerItem> VolunteerItems => this.Value<IEnumerable<VolunteerItem>>("volunteerItems");
+		[ImplementPropertyType("volunteersContent")]
+		public IEnumerable<IPublishedContent> VolunteersContent => this.Value<IEnumerable<IPublishedContent>>("volunteersContent");
 	}
 }

@@ -1,0 +1,18 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.WhoWeAreBlockViewModel>
+
+<div class="about-wrapper">
+    <div class="donate-images">
+        @foreach (var picture in Model.Pictures)
+        {
+            <div>
+                <img src="@picture.Url()" />
+            </div>
+        }
+    </div>
+    <div class="bg-yellow donate-content">
+        <h3 class="l-text bold">@Model.Title</h3>
+        <p class="m-text">
+            @Html.Raw(Model.Text)
+        </p>
+    </div>
+</div>
