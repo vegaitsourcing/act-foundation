@@ -20,46 +20,9 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace ACTFoundation.Models.Generated
 {
-	// Mixin Content Type with alias "siteSettings"
-	/// <summary>Site Settings</summary>
-	public partial interface ISiteSettings : IPublishedContent
-	{
-		/// <summary>Canonical Domain</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string CanonicalDomain { get; }
-
-		/// <summary>Cookie Script</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string CookieScript { get; }
-
-		/// <summary>Google Analytics Script Code</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string GoogleAnalyticsScriptCode { get; }
-
-		/// <summary>Google Tag Manager Non-Script Code</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string GoogleTagManagerNonScriptCode { get; }
-
-		/// <summary>Google Tag Manager Script Code</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string GoogleTagManagerScriptCode { get; }
-
-		/// <summary>Hide All Pages From Search Engines</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		bool HideAllPagesFromSearchEngines { get; }
-
-		/// <summary>Robots</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string Robots { get; }
-
-		/// <summary>Site Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string SiteName { get; }
-	}
-
 	/// <summary>Site Settings</summary>
 	[PublishedModel("siteSettings")]
-	public partial class SiteSettings : PublishedContentModel, ISiteSettings
+	public partial class SiteSettings : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -87,87 +50,83 @@ namespace ACTFoundation.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("canonicalDomain")]
-		public string CanonicalDomain => GetCanonicalDomain(this);
-
-		/// <summary>Static getter for Canonical Domain</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetCanonicalDomain(ISiteSettings that) => that.Value<string>("canonicalDomain");
+		public string CanonicalDomain => this.Value<string>("canonicalDomain");
 
 		///<summary>
 		/// Cookie Script
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("cookieScript")]
-		public string CookieScript => GetCookieScript(this);
-
-		/// <summary>Static getter for Cookie Script</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetCookieScript(ISiteSettings that) => that.Value<string>("cookieScript");
+		public string CookieScript => this.Value<string>("cookieScript");
 
 		///<summary>
 		/// Google Analytics Script Code
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("googleAnalyticsScriptCode")]
-		public string GoogleAnalyticsScriptCode => GetGoogleAnalyticsScriptCode(this);
-
-		/// <summary>Static getter for Google Analytics Script Code</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetGoogleAnalyticsScriptCode(ISiteSettings that) => that.Value<string>("googleAnalyticsScriptCode");
+		public string GoogleAnalyticsScriptCode => this.Value<string>("googleAnalyticsScriptCode");
 
 		///<summary>
 		/// Google Tag Manager Non-Script Code
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("googleTagManagerNonScriptCode")]
-		public string GoogleTagManagerNonScriptCode => GetGoogleTagManagerNonScriptCode(this);
-
-		/// <summary>Static getter for Google Tag Manager Non-Script Code</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetGoogleTagManagerNonScriptCode(ISiteSettings that) => that.Value<string>("googleTagManagerNonScriptCode");
+		public string GoogleTagManagerNonScriptCode => this.Value<string>("googleTagManagerNonScriptCode");
 
 		///<summary>
 		/// Google Tag Manager Script Code
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("googleTagManagerScriptCode")]
-		public string GoogleTagManagerScriptCode => GetGoogleTagManagerScriptCode(this);
-
-		/// <summary>Static getter for Google Tag Manager Script Code</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetGoogleTagManagerScriptCode(ISiteSettings that) => that.Value<string>("googleTagManagerScriptCode");
+		public string GoogleTagManagerScriptCode => this.Value<string>("googleTagManagerScriptCode");
 
 		///<summary>
 		/// Hide All Pages From Search Engines: This will create robots meta tag with "noindex,nofollow" value. Note: this should be unchecked on the live site.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("hideAllPagesFromSearchEngines")]
-		public bool HideAllPagesFromSearchEngines => GetHideAllPagesFromSearchEngines(this);
+		public bool HideAllPagesFromSearchEngines => this.Value<bool>("hideAllPagesFromSearchEngines");
 
-		/// <summary>Static getter for Hide All Pages From Search Engines</summary>
+		///<summary>
+		/// Password
+		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static bool GetHideAllPagesFromSearchEngines(ISiteSettings that) => that.Value<bool>("hideAllPagesFromSearchEngines");
+		[ImplementPropertyType("password")]
+		public string Password => this.Value<string>("password");
 
 		///<summary>
 		/// Robots: Content that will be served when Robots.txt is requested.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("robots")]
-		public string Robots => GetRobots(this);
-
-		/// <summary>Static getter for Robots</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetRobots(ISiteSettings that) => that.Value<string>("robots");
+		public string Robots => this.Value<string>("robots");
 
 		///<summary>
 		/// Site Name: The site name.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("siteName")]
-		public string SiteName => GetSiteName(this);
+		public string SiteName => this.Value<string>("siteName");
 
-		/// <summary>Static getter for Site Name</summary>
+		///<summary>
+		/// SMTP port
+		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetSiteName(ISiteSettings that) => that.Value<string>("siteName");
+		[ImplementPropertyType("sMTPPort")]
+		public string SMtpport => this.Value<string>("sMTPPort");
+
+		///<summary>
+		/// SMTP server
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("sMTPServer")]
+		public string SMtpserver => this.Value<string>("sMTPServer");
+
+		///<summary>
+		/// Username
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("username")]
+		public string Username => this.Value<string>("username");
 	}
 }
