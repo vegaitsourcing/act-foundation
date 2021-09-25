@@ -1,6 +1,40 @@
-﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.DonateAccountsBlock>
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.DonateAccountsBlockViewModel>
 
-@if (!string.IsNullOrWhiteSpace(Model.Title))
-{
-    
-}
+<script src="@Url.Content("~/assets/scripts/donateAccountsBlock.js")" ></script>
+
+
+<script>
+    var serializedProjects = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.DonateAccounts));
+</script>
+
+<div class="payment-slip">
+    <div class="payment-slip__donate">
+        <h2>@Model.Title</h2>
+        <p>@Model.Description</p>
+        <select name="project" id="project-select" onchange="selectProject()">
+            @{
+                foreach (var donateAccount in Model.DonateAccounts)
+                {
+                    <option value="@donateAccount.Id">@donateAccount.Title</option>
+                }
+            }
+        </select>
+        <a id="more-info" href="@Model.DonateAccounts.ElementAt(0).Url">Vidi informacije</a>
+    </div>
+    <div class="payment-slip__details">
+        <p class="payment-slip__details__label">Primalac:</p>
+        <p class="payment-slip__details__value" id="recepient">@Model.DonateAccounts.ElementAt(0).Recepient</p>
+        <div class="payment-slip__details__model">
+            <div>
+                <p class="payment-slip__details__label">Model</p>
+                <p class="payment-slip__details__value" id="calling-number">@Model.DonateAccounts.ElementAt(0).CallNumber</p>
+            </div>
+            <div class="payment-slip__reference-number">
+                <p class="payment-slip__details__label">Poziv na broj</p>
+                <p class="payment-slip__details__value" id="reference-number">@Model.DonateAccounts.ElementAt(0).CallingModel</p>
+            </div>
+        </div>
+        <p class="payment-slip__details__label">Racun:</p>
+        <p class="payment-slip__details__value" id="account">@Model.DonateAccounts.ElementAt(0).Account</p>
+    </div>
+</div>

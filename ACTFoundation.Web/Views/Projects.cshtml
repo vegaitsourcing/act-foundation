@@ -1,9 +1,6 @@
 ﻿@inherits UmbracoViewPage<ProjectsViewModel>
 
-@if (Model.ProjectContent != null && Model.ProjectContent.Any())
+@if (Model.DonateAccountsBlock != null)
 {
-    foreach (var projectContentElement in Model.ProjectContent)
-    {
-        Html.RenderNestedContent(projectContentElement);
-    }
+    Html.RenderPartial("_DonateAccountsBlock", Model.DonateAccountsBlock);
 }
