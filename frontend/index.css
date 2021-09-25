@@ -4,7 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;}
+  font-family: "Poppins", sans-serif;
+}
 
 a {
   text-decoration: none;
@@ -138,7 +139,28 @@ button {
   text-align: center;
   height: 100vh;
 }
-.hero > *:not(:last-child){
+
+.hero--article {
+  height: 673px;
+  position: relative;
+}
+
+.hero--article .chips {
+  bottom: 36px;
+  left: 94px;
+  position: absolute;
+}
+
+.hero--article .chips .chips__author {
+  color: white;
+}
+
+.hero .chips__author p {
+  opacity: 0.9;
+  text-align: left;
+}
+
+.hero > *:not(:last-child) {
   margin-bottom: 2rem;
 }
 .hero h1 {
@@ -190,4 +212,48 @@ button {
   background-color: var(--color-green);
 }
 
-/*********************/
+/* CHIPS */
+
+.chips {
+  align-items: center;
+  display: flex;
+}
+
+.chip {
+  border-radius: 9999px;
+  color: white;
+  font-size: 14px;
+  height: fit-content;
+  line-height: normal;
+  opacity: 0.7;
+  padding: 8px 16px;
+  text-transform: lowercase;
+}
+
+.chip + .chip {
+  margin-left: 10px;
+}
+
+.chip--orange {
+  background-color: #f15e24;
+}
+
+.chip--green {
+  background-color: #2e8b38;
+}
+
+.chips__author p {
+  font-size: 14px;
+  line-height: normal;
+  margin: 0;
+  margin-left: 18px;
+}
+
+.article .chips__author p {
+  margin: 0;
+  margin-left: 18px;
+}
+
+.article__author p span {
+  font-weight: 700;
+}
