@@ -34,7 +34,13 @@ nav {
 }
 nav a {
   margin-bottom: 1rem;
+  text-decoration: none;
 }
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 nav button {
   margin-top: 2rem;
 }
