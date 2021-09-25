@@ -1,13 +1,12 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.VolunteerItem>
 
-
 <div class="volunteer-card swiper-slide">
     <img class="volunteer-img"
-         src="@Model.Picture.Url()" />
+         src="@(Model.Picture?.Url())" />
     <p class="bold m-text">@Model.FullName</p>
     @Model.Occupation
     <p class="regular-text">
         @Model.Description
     </p>
-    <a href="@Model.ContactLink.Url" class="bg-white cl-black border-black">@Model.Link.Name</a>
+    <a href="@Model.ContactLink.Url" class="bg-white cl-black border-black">@Model.ContactLink.Name</a>
 </div>

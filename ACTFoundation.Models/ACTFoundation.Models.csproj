@@ -417,16 +417,10 @@
     <Compile Include="Generated\AccountInformation.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generated\Article.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
     <Compile Include="Generated\BannerCarousel.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\BannerDefault.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Generated\Blog.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\ButtonLinkItem.generated.cs">
@@ -439,12 +433,6 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\Donate.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Generated\DonateAccountsBlock.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Generated\DonateBlock.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\Error404.generated.cs">
@@ -489,9 +477,6 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="Generated\OurStoryBlock.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
@@ -557,9 +542,6 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\VolunteersShared.generated.cs">
-      <DependentUpon>ModelsBuilder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Generated\WhoWeAreBlock.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="MediaTypes\IMedia.cs" />
