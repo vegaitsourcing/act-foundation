@@ -517,6 +517,9 @@
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
+    <Content Include="Views\Partials\Blocks\_Blog.cshtml" />
+    <Content Include="Views\Partials\Blocks\_News.cshtml" />
+    <Content Include="Views\Partials\News\_GetMoreNews.cshtml" />
     <Content Include="Views\Partials\NestedContent\_GetMoreProjects.cshtml" />
     <Content Include="Views\Donate.cshtml" />
     <Content Include="Views\Article.cshtml" />
