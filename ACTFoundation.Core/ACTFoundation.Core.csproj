@@ -362,6 +362,7 @@
     <Compile Include="ViewModels\Shared\ButtonLinkItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\VolunteersSharedViewModel.cs" />
     <Compile Include="ViewModels\Shared\VolunteersViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

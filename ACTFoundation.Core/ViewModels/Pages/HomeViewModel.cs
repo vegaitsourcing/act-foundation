@@ -25,7 +25,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
 			var volunteers = context.Page.MainContent.FirstOrDefault(item => item is Volunteers);
 			if (volunteers != null)
 			{
-				Volunteers = new VolunteersViewModel(volunteers as VolunteersShared);
+				Volunteers = new VolunteersViewModel(volunteers as Volunteers);
 			}
 		}
 
