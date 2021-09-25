@@ -311,6 +311,7 @@
     <Compile Include="Contexts\SiteContext.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
+    <Compile Include="Controllers\RenderMvc\ArticleController.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectsController.cs" />
     <Compile Include="Controllers\RenderMvc\SearchResultsController.cs" />
@@ -342,6 +343,7 @@
     <Compile Include="ViewModels\Blocks\DonateBlockViewModel.cs" />
     <Compile Include="ViewModels\Blocks\WhoWeAreBlockViewModel.cs" />
     <Compile Include="ViewModels\Pages\Error404ViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ArticleViewModel.cs" />
     <Compile Include="ViewModels\Pages\HomeViewModel.cs" />
     <Compile Include="ViewModels\Pages\PageViewModel.cs" />
     <Compile Include="ViewModels\Pages\ProjectsViewModel.cs" />
@@ -365,6 +367,7 @@
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\DonateAccountInfoViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TagViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
