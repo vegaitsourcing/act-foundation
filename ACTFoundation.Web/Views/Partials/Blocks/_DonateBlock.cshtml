@@ -1,0 +1,22 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.DonateBlockViewModel>
+<link rel="stylesheet" href="../index.css" />
+<link rel="stylesheet" href="./donate.css" />
+
+<div class="donate-wrapper">
+    <div class="bg-yellow donate-content">
+        <h3 class="l-text bold">@Model.Title</h3>
+        <p class="m-text">
+            @Html.Raw(Model.Text)
+        </p>
+        <button class="bg-orange cl-white">@Model.SeeMoreLink.Name</button>
+    </div>
+    <div class="donate-images">
+        @foreach (var link in @Model.images)
+        {
+            <div>
+                <img src=@link.Url() />
+            </div>
+        }
+    </div>
+</div>
+

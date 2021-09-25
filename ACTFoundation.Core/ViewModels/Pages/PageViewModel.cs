@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using ACTFoundation.Core.Contexts;
 using ACTFoundation.Core.Extensions;
+using ACTFoundation.Core.ViewModels.Blocks;
 using ACTFoundation.Core.ViewModels.Partials.Layout;
 using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Models.Generated;
@@ -18,7 +20,6 @@ namespace ACTFoundation.Core.ViewModels.Pages
 			HeaderLazy = new Lazy<HeaderViewModel>(() => new HeaderViewModel(context.Home));
 			FooterLazy = new Lazy<FooterViewModel>(() => new FooterViewModel(context.Home));
 			TopBottomSocialLinksLazy = new Lazy<TopBottomSocialLinksViewModel>(() => new TopBottomSocialLinksViewModel(context.Home));
-
 			//CookieScriptLazy = new Lazy<string>(() => context.Home.CookieScript);
 			//GoogleTagManagerScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerScriptCode);
 			//GoogleTagManagerNonScriptCodeLazy = new Lazy<string>(() => context.Home.GoogleTagManagerNonScriptCode);
@@ -38,6 +39,8 @@ namespace ACTFoundation.Core.ViewModels.Pages
 
 		private Lazy<MetaTagsViewModel> MetaTagsLazy { get; }
 		private Lazy<OpenGraphViewModel> OpenGraphLazy { get; }
+
+		private Lazy<DonateBlockViewModel> DonateBlockLazy { get; }
 		private Lazy<HeaderViewModel> HeaderLazy { get; }
 		private Lazy<FooterViewModel> FooterLazy { get; }
 		private Lazy<TopBottomSocialLinksViewModel> TopBottomSocialLinksLazy { get; }

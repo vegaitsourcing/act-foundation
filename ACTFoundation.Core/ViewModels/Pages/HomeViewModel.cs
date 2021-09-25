@@ -1,4 +1,5 @@
 ﻿using ACTFoundation.Core.Contexts;
+using ACTFoundation.Core.ViewModels.Blocks;
 using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Models.Generated;
 using System.Collections.Generic;
@@ -18,10 +19,18 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
 				Testimonials = new TestimonialsViewModel((Testimonials)testimonials);
             }
+
+			var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
+			if (donateBlock != null)
+			{
+				DonateBlock = new DonateBlockViewModel((DonateBlock) donateBlock);
+			}
 		}
 
         public IEnumerable<IPublishedElement> MainContent { get; }
 
 		public TestimonialsViewModel Testimonials { get; }
-    }
+		public DonateBlockViewModel DonateBlock { get; }
+
+	}
 }
