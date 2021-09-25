@@ -455,6 +455,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\scripts\projectsListing.js" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -513,6 +514,7 @@
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_GetMoreProjects.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

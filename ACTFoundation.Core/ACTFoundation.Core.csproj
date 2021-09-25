@@ -317,6 +317,7 @@
     <Compile Include="Controllers\RenderMvc\XMLSitemapController.cs" />
     <Compile Include="Controllers\Surface\BaseSurfaceController.cs" />
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
+    <Compile Include="Controllers\Surface\ProjectsListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\HttpContextExtensions.cs" />
@@ -347,6 +348,7 @@
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\DonateAccountsBlockViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\ProjectCardViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\TestimonialItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\FooterViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\CurrentProjectsViewModel.cs" />
