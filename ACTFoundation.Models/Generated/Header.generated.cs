@@ -27,6 +27,14 @@ namespace ACTFoundation.Models.Generated
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		Image Logo { get; }
+
+		/// <summary>Main navigation Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		Umbraco.Web.Models.Link MainNavigationButton { get; }
+
+		/// <summary>Main navigation Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks { get; }
 	}
 
 	/// <summary>Header</summary>
@@ -64,5 +72,27 @@ namespace ACTFoundation.Models.Generated
 		/// <summary>Static getter for Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static Image GetLogo(IHeader that) => that.Value<Image>("logo");
+
+		///<summary>
+		/// Main navigation Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mainNavigationButton")]
+		public Umbraco.Web.Models.Link MainNavigationButton => GetMainNavigationButton(this);
+
+		/// <summary>Static getter for Main navigation Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static Umbraco.Web.Models.Link GetMainNavigationButton(IHeader that) => that.Value<Umbraco.Web.Models.Link>("mainNavigationButton");
+
+		///<summary>
+		/// Main navigation Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mainNavigationLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks => GetMainNavigationLinks(this);
+
+		/// <summary>Static getter for Main navigation Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<Umbraco.Web.Models.Link> GetMainNavigationLinks(IHeader that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("mainNavigationLinks");
 	}
 }

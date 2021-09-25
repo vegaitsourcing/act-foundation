@@ -22,7 +22,7 @@ namespace ACTFoundation.Models.Generated
 {
 	/// <summary>Project</summary>
 	[PublishedModel("project")]
-	public partial class Project : PublishedContentModel
+	public partial class Project : PublishedContentModel, IAccountInformation
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -72,5 +72,33 @@ namespace ACTFoundation.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]
 		public string Title => this.Value<string>("title");
+
+		///<summary>
+		/// Account: Racun
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("account")]
+		public string Account => AccountInformation.GetAccount(this);
+
+		///<summary>
+		/// Calling Model: Model
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("callingModel")]
+		public string CallingModel => AccountInformation.GetCallingModel(this);
+
+		///<summary>
+		/// Call number: Poziv na broj
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("callNumber")]
+		public string CallNumber => AccountInformation.GetCallNumber(this);
+
+		///<summary>
+		/// Recepient: Primalac
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("recepient")]
+		public string Recepient => AccountInformation.GetRecepient(this);
 	}
 }
