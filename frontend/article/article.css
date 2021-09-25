@@ -55,3 +55,7 @@
 .article blockquote::after {
   content: "\201D";
 }
+
+.article__bottom-chips {
+  margin-top: 48px;
+}
