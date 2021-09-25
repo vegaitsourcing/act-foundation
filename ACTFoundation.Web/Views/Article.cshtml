@@ -1,0 +1,98 @@
+﻿@inherits UmbracoViewPage<ArticleViewModel>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300&display=swap"
+      rel="stylesheet" />
+
+<header class="hero hero--article"
+        style="
+        background: linear-gradient(
+        180deg,
+        #000000 -33.39%,
+        rgba(0, 0, 0, 0.4) 23.71%,
+        rgba(0, 0, 0, 0.4) 61.3%,
+        #000000 105.39%
+      ),
+      url(@Model.MainImage.Url) no-repeat center;">
+    <div class="chips">
+        @foreach (var tag in @Model.Tags)
+        {
+        <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+        }
+        <div class="chips__author">
+            <p>by <span>@Model.Author</span><br />@Model.CreateDate</p>
+        </div>
+    </div>
+</header>
+
+<div class="article-section">
+    <div class="article">
+        <h1>@Model.Title</h1>
+        @Html.Raw(Model.Text)
+    </div>
+
+    <div class="article-sidebar">
+        <div class="articles-list-item">
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
+                     alt="" />
+            </div>
+            <div class="article-body">
+                <h4 class="m-text">Naziv clanka</h4>
+                <p class="regular-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris...
+                </p>
+                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
+            </div>
+        </div>
+        <div class="articles-list-item">
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
+                     alt="" />
+            </div>
+            <div class="article-body">
+                <h4 class="m-text">Naziv clanka</h4>
+                <p class="regular-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris...
+                </p>
+                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
+            </div>
+        </div>
+        <div class="articles-list-item">
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
+                     alt="" />
+            </div>
+            <div class="article-body">
+                <h4 class="m-text">Naziv clanka</h4>
+                <p class="regular-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris...
+                </p>
+                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
+            </div>
+        </div>
+        <div class="articles-list-item">
+            <div class="article-image">
+                <img src="https://images.unsplash.com/photo-1629821557058-76ba82e62849?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=331&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjUxMjI4OA&ixlib=rb-1.2.1&q=80&w=399"
+                     alt="" />
+            </div>
+            <div class="article-body">
+                <h4 class="m-text">Naziv clanka</h4>
+                <p class="regular-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris...
+                </p>
+                <a class="small-text uppercase" href="#">PROCITAJ VISE</a>
+            </div>
+        </div>
+    </div>
+
+ </div>

@@ -1,0 +1,137 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="../../ACTFoundation.Web/assets/css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<meta charset="UTF-8" />
+
+<div class="volunteers-wrapper">
+  <div
+    class="volunteers-hero"
+    style="
+      background-image: url('https://ichef.bbci.co.uk/news/976/mcs/media/images/75745000/jpg/_75745654_466377933.jpg');
+    "
+  >
+    <h2 class="xl-text bold">NAŠI VOLONTERI</h2>
+    <p class="m-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+    <button class="bg-blue">PRIKLJUCI SE</button>
+  </div>
+  <div class="volunteers">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="volunteer-card swiper-slide">
+          <img
+            class="volunteer-img"
+            src="https://source.unsplash.com/random/600x400"
+          />
+          <p class="bold m-text">Silvia Mcan</p>
+          <p class="regular-text">TITLE</p>
+          <p class="regular-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="bg-white cl-black border-black">KONTAKT</button>
+        </div>
+        <div class="volunteer-card swiper-slide">
+          <img
+            class="volunteer-img"
+            src="https://source.unsplash.com/random/600x400"
+          />
+
+          <p class="bold m-text">Silvia Mcan</p>
+          <p class="regular-text">TITLE</p>
+          <p class="regular-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="bg-white cl-black border-black">KONTAKT</button>
+        </div>
+        <div class="volunteer-card swiper-slide">
+          <img
+            class="volunteer-img"
+            src="https://source.unsplash.com/random/600x400"
+          />
+
+          <p class="bold m-text">Silvia Mcan</p>
+          <p class="regular-text">TITLE</p>
+          <p class="regular-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="bg-white cl-black border-black">KONTAKT</button>
+        </div>
+        <div class="volunteer-card swiper-slide">
+          <img
+            class="volunteer-img"
+            src="https://source.unsplash.com/random/600x400"
+          />
+
+          <p class="bold m-text">Silvia Mcan</p>
+          <p class="regular-text">TITLE</p>
+          <p class="regular-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="bg-white cl-black border-black">KONTAKT</button>
+        </div>
+        <div class="volunteer-card swiper-slide">
+          <img
+            class="volunteer-img"
+            src="https://source.unsplash.com/random/600x400"
+          />
+          <p class="bold m-text">Silvia Mcan</p>
+          <p class="regular-text">TITLE</p>
+          <p class="regular-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="bg-white cl-black border-black">KONTAKT</button>
+        </div>
+        <div class="volunteer-card swiper-slide">
+          <img src="https://source.unsplash.com/random/600x400" />
+
+          <p class="regular-text">TITLE</p>
+          <p class="regular-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button class="bg-white cl-black border-black">KONTAKT</button>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    // spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      767: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 480px
+      992: {
+        slidesPerView: 3,
+      },
+      1240: {
+        slidesPerView: 4,
+      },
+    },
+    // when window width is >= 640px
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+</script>

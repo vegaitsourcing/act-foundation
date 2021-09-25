@@ -1,9 +1,17 @@
 # ACT Foundation Static Assets
 
-https://vegaitsourcing.github.io/act-foundation/
+GitHub Pages links:
 
-**Minified CSS:**
-https://raw.githubusercontent.com/vegaitsourcing/act-foundation/gh-pages/index.css
+* [Homepage](https://vegaitsourcing.github.io/act-foundation/)
+* [Article](https://vegaitsourcing.github.io/act-foundation/article.html)
+* [Projects](https://vegaitsourcing.github.io/act-foundation/projects.html)
+* [Project](https://vegaitsourcing.github.io/act-foundation/project.html)
+* [About](https://vegaitsourcing.github.io/act-foundation/about.html)
+* [Volunteer](https://vegaitsourcing.github.io/act-foundation/volunteer.html)
+* [Donate](https://vegaitsourcing.github.io/act-foundation/donate.html)
+* [Contact](https://vegaitsourcing.github.io/act-foundation/contact.html)
+
+To compile the templates:
 
 ```
 npm install
