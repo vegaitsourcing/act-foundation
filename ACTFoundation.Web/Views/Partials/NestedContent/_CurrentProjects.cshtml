@@ -1,1 +1,26 @@
-﻿
+@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Layout.CurrentProjectsViewModel>
+
+<section class="section-articles">
+    <div class="heading-articles">
+        <p class="m-text">@Model.Subtitle</p>
+        <h2 class="heading-secondary xl-text">@Model.Title</h2>
+    </div>
+    <div class="row">
+        @foreach (var project in Model.Projects)
+        {
+            <div class="articles-list-item col-1-of-3">
+                <div class="article-image">
+                    <img src="@project.MainImage.Url"
+                         alt="" />
+                </div>
+                <div class="article-body">
+                    <h4 class="m-text">@project.Title</h4>
+                    <p class="regular-text">
+                        @project.ShortText...
+                    </p>
+                    <a class="small-text color-blue" href="@project.Url">@Umbraco.GetDictionaryValue("CurrentProjects.FindOutMore")</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

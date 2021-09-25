@@ -1,1 +1,6 @@
-﻿
+@inherits UmbracoViewPage<ACTFoundation.Models.Generated.Volunteers>
+
+@foreach (var item in Model.VolunteersContent)
+{
+    Html.RenderNestedContent(item);
+}
