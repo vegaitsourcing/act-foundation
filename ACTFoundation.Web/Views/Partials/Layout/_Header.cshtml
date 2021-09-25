@@ -1,1 +1,29 @@
-﻿
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Layout.HeaderViewModel>
+
+<div class="navigation">
+    <div class="hamburger">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <nav>
+        <img src=@Model.Logo.Url />
+
+        @if (@Model.MainNavigationLinks != null && @Model.MainNavigationLinks.Any())
+        {
+            foreach (var link in @Model.MainNavigationLinks)
+            {
+                <a href="@link.Url" class="regular-text cl-white">@link.Content</a>
+            }
+        }
+        @if (@Model.MainNavigationButton != null)
+        {
+            <button href="@Model.MainNavigationButton.Url" class="bg-orange cl-white">@Model.MainNavigationButton.Content</button>
+        }
+
+        @*<a href="about.html" class="regular-text cl-white">O NAMA</a>
+        <a class="regular-text cl-white">PROJEKTI</a>
+        <a class="regular-text cl-white">KONTAKT</a>
+        <button class="bg-orange cl-white">VOLONTIRAJ</button>*@
+    </nav>
+</div>

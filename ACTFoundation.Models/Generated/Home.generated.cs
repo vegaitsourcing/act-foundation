@@ -22,7 +22,7 @@ namespace ACTFoundation.Models.Generated
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooter, IHeader, IMainNavigation, IPage, ITopBottomSocialLinks
+	public partial class Home : PublishedContentModel, IFooter, MainNavigationButton, IPage, ITopBottomSocialLinks
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -109,18 +109,18 @@ namespace ACTFoundation.Models.Generated
 		public Image Logo => Header.GetLogo(this);
 
 		///<summary>
-		/// Main navigation button
+		/// Main navigation Button
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("mainNavigationButton")]
-		public Umbraco.Web.Models.Link MainNavigationButton => MainNavigation.GetMainNavigationButton(this);
+		public Umbraco.Web.Models.Link MainNavigationButton => Header.GetMainNavigationButton(this);
 
 		///<summary>
-		/// Main Navigation Links
+		/// Main navigation Links
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("mainNavigationLinks")]
-		public IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks => MainNavigation.GetMainNavigationLinks(this);
+		public IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks => Header.GetMainNavigationLinks(this);
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

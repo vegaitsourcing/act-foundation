@@ -22,16 +22,24 @@ namespace ACTFoundation.Models.Generated
 {
 	// Mixin Content Type with alias "header"
 	/// <summary>Header</summary>
-	public partial interface IHeader : IPublishedContent
+	public partial interface MainNavigationButton : IPublishedContent
 	{
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		Image Logo { get; }
+
+		/// <summary>Main navigation Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		Umbraco.Web.Models.Link MainNavigationButton { get; }
+
+		/// <summary>Main navigation Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks { get; }
 	}
 
 	/// <summary>Header</summary>
 	[PublishedModel("header")]
-	public partial class Header : PublishedContentModel, IHeader
+	public partial class Header : PublishedContentModel, MainNavigationButton
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -63,6 +71,28 @@ namespace ACTFoundation.Models.Generated
 
 		/// <summary>Static getter for Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static Image GetLogo(IHeader that) => that.Value<Image>("logo");
+		public static Image GetLogo(MainNavigationButton that) => that.Value<Image>("logo");
+
+		///<summary>
+		/// Main navigation Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mainNavigationButton")]
+		public Umbraco.Web.Models.Link MainNavigationButton => GetMainNavigationButton(this);
+
+		/// <summary>Static getter for Main navigation Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static Umbraco.Web.Models.Link GetMainNavigationButton(MainNavigationButton that) => that.Value<Umbraco.Web.Models.Link>("mainNavigationButton");
+
+		///<summary>
+		/// Main navigation Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mainNavigationLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> MainNavigationLinks => GetMainNavigationLinks(this);
+
+		/// <summary>Static getter for Main navigation Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<Umbraco.Web.Models.Link> GetMainNavigationLinks(MainNavigationButton that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("mainNavigationLinks");
 	}
 }
