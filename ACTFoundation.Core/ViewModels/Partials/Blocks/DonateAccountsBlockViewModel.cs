@@ -12,6 +12,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Blocks
         {
             Title = donateAccountsBlock.Title;
             Description = donateAccountsBlock.Description;
+            CtaText = donateAccountsBlock.CtaText;
             DonateAccounts = donateAccountsBlock.Projects.Select(dab => new DonateAccountInfoViewModel
             {
                 Id = (dab as Project).Id,
@@ -26,6 +27,8 @@ namespace ACTFoundation.Core.ViewModels.Partials.Blocks
 
         public string Title { get; }
         public string Description { get; }
+
+        public string CtaText { get;  }
         public IEnumerable<DonateAccountInfoViewModel> DonateAccounts { get; }
     }
 }
