@@ -56,44 +56,6 @@
   content: "\201D";
 }
 
-.article__tags {
-  align-items: center;
-  display: flex;
+.article__bottom-chips {
   margin-top: 48px;
-}
-
-.article__tag--orange {
-  background-color: #f15e24;
-  border-radius: 9999px;
-  color: white;
-  font-size: 14px;
-  height: fit-content;
-  line-height: normal;
-  opacity: 0.7;
-  padding: 8px 16px;
-  text-transform: lowercase;
-}
-
-.article__tag--green {
-  background-color: #2e8b38;
-  border-radius: 9999px;
-  color: white;
-  font-size: 14px;
-  height: fit-content;
-  line-height: normal;
-  margin-left: 10px;
-  opacity: 0.7;
-  padding: 8px 16px;
-  text-transform: lowercase;
-}
-
-.article__author p {
-  font-size: 14px;
-  line-height: normal;
-  margin: 0;
-  margin-left: 18px;
-}
-
-.article__author p span {
-  font-weight: 700;
 }
