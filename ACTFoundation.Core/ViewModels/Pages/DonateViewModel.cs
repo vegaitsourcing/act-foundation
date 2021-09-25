@@ -1,6 +1,6 @@
 ﻿using ACTFoundation.Core.Contexts;
+using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.Generated;
-using Umbraco.Core.Models.PublishedContent;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
@@ -8,9 +8,13 @@ namespace ACTFoundation.Core.ViewModels.Pages
 	{
 		public DonateViewModel(IPageContext<Donate> context) : base(context)
 		{
-			this.DonateContent = (BannerDefault) context.Page.DonateContent;
+			var bannerCarousel = context.Page.DonateContent;
+			if (bannerCarousel != null && bannerCarousel is BannerCarousel)
+			{
+				DonateContent = new BannerCarouselViewModel(bannerCarousel as BannerCarousel);
+			}
 		}
 
-		public BannerDefault DonateContent { get; }
+		public BannerCarouselViewModel DonateContent { get; set; }
 	}
 }

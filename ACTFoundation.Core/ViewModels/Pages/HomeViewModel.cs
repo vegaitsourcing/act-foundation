@@ -7,41 +7,41 @@ using System.Linq;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
-  public class HomeViewModel : PageViewModel
-	{
-		public HomeViewModel(IPageContext<Home> context) : base(context)
-		{
-			var bannerCarousel = context.Page.MainContent.FirstOrDefault(item => item is BannerCarousel);
-      if(bannerCarousel != null)
-			{
-				BannerCarousel = new BannerCarouselViewModel(bannerCarousel as BannerCarousel);
-      }
+    public class HomeViewModel : PageViewModel
+    {
+        public HomeViewModel(IPageContext<Home> context) : base(context)
+        {
+            var bannerCarousel = context.Page.MainContent.FirstOrDefault(item => item is BannerCarousel);
+            if (bannerCarousel != null)
+            {
+                BannerCarousel = new BannerCarouselViewModel(bannerCarousel as BannerCarousel);
+            }
 
-			var testimonials = context.Page.MainContent.FirstOrDefault(item => item is Testimonials);
-			if(testimonials != null)
-      {
-				Testimonials = new TestimonialsViewModel(testimonials as Testimonials);
-      }
+            var testimonials = context.Page.MainContent.FirstOrDefault(item => item is Testimonials);
+            if (testimonials != null)
+            {
+                Testimonials = new TestimonialsViewModel(testimonials as Testimonials);
+            }
 
-			var volunteers = context.Page.MainContent.FirstOrDefault(item => item is Volunteers);
-			if (volunteers != null)
-			{
-				Volunteers = new VolunteersViewModel(volunteers as Volunteers);
-      }
-      
-			var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
-			if (donateBlock != null)
-			{
-				DonateBlock = new DonateBlockViewModel((DonateBlock) donateBlock);
-			}
-		}
+            var volunteers = context.Page.MainContent.FirstOrDefault(item => item is Volunteers);
+            if (volunteers != null)
+            {
+                Volunteers = new VolunteersViewModel(volunteers as Volunteers);
+            }
 
-		public BannerCarouselViewModel BannerCarousel { get; set; }
+            var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
+            if (donateBlock != null)
+            {
+                DonateBlock = new DonateBlockViewModel((DonateBlock)donateBlock);
+            }
+        }
 
-		public TestimonialsViewModel Testimonials { get; }
+        public BannerCarouselViewModel BannerCarousel { get; set; }
 
-		public VolunteersViewModel Volunteers { get; }
+        public TestimonialsViewModel Testimonials { get; }
 
-		public DonateBlockViewModel DonateBlock { get; }
-	}
+        public VolunteersViewModel Volunteers { get; }
+
+        public DonateBlockViewModel DonateBlock { get; }
+    }
 }
