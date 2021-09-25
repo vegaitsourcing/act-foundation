@@ -1,11 +1,8 @@
 ﻿@inherits UmbracoViewPage<HomeViewModel>
 
-@if (Model.MainContent != null && Model.MainContent.Any())
+@if (Model.BannerCarousel != null)
 {
-    foreach (var mainContentElement in Model.MainContent)
-    {
-        Html.RenderNestedContent(mainContentElement);
-    }
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerCarousel.cshtml", Model.BannerCarousel);
 }
 
 @if (Model.Testimonials != null)

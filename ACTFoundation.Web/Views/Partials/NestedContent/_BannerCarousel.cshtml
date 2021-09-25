@@ -1,7 +1,6 @@
-﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.BannerCarousel>
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Shared.BannerCarouselViewModel>
 
-@*HTML FOR CAROUSEL*@
 @foreach (var item in Model.Items)
 {
-    Html.RenderNestedContent(item);
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", item);
 }

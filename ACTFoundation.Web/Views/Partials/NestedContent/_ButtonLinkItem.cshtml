@@ -1,8 +1,6 @@
-﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.ButtonLinkItem>
-
-@*HTML FOR BANNER DEFAULT*@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Shared.ButtonLinkItemViewModel>
 
 @if (!string.IsNullOrWhiteSpace(Model.Link.Url))
 {
-    <a href="@Model.Link.Url" style="background-color:@Model.ButtonColor">@Model.Link.Name</a>
+    <a href="@Model.Link.Url" style="background-color:@Model.ButtonColor">@Model.Link.Content</a>
 }
