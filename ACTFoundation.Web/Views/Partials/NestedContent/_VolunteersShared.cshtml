@@ -1,0 +1,24 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Models.Generated.VolunteersShared>
+
+<div class="volunteers-wrapper">
+    <div class="volunteers-hero"
+         style="
+      background-image: url('@Model.BackgroundImage.Url()');
+    ">
+        <h2 class="xl-text bold">@Model.Title</h2>
+        <p class="m-text">
+            @Model.Description
+        </p>
+        <a href="@Model.Link.Url" class="bg-blue">@Model.Link.Name</a>
+    </div>
+    <div class="volunteers swiper">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model.Volunteers)
+            {
+                Html.RenderNestedContent(item);
+            }
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
