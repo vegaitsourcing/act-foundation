@@ -20,7 +20,8 @@
 </head>
 <body>
 @{
-	Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
+    Html.RenderPartial("~/Views/Partials/Shared/_TopBottomSocialLinks.cshtml", Model.TopBottomSocialLinks);
+    Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
 }
 <div>
 	@RenderBody()
@@ -28,5 +29,7 @@
 @{
 	Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
 }
+
+	<link rel="stylesheet" href="~/assets/css/style.css" />
 </body>
 </html>
