@@ -41,9 +41,7 @@
     margin: auto;
     background-color: var(--color-white);
   }
-}
 
-@media screen and (min-width: 1240px) {
   .donate-images::before{
     content: '';
     height: 100%;
