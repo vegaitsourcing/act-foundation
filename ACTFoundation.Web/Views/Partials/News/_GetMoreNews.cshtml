@@ -1,0 +1,30 @@
+﻿@using ACTFoundation.Core.Controllers.Surface
+@inherits UmbracoViewPage<ACTFoundation.Core.Models.LoadmorePagination<ACTFoundation.Core.ViewModels.Blocks.ArticleCardViewModel>>
+
+@if (Model.Items != null && Model.Items.Any())
+{
+    foreach (var item in Model.Items)
+    {
+        <div class="articles-list-item col-1-of-3">
+            <div class="article-image">
+                <img src="@item.MainImage.Url"
+                     alt="" />
+            </div>
+            <div class="article-body">
+                <h4 class="m-text">@item.PageTitle</h4>
+                <p class="regular-text">
+                    @item.Text
+                </p>
+                <a class="small-text uppercase" href="@item.Url">@item.Url</a>
+            </div>
+        </div>
+    }
+
+    if (Model.HasMore())
+    {
+        <button id="load-more-news" data-loadmore rel="nofollow"
+            onclick="loadMoreNews('@Model.ParentId', @(Model.Page + 1))">
+            @Umbraco.GetDictionaryValue("News.LoadMore")
+        </button>
+    }
+}

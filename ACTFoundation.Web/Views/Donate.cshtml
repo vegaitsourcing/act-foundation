@@ -4,3 +4,10 @@
 {
     Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.DonateContent);
 }
+
+
+@if (Model.DonateAccountsBlockViewModel != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_DonateAccountsBlock.cshtml", Model.DonateAccountsBlockViewModel);
+}
+

@@ -24,3 +24,8 @@
 {
     Html.RenderPartial("~/Views/Partials/NestedContent/_Volunteers.cshtml", Model.Volunteers);
 }
+
+@if (Model.News != null)
+{
+    Html.RenderPartial("~/Views/Partials/Blocks/_News.cshtml", Model.News);
+}
