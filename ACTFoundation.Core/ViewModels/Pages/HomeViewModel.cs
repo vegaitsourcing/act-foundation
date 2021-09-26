@@ -1,5 +1,6 @@
 ﻿using ACTFoundation.Core.Contexts;
 using ACTFoundation.Core.ViewModels.Blocks;
+using ACTFoundation.Core.ViewModels.Partials.Layout;
 using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.Generated;
@@ -16,6 +17,13 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
                 BannerCarousel = new BannerCarouselViewModel(bannerCarousel as BannerCarousel);
             }
+
+            var partnerLogos = context.Page.MainContent.FirstOrDefault(item => item is PartnerLogosItem);
+            if (partnerLogos != null)
+            {
+                PartnerLogos = new PartnerLogosViewModel(partnerLogos as PartnerLogosItem);
+            }
+
 
             var testimonials = context.Page.MainContent.FirstOrDefault(item => item is Testimonials);
             if (testimonials != null)
@@ -43,5 +51,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public VolunteersViewModel Volunteers { get; }
 
         public DonateBlockViewModel DonateBlock { get; }
+
+        public PartnerLogosViewModel PartnerLogos { get; }
     }
 }
