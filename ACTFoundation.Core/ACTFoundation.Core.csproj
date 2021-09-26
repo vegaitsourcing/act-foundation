@@ -302,6 +302,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\ExternalRedirectAttribute.cs" />
     <Compile Include="Components\ApplicationConfigurationComponent.cs" />
+    <Compile Include="Components\NewsletterSubscriptionComponent.cs" />
+    <Compile Include="Composers\MapHttpRoutesComposer.cs" />
+    <Compile Include="Composers\NewsletterSubscriptionComposer.cs" />
     <Compile Include="Composers\SearchComposer.cs" />
     <Compile Include="Contexts\IPageContext.cs" />
     <Compile Include="Contexts\ISeoContext.cs" />
@@ -320,9 +323,11 @@
     <Compile Include="Controllers\RenderMvc\VolunteerController.cs" />
     <Compile Include="Controllers\RenderMvc\XMLSitemapController.cs" />
     <Compile Include="Controllers\Surface\BaseSurfaceController.cs" />
+    <Compile Include="Controllers\Surface\NewsletterSubscriptionsController.cs" />
     <Compile Include="Controllers\Surface\Partials\LayoutController.cs" />
     <Compile Include="Controllers\Surface\ProjectsListingController.cs" />
     <Compile Include="Controllers\Surface\Partials\SearchListingController.cs" />
+    <Compile Include="Database\NewsletterSubscriptionMigrationPlan.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\HttpContextExtensions.cs" />
     <Compile Include="Extensions\HttpRequestBaseExtensions.cs" />
@@ -335,6 +340,7 @@
     <Compile Include="Handlers\DomainRootRouteHandler.cs" />
     <Compile Include="Handlers\Error404RouteHandler.cs" />
     <Compile Include="HttpHandlers\RobotsHandler.cs" />
+    <Compile Include="Models\Database\NewsletterSubscriptionDatabaseModel.cs" />
     <Compile Include="Models\EmailSettings.cs" />
     <Compile Include="Models\IPagination.cs" />
     <Compile Include="Models\IReadOnlyPagedCollection.cs" />
