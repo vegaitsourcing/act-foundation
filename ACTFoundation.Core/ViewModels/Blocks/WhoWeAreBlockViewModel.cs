@@ -9,9 +9,9 @@ namespace ACTFoundation.Core.ViewModels.Blocks
     {
         public WhoWeAreBlockViewModel(WhoWeAreBlock whoWeAre)
         {
-            this.Title = whoWeAre.Title;
-            this.Text = whoWeAre.Text;
-            this.Pictures = whoWeAre.Picture;
+            this.Title = whoWeAre?.Title;
+            this.Text = whoWeAre?.Text;
+            this.Pictures = whoWeAre?.Picture;
         }
 
         public string Title { get; }

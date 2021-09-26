@@ -489,6 +489,7 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="ConnectionStrings.config" />
     <Content Include="App_Plugins\CustomNewsletterDashboard\package.manifest" />
     <Content Include="App_Plugins\CustomNewsletterDashboard\customnewsletterdashboard.controller.js" />
     <None Include="packages.config" />
@@ -532,6 +533,7 @@
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Volunteer.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Categories.cshtml" />
+    <Content Include="Views\AboutUs.cshtml" />
     <Content Include="Views\Partials\Blocks\_OurMissionBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_OurStoryBlock.cshtml" />
