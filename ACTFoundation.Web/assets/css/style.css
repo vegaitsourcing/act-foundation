@@ -23,6 +23,14 @@ a {
   text-decoration: none;
 }
 
+.btn-fixed-width {
+  display: inline-block;
+  font-size: 14px;
+  padding: 1em 0;
+  text-align: center;
+  width: 180px;
+}
+
 .xl-text {
   font-size: var(--xl-text);
 }
@@ -880,8 +888,8 @@ form button {
   text-transform: uppercase;
 }
 
-.hero-buttons button + button {
-  margin-left: 25px;
+.hero-buttons a + a {
+  margin-left: 26px;
 }
 
 .hero-see-more-btn {
