@@ -427,6 +427,10 @@
     <Content Include="App_Plugins\CustomNewsletterDashboard\lang\en-US.xml" />
     <Content Include="App_Plugins\CustomNewsletterDashboard\NewsletterDashboard.html" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\media\bgFooter.png" />
+    <Content Include="assets\media\facebook.svg" />
+    <Content Include="assets\media\instagram.svg" />
+    <Content Include="assets\media\linkedin.svg" />
     <Content Include="assets\scripts\default.js" />
     <Content Include="assets\scripts\donateAccountsBlock.js" />
     <Content Include="assets\scripts\navigation.js" />
