@@ -4,10 +4,15 @@
 {
     Html.RenderPartial("~/Views/Partials/NestedContent/_BannerCarousel.cshtml", Model.BannerCarousel);
 }
-   
+
+@if (Model.PartnerLogos != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_PartnerLogos.cshtml", Model.PartnerLogos);
+}
+
 @if (Model.DonateBlock != null)
 {
-    Html.RenderPartial("~/Views/Partials/Blocks/_DonateBlock.cshtml", Model.DonateBlock );
+    Html.RenderPartial("~/Views/Partials/Blocks/_DonateBlock.cshtml", Model.DonateBlock);
 }
 
 @if (Model.Testimonials != null)

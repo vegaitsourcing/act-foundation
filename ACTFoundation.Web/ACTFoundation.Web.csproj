@@ -503,7 +503,7 @@
     <Content Include="Views\Partials\NestedContent\_Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_VolunteersShared.cshtml" />
     <Content Include="Views\Partials\NestedContent\_VolunteerItem.cshtml" />
-    <Content Include="Views\Partials\NestedContent\_PartnertLogos.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_PartnerLogos.cshtml" />
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
     <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
     <Content Include="Views\Partials\PublishedElement.cshtml" />

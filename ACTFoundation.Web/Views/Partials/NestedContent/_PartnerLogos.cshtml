@@ -1,0 +1,12 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Layout.PartnerLogosViewModel>
+
+<div class="partners">
+    @foreach (var item in Model.PartnerLogos)
+    {
+        <div class="partners-list-item">
+            <a href="#" target="_blank">
+                <img src="@item.Url()" alt="ACT Foundation partner logo" />
+            </a>
+        </div>
+    }
+</div>
