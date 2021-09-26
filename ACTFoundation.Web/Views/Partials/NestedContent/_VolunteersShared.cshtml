@@ -53,3 +53,33 @@
         </div>
     </div>
 </div>
+
+<script>
+    const swiper2 = new Swiper(".swiper", {
+        // spaceBetween: 30,
+        navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            767: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 480px
+            992: {
+                slidesPerView: 3,
+            },
+            1240: {
+                slidesPerView: 4,
+            },
+        },
+        // when window width is >= 640px
+        on: {
+            resize: function () {
+                swiper2.changeDirection(getDirection());
+            },
+        },
+    });
+
+</script>
