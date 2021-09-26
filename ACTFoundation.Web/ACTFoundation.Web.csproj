@@ -536,6 +536,8 @@
     <Content Include="Views\Partials\Blocks\_OurMissionBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_OurStoryBlock.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Gallery.cshtml" />
+    <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

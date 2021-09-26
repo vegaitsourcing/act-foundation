@@ -377,7 +377,8 @@
     <Compile Include="ViewModels\Pages\VolunteerViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\OurMissionViewModel.cs" />
-    <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\GalleryItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\GalleryViewModel.cs" />    <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\DonateAccountsBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\ProjectCardViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\TestimonialItemViewModel.cs" />
