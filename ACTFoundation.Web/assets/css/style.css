@@ -922,7 +922,11 @@ nav {
   align-items: center;
   padding: calc(var(--default-spacing) / 2) var(--default-spacing);
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+
+nav a:last-child {
+  margin-left: auto;
 }
 nav a {
   margin-bottom: 1rem;
