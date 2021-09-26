@@ -315,6 +315,7 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
+    <Compile Include="Controllers\RenderMvc\AboutUsController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\DonateController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactController.cs" />
@@ -356,6 +357,9 @@
     <Compile Include="SmtpHelper.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
+    <Compile Include="ViewModels\Blocks\OurMissionBlockViewModel.cs" />
+    <Compile Include="ViewModels\Blocks\OurStoryBlockViewModel.cs" />
+    <Compile Include="ViewModels\Pages\AboutUsViewModel.cs" />
     <Compile Include="ViewModels\Blocks\OurStoryViewModel.cs" />
     <Compile Include="ViewModels\Blocks\BlogViewModel.cs" />
     <Compile Include="ViewModels\Blocks\ArticleCardViewModel.cs" />

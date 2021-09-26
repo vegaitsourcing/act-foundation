@@ -1,0 +1,26 @@
+﻿@inherits UmbracoViewPage<AboutUsViewModel>
+
+@if (Model.OurStoryBanner != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.OurStoryBanner);
+}
+
+@if (Model.WhoWeAre != null)
+{
+    Html.RenderPartial("~/Views/Partials/Blocks/_WhoWeAreBlock.cshtml", Model.WhoWeAre);
+}
+
+@if (Model.Volunteers != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_Volunteers.cshtml", Model.Volunteers);
+}
+
+@if (Model.OurStoryBlock != null)
+{
+    Html.RenderPartial("~/Views/Partials/Blocks/_OurStoryBlock.cshtml", Model.OurStoryBlock);
+}
+
+@if (Model.OurMissionBlock != null)
+{
+    Html.RenderPartial("~/Views/Partials/Blocks/_OurMissionBlock.cshtml", Model.OurMissionBlock);
+}
