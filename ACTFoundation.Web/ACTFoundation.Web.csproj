@@ -424,6 +424,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\CustomNewsletterDashboard\lang\en-US.xml" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\NewsletterDashboard.html" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\scripts\default.js" />
     <Content Include="assets\scripts\donateAccountsBlock.js" />
@@ -487,6 +489,8 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\package.manifest" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\customnewsletterdashboard.controller.js" />
     <None Include="packages.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />

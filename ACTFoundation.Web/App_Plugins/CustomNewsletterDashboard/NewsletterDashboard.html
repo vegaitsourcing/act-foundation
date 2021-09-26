@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1b264f1f;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="CustomNewsletterDashboardController as vm">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th style="text-align: right;">Actions</th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="subscription in subscriptions">
+                    <td> {{ subscription.Id }}</td>
+                    <td> {{ subscription.Email }} </td>
+                    <td style="text-align: right;"><button type="button" class="btn umb-button__button btn-danger umb-button--xs umb-outline" ng-click="Remove(subscription.Id)">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
