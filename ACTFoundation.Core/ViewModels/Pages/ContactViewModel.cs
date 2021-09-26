@@ -9,11 +9,18 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public ContactViewModel(IPageContext<Contact> context) : base(context)
         {
             DonateContent = new BannerCarouselItemViewModel(context.Page.ContactContent);
-            IsSubmitted = false;
+            SubmitStatus = SubmitStatusEnum.Default;
         }
 
         public BannerCarouselItemViewModel DonateContent { get; set; }
 
-        public bool IsSubmitted { get; set; }
+        public SubmitStatusEnum SubmitStatus{ get; set; }
+    }
+
+    public enum SubmitStatusEnum
+    {
+        Default,
+        Success,
+        Error
     }
 }
