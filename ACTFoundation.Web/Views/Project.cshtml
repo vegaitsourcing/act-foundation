@@ -1,0 +1,79 @@
+﻿@inherits UmbracoViewPage<ProjectViewModel>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300&display=swap"
+      rel="stylesheet" />
+
+<header class="hero hero--article"
+        style="
+        background: linear-gradient(
+        180deg,
+        #000000 -33.39%,
+        rgba(0, 0, 0, 0.4) 23.71%,
+        rgba(0, 0, 0, 0.4) 61.3%,
+        #000000 105.39%
+      ),
+      url(@Model.MainImage.Url) no-repeat center;">
+    <div class="chips">
+        @if (Model.Tags != null)
+        {
+            foreach (var tag in Model.Tags)
+            {
+                <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+            }
+        }
+    </div>
+</header>
+
+<div class="article-section">
+    <div class="article">
+        <h1>@Model.Title</h1>
+        @Html.Raw(Model.Text)
+    </div>
+
+    <div class="article-sidebar">
+
+        <div class="articles-list-item">
+            <div class="article-body">
+                <h4 class="m-text">@Umbraco.GetDictionaryValue("Project.Donate.Title")</h4>
+                <p class="regular-text">
+                    @{ var displayTextDonate = new HtmlString(Umbraco.GetDictionaryValue("Project.Donate.Text"));}
+                    @displayTextDonate
+                </p>
+                <a href="@Umbraco.GetDictionaryValue("Project.Donate.Link")">
+                    <button class="bg-orange cl-white">@Umbraco.GetDictionaryValue("Project.Donate.Button.Text")</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="articles-list-item">
+            <div class="article-body">
+                <h4 class="m-text">@Umbraco.GetDictionaryValue("Project.Volunteer.Title")</h4>
+                <p class="regular-text">
+                    @{ var displayTextVolunteer = new HtmlString(Umbraco.GetDictionaryValue("Project.Volunteer.Text"));}
+                    @displayTextVolunteer
+                </p>
+                <a href="@Umbraco.GetDictionaryValue("Project.Volunteer.Link")">
+                    <button class="bg-orange cl-white">@Umbraco.GetDictionaryValue("Project.Volunteer.Button.Text")</button>
+                </a>
+            </div>
+        </div>
+
+        @foreach (var article in Model.RelatedProjects)
+        {
+            <div class="articles-list-item">
+                <div class="article-image">
+                    <img src=@article.MainImage.Url alt="" />
+                </div>
+                <div class="article-body">
+                    <h4 class="m-text">@article.Title</h4>
+                    <p class="regular-text">
+                        @Html.Raw(article.TextPreview)
+                    </p>
+                    <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
+                </div>
+            </div>
+        }
+    </div>
+ </div>

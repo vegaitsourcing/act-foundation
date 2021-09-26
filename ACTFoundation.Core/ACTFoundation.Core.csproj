@@ -316,6 +316,7 @@
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsController.cs" />
+    <Compile Include="Controllers\RenderMvc\ProjectController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\DonateController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactController.cs" />
@@ -363,7 +364,9 @@
     <Compile Include="ViewModels\Blocks\ArticleCardViewModel.cs" />
     <Compile Include="ViewModels\Blocks\LoadNewsViewModel.cs" />
     <Compile Include="ViewModels\Blocks\NewsViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ProjectPreviewViewModel.cs" />
     <Compile Include="ViewModels\Pages\ArticlePreviewViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ProjectViewModel.cs" />
     <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
     <Compile Include="ViewModels\Blocks\DonateBlockViewModel.cs" />
     <Compile Include="ViewModels\Blocks\WhoWeAreBlockViewModel.cs" />
