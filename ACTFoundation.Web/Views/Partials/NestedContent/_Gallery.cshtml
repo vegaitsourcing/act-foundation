@@ -1,0 +1,44 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.GalleryViewModel>
+<div class="project-galleries">
+    <div class="heading-project-galleries">
+        <p class="m-text uppercase">@Model.Subtitle</p>
+        <h2 class="heading-secondary xl-text uppercase">@Model.Title</h2>
+    </div>
+    <div class="gallery-box-swiper">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                
+                @foreach (var galleryItem in Model.GalleryItems)
+                {
+                    <div class="swiper-slide" style="background-image: url(@galleryItem.GalleryImage.Url)">
+                        <div class="swiper-slide-text">
+                            <div class="swiper-slide-text__inner">
+                                <div class="gallery-swiper-description regular-text">
+                                    @Html.Raw(@galleryItem.GalleryDescription)
+                                </div>
+                                <p class="gallery-swiper-date regular-text"><strong>@Umbraco.GetDictionaryValue("Gallery.Date")</strong>@galleryItem.GalleryDate</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+<script>
+    const swiper = new Swiper(".swiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            },
+        },
+    });
+</script>

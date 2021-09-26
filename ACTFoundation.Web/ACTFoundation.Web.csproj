@@ -424,6 +424,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\CustomNewsletterDashboard\lang\en-US.xml" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\NewsletterDashboard.html" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\scripts\default.js" />
     <Content Include="assets\scripts\donateAccountsBlock.js" />
@@ -487,6 +489,9 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="ConnectionStrings.config" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\package.manifest" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\customnewsletterdashboard.controller.js" />
     <None Include="packages.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -527,8 +532,13 @@
     <Content Include="Views\Donate.cshtml" />
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Volunteer.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Categories.cshtml" />
+    <Content Include="Views\AboutUs.cshtml" />
     <Content Include="Views\Partials\Blocks\_OurMissionBlock.cshtml" />
+    <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_OurStoryBlock.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Gallery.cshtml" />
+    <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

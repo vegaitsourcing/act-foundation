@@ -1,5 +1,4 @@
-﻿@using ACTFoundation.Core.Controllers.Surface
-@inherits UmbracoViewPage<ACTFoundation.Core.Models.LoadmorePagination<ACTFoundation.Core.ViewModels.Partials.Blocks.ProjectCardViewModel>>
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.Models.LoadmorePagination<ACTFoundation.Core.ViewModels.Partials.Blocks.ProjectCardViewModel>>
 
 @{ 
     var index = 0;
@@ -19,14 +18,24 @@
         @foreach (var item in rowItems)
         {
             <div class="articles-list-item">
-                <div class="article-image">
+                <div class="article-image" style="position: relative">
                     <img src="@item.Image.Url" alt="" />
+                    <div class="chips chips-top">
+                        @foreach (var tag in item.Tags)
+                        {
+                            if (tag != null)
+                            {
+                                <div class="chip chip--@tag.Color">@tag.Name</div>
+                            }
+                        }
+                    </div>
                 </div>
                 <div class="article-body">
                     <h4 class="m-text">@item.Title</h4>
                     <p class="regular-text">
                         @item.Description
                     </p>
+                    <a class="small-text uppercase" href="@item.Url">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
                 </div>
             </div>
         }
@@ -36,5 +45,7 @@
 
 @if (Model.HasMore())
 {
-    <button id="loadMore" class="small-text uppercase" onclick="loadMore(projectId, pageNumber)">@Umbraco.GetDictionaryValue("Projects.LoadMore")</button>
+    <button id="loadMore" class="small-text uppercase" onclick="loadMoreProjects(projectId, pageNumber)">
+        @Umbraco.GetDictionaryValue("Projects.LoadMore")
+    </button>
 }

@@ -2,12 +2,16 @@
 
 <div class="about-wrapper">
     <div class="donate-images">
-        @foreach (var picture in Model.Pictures)
+        @if (Model.Pictures != null)
         {
-            <div>
-                <img src="@picture.Url()" />
-            </div>
+            foreach (var picture in Model.Pictures)
+            {
+                <div>
+                    <img src="@picture.Url()" />
+                </div>
+            }
         }
+
     </div>
     <div class="bg-yellow donate-content">
         <h3 class="l-text bold">@Model.Title</h3>
@@ -16,3 +20,7 @@
         </p>
     </div>
 </div>
+
+<script>
+    if(!@Model.Pictures) console.log('pictures are null')
+</script>

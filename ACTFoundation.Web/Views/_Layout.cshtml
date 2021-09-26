@@ -20,8 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="@Url.Content("~/assets/scripts/projectsListing.js")"></script>
     <script src="@Url.Content("~/assets/scripts/default.js")"></script>
-    <link rel="stylesheet"
-          href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -34,8 +33,8 @@
     </div>
     @{
         Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
+        Html.RenderPartial("~/Views/Partials/Shared/_TopBottomSocialLinks.cshtml", Model.TopBottomSocialLinks);
     }
-
     <link rel="stylesheet" href="~/assets/css/style.css" />
     <script src="@Url.Content("~/assets/scripts/navigation.js")"></script>
 

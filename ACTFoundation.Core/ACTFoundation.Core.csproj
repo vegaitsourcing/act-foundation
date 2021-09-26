@@ -315,6 +315,7 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
+    <Compile Include="Controllers\RenderMvc\AboutUsController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
     <Compile Include="Controllers\RenderMvc\DonateController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactController.cs" />
@@ -356,6 +357,7 @@
     <Compile Include="SmtpHelper.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
+    <Compile Include="ViewModels\Pages\AboutUsViewModel.cs" />
     <Compile Include="ViewModels\Blocks\OurStoryViewModel.cs" />
     <Compile Include="ViewModels\Blocks\BlogViewModel.cs" />
     <Compile Include="ViewModels\Blocks\ArticleCardViewModel.cs" />
@@ -374,8 +376,10 @@
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\VolunteerViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\ProjectsCategoriesViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\OurMissionViewModel.cs" />
-    <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\GalleryItemViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\GalleryViewModel.cs" />    <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\DonateAccountsBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\ProjectCardViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\TestimonialItemViewModel.cs" />
