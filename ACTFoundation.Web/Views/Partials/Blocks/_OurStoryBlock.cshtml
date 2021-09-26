@@ -7,5 +7,8 @@
     </div>
 </div>
 <div class="story-logo-wrapper">
-    <img src="@Model.Image.Url" />
+    @if (Model.Image != null)
+    {
+        <img src="@Model.Image.Url" />
+    }
 </div>
