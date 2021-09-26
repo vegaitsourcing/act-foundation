@@ -1,0 +1,32 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.ProjectsCategoriesViewModel>
+
+<script>
+    var projectsId = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ProjectsId));
+</script>
+
+<div class="categories">
+    <div class="categories__decor">
+        <div class="categories__line"></div>
+        <div class="categories__circles">
+            <div class="categories__rounded categories__circle--black"></div>
+            <div class="categories__rounded categories__circle--blue"></div>
+            <div class="categories__rounded categories__circle--yellow"></div>
+            <div class="categories__rounded categories__circle--orange"></div>
+            <div class="categories__rounded categories__circle--black"></div>
+        </div>
+        <div class="categories__line"></div>
+    </div>
+    <div class="categories__container">
+        <div id="" class="categories__rounded categories__category categories__category--active" onclick="filterByCategory(this, projectsId, 1, this.id)">
+            @Umbraco.GetDictionaryValue("Categories.AllCategoriesCtaText")
+        </div>
+        @foreach (var category in Model.Categories)
+        {
+            <div id="@category.Name" class="categories__rounded categories__category" 
+                 onclick="filterByCategory(this, projectsId, 1, this.id)"
+            >
+                @category.Name
+            </div>
+        }
+    </div>
+</div>

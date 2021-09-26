@@ -1,10 +1,11 @@
 ﻿@inherits UmbracoViewPage<ProjectsViewModel>
 
+@if (Model.Categories != null && Model.Categories.Categories != null)
+{
+    Html.RenderPartial("_Categories", Model.Categories);
+}
+
 <div class="articles" id="projects">
-    <div class="heading-articles">
-        <p class="m-text uppercase">BLOG</p>
-        <h2 class="heading-secondary xl-text uppercase">Vesti</h2>
-    </div>
     @if (Model.ProjectsId.HasValue)
     {
         Html.RenderAction<ProjectsListingController>(c => nameof(c.GetMoreProjects), new { projectsId = Model.ProjectsId.Value });

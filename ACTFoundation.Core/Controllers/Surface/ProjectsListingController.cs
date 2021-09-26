@@ -11,14 +11,20 @@ namespace ACTFoundation.Core.Controllers.Surface.Partials
 {
     public class ProjectsListingController : SurfaceController 
     {
-		public ActionResult GetMoreProjects(Guid projectsId, int pageNumber = 1)
+		public ActionResult GetMoreProjects(Guid projectsId, int pageNumber = 1, string categoryName = null)
 		{
 			var projectsPage = Umbraco.Content(projectsId) as Projects;
-			var articles = projectsPage.DescendantsOfType(Project.ModelTypeAlias)
-				.Select(x => new ProjectCardViewModel(x as Project))
+			var projects = projectsPage.DescendantsOfType(Project.ModelTypeAlias)
+				.Where(project => string.IsNullOrEmpty(categoryName) || FilterProjectByCategory(project as Project, categoryName))
+				.Select(project => new ProjectCardViewModel(project as Project))
 				.ToList();
-
-			return PartialView(new LoadmorePagination<ProjectCardViewModel>(projectsId, pageNumber, 6, articles));
+			
+			return PartialView(new LoadmorePagination<ProjectCardViewModel>(categoryName, projectsId, pageNumber, 6, projects));
 		}
+
+		private bool FilterProjectByCategory(Project project, string categoryName) =>
+			project.ProjectContent.Where(content => content is ProjectTags)
+					.Any(tag => (tag as ProjectTags).SelectedTags
+					.Any(selectedTag => (selectedTag as TagItem)?.Name?.ToLower() == categoryName.ToLower()));
 	}
 }
