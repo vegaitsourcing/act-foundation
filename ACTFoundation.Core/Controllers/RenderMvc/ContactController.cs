@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Web.Mvc;
+using ACTFoundation.Core.Caching;
 using ACTFoundation.Core.Models;
 using ACTFoundation.Core.ViewModels.Pages;
 using ACTFoundation.Models.Generated;
 using Umbraco.Core.Logging;
-using Umbraco.Web;
 
 namespace ACTFoundation.Core.Controllers.RenderMvc
 {
@@ -25,7 +24,13 @@ namespace ACTFoundation.Core.Controllers.RenderMvc
         [HttpPost]
         public ActionResult Contact(string name, string email, string contactReason, string text)
         {
-            var settings = Umbraco.ContentSingleAtXPath("//siteSettings") as SiteSettings;
+            SiteSettings settings = CacheHelper.Instance.TryRead("siteSettings") as SiteSettings;
+            if (settings == null)
+            {
+                settings = Umbraco.ContentSingleAtXPath("//siteSettings") as SiteSettings;
+                CacheHelper.Instance.Write("siteSettings", settings);
+            }
+
             var emailSettings = new EmailSettings(settings);
             var isError = false;
             try
