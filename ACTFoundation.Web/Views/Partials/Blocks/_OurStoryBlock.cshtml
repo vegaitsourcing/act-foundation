@@ -1,0 +1,11 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.OurStoryViewModel>
+<div class="story-box">
+    <span class="m-text">@Model.Subtitle</span>
+    <h2 class="xl-text">@Model.Title</h2>
+    <div class="regular-text">
+        @Html.Raw(Model.Text)
+    </div>
+</div>
+<div class="story-logo-wrapper">
+    <img src="@Model.Image.Url" />
+</div>

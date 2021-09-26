@@ -19,7 +19,7 @@ namespace ACTFoundation.Core.Controllers.Surface.Partials
 				.Select(project => new ProjectCardViewModel(project as Project))
 				.ToList();
 			
-			return PartialView(new LoadmorePagination<ProjectCardViewModel>(categoryName, projectsId, pageNumber, 6, projects));
+			return PartialView(new LoadmorePagination<ProjectCardViewModel>(projectsId, pageNumber, 6, projects));
 		}
 
 		private bool FilterProjectByCategory(Project project, string categoryName) =>

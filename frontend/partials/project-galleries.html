@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../../ACTFoundation.Web/assets/css/style.css">
+
+<div class="project-galleries">
+  <div class="heading-project-galleries">
+    <p class="m-text uppercase">Zanimljivosti</p>
+    <h2 class="heading-secondary xl-text uppercase">Galerija</h2>
+  </div>
+  <div class="gallery-box-swiper">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(https://images.unsplash.com/photo-1630158818165-c1a784a65c96?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1400&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjY2MDgyMQ&ixlib=rb-1.2.1&q=80&w=1920)">
+          <div class="swiper-slide-text">
+            <div class="swiper-slide-text__inner">
+              <p class="gallery-swiper-description regular-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p class="gallery-swiper-date regular-text"><strong>Datum:</strong>26. Jun 2021</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://images.unsplash.com/photo-1630158818165-c1a784a65c96?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1400&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjY2MDgyMQ&ixlib=rb-1.2.1&q=80&w=1920)">
+          <div class="swiper-slide-text">
+            <div class="swiper-slide-text__inner">
+              <p class="gallery-swiper-description regular-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p class="gallery-swiper-date regular-text"><strong>Datum:</strong>26. Jun 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+</script>
+</html>

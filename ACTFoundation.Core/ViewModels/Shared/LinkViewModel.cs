@@ -19,7 +19,7 @@ namespace ACTFoundation.Core.ViewModels.Shared
 		public LinkViewModel(IPage node, string target = null) : this(node.Url(), node.PageTitle, target)
 		{ }
 
-		public string Url { get; }
+		public string Url { get; set; }
 		public string Content { get; }
 		public string Target { get; }
 	}

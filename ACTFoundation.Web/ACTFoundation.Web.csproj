@@ -424,7 +424,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\CustomNewsletterDashboard\lang\en-US.xml" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\NewsletterDashboard.html" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\scripts\default.js" />
     <Content Include="assets\scripts\donateAccountsBlock.js" />
     <Content Include="assets\scripts\navigation.js" />
     <Content Include="config\grid.editors.config.js" />
@@ -451,6 +454,7 @@
     <Content Include="CustomError400.aspx" />
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="assets\scripts\news.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -485,6 +489,8 @@
     <Content Include="config\HealthChecks.config" />
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\package.manifest" />
+    <Content Include="App_Plugins\CustomNewsletterDashboard\customnewsletterdashboard.controller.js" />
     <None Include="packages.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -503,7 +509,7 @@
     <Content Include="Views\Partials\NestedContent\_Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_VolunteersShared.cshtml" />
     <Content Include="Views\Partials\NestedContent\_VolunteerItem.cshtml" />
-    <Content Include="Views\Partials\NestedContent\_PartnertLogos.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_PartnerLogos.cshtml" />
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
     <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
     <Content Include="Views\Partials\PublishedElement.cshtml" />
@@ -517,11 +523,18 @@
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
+    <Content Include="Views\Partials\Blocks\_Blog.cshtml" />
+    <Content Include="Views\Partials\Blocks\_News.cshtml" />
+    <Content Include="Views\Partials\News\_GetNews.cshtml" />
+    <Content Include="Views\Partials\News\_GetMoreNews.cshtml" />
     <Content Include="Views\Partials\NestedContent\_GetMoreProjects.cshtml" />
     <Content Include="Views\Donate.cshtml" />
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Volunteer.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Categories.cshtml" />
+    <Content Include="Views\Partials\Blocks\_OurMissionBlock.cshtml" />
+    <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
+    <Content Include="Views\Partials\Blocks\_OurStoryBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

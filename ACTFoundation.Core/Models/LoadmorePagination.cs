@@ -6,14 +6,13 @@ namespace ACTFoundation.Core.Models
 {
 	public class LoadmorePagination<TViewModel>
 	{
-		public LoadmorePagination(string categoryName, Guid parentId, int page, int itemsPerPage, IEnumerable<TViewModel> items)
+		public LoadmorePagination(Guid parentId, int page, int itemsPerPage, IEnumerable<TViewModel> items)
 		{
 			if (page <= 0) throw new ArgumentOutOfRangeException(nameof(page));
 			if (itemsPerPage <= 0) throw new ArgumentOutOfRangeException(nameof(itemsPerPage));
 
 			ParentId = parentId;
 			Page = page;
-			CategoryName = categoryName;
 			TotalResults = items.Count();
 			TotalPages = (int)Math.Ceiling((double)TotalResults / itemsPerPage);
 			ItemsPerPage = itemsPerPage;
@@ -28,7 +27,6 @@ namespace ACTFoundation.Core.Models
 		public int TotalPages { get; }
 		public int ItemsPerPage { get; }
 		public long TotalResults { get; }
-		public string CategoryName { get; }
 		public IReadOnlyList<TViewModel> Items { get; }
 
 		public bool HasMore()

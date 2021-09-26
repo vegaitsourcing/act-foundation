@@ -1,5 +1,10 @@
 ﻿@inherits UmbracoViewPage<ProjectsViewModel>
 
+@if (Model.BannerItem != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.BannerItem);
+}
+
 @if (Model.Categories != null && Model.Categories.Categories != null)
 {
     Html.RenderPartial("_Categories", Model.Categories);
