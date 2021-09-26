@@ -4,7 +4,7 @@
     <p class="testemonials-subtitle m-text">@Model.Title</p>
     <p class="testemonials-title xl-text bold">@Model.Subtitle</p>
     <p class="testemonials-content m-text">
-        @Html.Raw(Model.Description)
+        @Model.Description.StripHtml()
     </p>
     <div class="testemonials-profiles">
         @foreach (var item in Model.TestimonialItems)

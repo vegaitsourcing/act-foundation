@@ -1,0 +1,17 @@
+﻿{
+  "dashboards": [
+    {
+      "alias": "NewsletterDashboard",
+      "view": "/App_Plugins/CustomNewsletterDashboard/NewsletterDashboard.html",
+      "sections": [ "content" ],
+      "weight": -10,
+      "access": [
+        { "deny": "translator" },
+        { "grant": "admin" }
+      ]
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/CustomNewsletterDashboard/customnewsletterdashboard.controller.js"
+  ]
+}

@@ -17,7 +17,7 @@ namespace ACTFoundation.Core.Controllers.Surface
         }
 
         [HttpGet]
-        [Route("subscriptions/getall")]
+        [Route("umbraco/backoffice/subscriptions/getall")]
         [UmbracoAuthorize]
         public JsonResult<IEnumerable<NewsletterSubscriptionDatabaseModel>> GetAll()
         {
@@ -40,7 +40,7 @@ namespace ACTFoundation.Core.Controllers.Surface
         }
 
         [HttpPost]
-        [Route("subscriptions/remove")]
+        [Route("umbraco/backoffice/subscriptions/remove")]
         [UmbracoAuthorize]
         public void Remove(int id)
         {
