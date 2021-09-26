@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body.locked {
+  overflow-y: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -924,10 +928,32 @@ form button {
   z-index: 300;
 }
 .navigation.is-open {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
+  height: calc(100vh - 4.2rem);
 }
+
+.navigation.is-open nav {
+  height: 80vh;
+  align-items: center;
+}
+
+.navigation.is-open nav img {
+  width: 30%;
+  height: auto;
+}
+
+.navigation.is-open nav a {
+  font-size: var(--l-text);
+  margin-top: 1em;
+}
+
+.navigation.is-open nav .btn {
+  margin-top: auto;
+  margin-left: unset;
+}
+
 .hamburger {
-  padding: calc(var(--default-spacing) / 2) var(--default-spacing);
+  padding: 24px;
 }
 .hamburger > p {
   height: 0.3rem;
@@ -968,7 +994,7 @@ nav button {
   margin-top: 2rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 730px) {
   .hamburger {
     display: none;
   }
