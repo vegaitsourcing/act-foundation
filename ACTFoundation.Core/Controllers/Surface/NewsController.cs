@@ -34,9 +34,8 @@ namespace ACTFoundation.Core.Controllers.Surface
         private List<ArticleCardViewModel> GetArticlesFromCache(Guid blogId, int pageNumber)
         {
             var key = $"{CacheName}{blogId}-{pageNumber}";
-            List<ArticleCardViewModel> articles = CacheHelper.Instance.TryRead(key) as List<ArticleCardViewModel>;
 
-            if (articles == null)
+            if (!(CacheHelper.Instance.TryRead(key) is List<ArticleCardViewModel> articles))
             {
                 var blogPage = Umbraco.Content(blogId) as Blog;
                 articles = blogPage.DescendantsOfType(Article.ModelTypeAlias)
