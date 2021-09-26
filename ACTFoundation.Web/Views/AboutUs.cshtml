@@ -15,12 +15,12 @@
     Html.RenderPartial("~/Views/Partials/NestedContent/_Volunteers.cshtml", Model.Volunteers);
 }
 
-@if (Model.OurStoryBlock != null)
+@if (Model.OurStory != null)
 {
-    Html.RenderPartial("~/Views/Partials/Blocks/_OurStoryBlock.cshtml", Model.OurStoryBlock);
+    Html.RenderPartial("~/Views/Partials/Blocks/_OurStoryBlock.cshtml", Model.OurStory);
 }
 
-@if (Model.OurMissionBlock != null)
+@if (Model.OurMission != null)
 {
-    Html.RenderPartial("~/Views/Partials/Blocks/_OurMissionBlock.cshtml", Model.OurMissionBlock);
+    Html.RenderPartial("~/Views/Partials/Blocks/_OurMissionBlock.cshtml", Model.OurMission);
 }

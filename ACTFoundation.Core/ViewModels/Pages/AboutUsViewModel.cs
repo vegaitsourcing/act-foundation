@@ -2,8 +2,9 @@
 using ACTFoundation.Core.ViewModels.Blocks;
 using ACTFoundation.Core.ViewModels.Partials.Items;
 using ACTFoundation.Core.ViewModels.Shared;
-using ACTFoundation.Models.Generated;
 using System.Linq;
+using ACTFoundation.Models.Generated;
+using ACTFoundation.Core.ViewModels.Partials.Blocks;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
@@ -32,13 +33,13 @@ namespace ACTFoundation.Core.ViewModels.Pages
             var ourStory = context.Page.Content.FirstOrDefault(item => item is OurStoryBlock);
             if (bannerCarousel != null)
             {
-                OurStoryBlock = new OurStoryBlockViewModel(ourStory as OurStoryBlock);
+                OurStory = new OurStoryViewModel(ourStory as OurStoryBlock);
             }
 
             var ourMission = context.Page.Content.FirstOrDefault(item => item is OurMissionBlock);
             if (bannerCarousel != null)
             {
-                OurMissionBlock = new OurMissionBlockViewModel(ourMission as OurMissionBlock);
+                OurMission = new OurMissionViewModel(ourMission as OurMissionBlock);
             }
         }
 
@@ -51,8 +52,8 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public WhoWeAreBlockViewModel WhoWeAre { get; set; }
 
         public VolunteersViewModel Volunteers { get; set; }
-        public OurStoryBlockViewModel OurStoryBlock { get; set; }
+        public OurStoryViewModel OurStory { get; set; }
 
-        public OurMissionBlockViewModel OurMissionBlock { get; set; }
+        public OurMissionViewModel OurMission { get; set; }
     }
 }
