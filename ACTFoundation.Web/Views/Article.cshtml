@@ -46,7 +46,7 @@
                 <p class="regular-text">
                     @Html.Raw(article.TextPreview)
                 </p>
-                <a class="small-text uppercase" href="@article.Link">PROCITAJ VISE</a>
+                <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Article.ReadMoreLink.Text")</a>
             </div>
         </div>
         }
