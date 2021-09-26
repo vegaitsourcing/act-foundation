@@ -972,6 +972,10 @@ form button {
   margin-left: unset;
 }
 
+nav > a[href="/volunteer/"] {
+  margin: 0 auto;
+}
+
 .hamburger {
   padding: 24px;
 }
@@ -981,6 +985,7 @@ form button {
   margin-bottom: 1rem;
   background-color: var(--color-yellow);
 }
+
 nav img {
   height: 6rem;
   width: 6rem;
