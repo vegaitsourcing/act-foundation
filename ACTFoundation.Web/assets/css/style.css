@@ -1593,3 +1593,33 @@ nav button {
     margin-right: 10px;
   }
 }
+
+.story-galleries {
+  height: 300px;
+}
+
+.story-galleries .swiper-slide img {
+  height: 300px;
+}
+
+@media screen and (min-width: 786px) {
+  .story-galleries {
+    height: 450px;
+  }
+  
+  .story-galleries .swiper-slide img {
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .story-galleries {
+    height: 560px;
+  }
+  
+  .story-galleries .swiper-slide img {
+    height: 560px;
+  }
+}
+
+

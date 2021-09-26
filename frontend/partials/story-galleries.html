@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../../ACTFoundation.Web/assets/css/style.css">
+
+<div class="story-galleries">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1630158818165-c1a784a65c96?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1400&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjY2MDgyMQ&ixlib=rb-1.2.1&q=80&w=1920" alt="">
+        </div>
+        <!-- <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1630158818165-c1a784a65c96?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1400&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMjY2MDgyMQ&ixlib=rb-1.2.1&q=80&w=1920" alt="">
+        </div> -->
+      </div>
+  </div>
+</div>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+        delay: 3000,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+</script>
+</html>
