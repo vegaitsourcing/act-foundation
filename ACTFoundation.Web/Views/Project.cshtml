@@ -33,19 +33,47 @@
     </div>
 
     <div class="article-sidebar">
-        @foreach (var article in Model.RelatedProjects) {
+
         <div class="articles-list-item">
-            <div class="article-image">
-                <img src=@article.MainImage.Url alt="" />
-            </div>
             <div class="article-body">
-                <h4 class="m-text">@article.Title</h4>
+                <h4 class="m-text">@Umbraco.GetDictionaryValue("Project.Donate.Title")</h4>
                 <p class="regular-text">
-                    @Html.Raw(article.TextPreview)
+                    @{ var displayTextDonate = new HtmlString(Umbraco.GetDictionaryValue("Project.Donate.Text"));}
+                    @displayTextDonate
                 </p>
-                <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
+                <a href="@Umbraco.GetDictionaryValue("Project.Donate.Link")">
+                    <button class="bg-orange cl-white">@Umbraco.GetDictionaryValue("Project.Donate.Button.Text")</button>
+                </a>
             </div>
         </div>
+
+        <div class="articles-list-item">
+            <div class="article-body">
+                <h4 class="m-text">@Umbraco.GetDictionaryValue("Project.Volunteer.Title")</h4>
+                <p class="regular-text">
+                    @{ var displayTextVolunteer = new HtmlString(Umbraco.GetDictionaryValue("Project.Volunteer.Text"));}
+                    @displayTextVolunteer
+                </p>
+                <a href="@Umbraco.GetDictionaryValue("Project.Volunteer.Link")">
+                    <button class="bg-orange cl-white">@Umbraco.GetDictionaryValue("Project.Volunteer.Button.Text")</button>
+                </a>
+            </div>
+        </div>
+
+        @foreach (var article in Model.RelatedProjects)
+        {
+            <div class="articles-list-item">
+                <div class="article-image">
+                    <img src=@article.MainImage.Url alt="" />
+                </div>
+                <div class="article-body">
+                    <h4 class="m-text">@article.Title</h4>
+                    <p class="regular-text">
+                        @Html.Raw(article.TextPreview)
+                    </p>
+                    <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
+                </div>
+            </div>
         }
     </div>
  </div>
