@@ -301,11 +301,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\ExternalRedirectAttribute.cs" />
+    <Compile Include="Caching\CacheHelper.cs" />
     <Compile Include="Components\ApplicationConfigurationComponent.cs" />
+    <Compile Include="Components\HandlePublishedComponent.cs" />
+    <Compile Include="Composers\HandlePublishedComposer.cs" />
     <Compile Include="Components\NewsletterSubscriptionComponent.cs" />
     <Compile Include="Composers\MapHttpRoutesComposer.cs" />
-    <Compile Include="Composers\NewsletterSubscriptionComposer.cs" />
-    <Compile Include="Composers\SearchComposer.cs" />
+    <Compile Include="Composers\NewsletterSubscriptionComposer.cs" />    <Compile Include="Composers\SearchComposer.cs" />
     <Compile Include="Contexts\IPageContext.cs" />
     <Compile Include="Contexts\ISeoContext.cs" />
     <Compile Include="Contexts\ISiteContext.cs" />
