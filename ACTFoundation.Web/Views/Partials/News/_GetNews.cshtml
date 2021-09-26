@@ -1,0 +1,13 @@
+﻿@using ACTFoundation.Core.ViewModels.Blocks
+@using ACTFoundation.Core.Controllers.Surface
+@inherits UmbracoViewPage<LoadNewsViewModel>
+
+<div class="articles">
+    <div class="heading-articles">
+        <p class="m-text uppercase">@Model.Blog.Title</p>
+        <h2 class="heading-secondary xl-text uppercase">@Model.Blog.Headline</h2>
+    </div>
+    <div class="row">
+        @Html.Partial("~/Views/Partials/News/_GetMoreNews.cshtml", Model.LoadPaginationItems);
+    </div>
+</div>

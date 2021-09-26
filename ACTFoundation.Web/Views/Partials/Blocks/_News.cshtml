@@ -3,5 +3,5 @@
 
 @if (Model.BlogId.HasValue)
 {
-    Html.RenderAction<NewsController>(c => nameof(c.GetMoreNews), new { blogId = Model.BlogId.Value });
+    Html.RenderAction<NewsController>(c => nameof(c.GetNews), new { blogId = Model.BlogId.Value });
 }

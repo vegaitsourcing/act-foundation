@@ -22,6 +22,9 @@
 
     if (Model.HasMore())
     {
-        <a href="@(Url.SurfaceAction<NewsController>(nameof(NewsController.GetMoreNews), new { page = Model.Page + 1, noOfItems = Model.ItemsPerPage, blogId = Model.ParentId }))" class="load-more-button" data-loadmore rel="nofollow">Ucitaj jos</a>
+        <button id="load-more-news" data-loadmore rel="nofollow"
+            onclick="loadMoreNews('@Model.ParentId', @(Model.Page + 1))">
+            @Umbraco.GetDictionaryValue("News.LoadMore")
+        </button>
     }
 }
