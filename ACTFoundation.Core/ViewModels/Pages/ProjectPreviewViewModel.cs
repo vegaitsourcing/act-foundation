@@ -9,17 +9,17 @@ using Umbraco.Web;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
-    public class ArticlePreviewViewModel
+    public class ProjectPreviewViewModel
     {
         private const int ShortTextLength = 208;
 
-        public ArticlePreviewViewModel(Article article)
+        public ProjectPreviewViewModel(Project project)
         {
-            Title = article.Title;
-            TextPreview = GetTextPreview(article.Text.ToHtmlString().StripHtml());
-            MainImage = article.MainImage.ToViewModel();
-            Tags = article.Tags?.Select(tag => new TagViewModel(tag as TagItem));
-            Link = article.Url();
+            Title = project.Title;
+            TextPreview = GetTextPreview(project.Text.ToHtmlString().StripHtml());
+            MainImage = project.MainImage.ToViewModel();
+            Tags = project.Tags?.Select(tag => new TagViewModel(tag as TagItem));
+            Link = project.Url();
         }
 
         public string Title { get; }

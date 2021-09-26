@@ -45,7 +45,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
             var relatedArticles = contentItems
                 .Select(article => article as Article)
                 .Where(article => article.Id != ArticleId && article.Tags != null && Tags != null && article.Tags.Any(tag => MatchingProvidedTags(tag as TagItem, Tags)))
-                .Take(4)
+                .Take(RelatedArticlesToDisplay)
                 .Select(article => new ArticlePreviewViewModel(article))
                 .ToArray();
 
