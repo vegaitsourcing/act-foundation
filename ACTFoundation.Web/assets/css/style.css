@@ -287,6 +287,12 @@ button {
   margin-left: 18px;
 }
 
+.chips-top {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
 .article .chips__author p {
   margin: 0;
   margin-left: 18px;
