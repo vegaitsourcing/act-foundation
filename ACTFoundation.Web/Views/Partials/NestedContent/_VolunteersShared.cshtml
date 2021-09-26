@@ -1,6 +1,6 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Shared.VolunteersSharedViewModel>
 
-<div class="volunteers-wrapper">
+@*<div class="volunteers-wrapper">
     <div class="volunteers-hero"
          style="
       background-image: url(@(Model.BackgroundImage));
@@ -23,4 +23,63 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
+</div>*@
+
+
+<div class="volunteers-wrapper">
+    <div class="volunteers-hero"
+         style="
+      background-image: url('@Model.BackgroundImage.Url');">
+        <h2 class="xl-text bold">@Model.Title</h2>
+        <p class="m-text">
+            @Model.Description
+        </p>
+        <a href="@Model.Link.Url" class="btn btn-fixed-width bg-blue uppercase">@Model.Link.Content</a>
+    </div>
+    <div class="volunteers">
+        <div class="button-prev volunteers-arrows">
+            <img src="../assets/slideLeft.svg" slt="" role="presentation" />
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model.Volunteers)
+                {
+                    Html.RenderPartial("~/Views/Partials/NestedContent/_VolunteerItem.cshtml", item);
+                }
+            </div>
+        </div>
+        <div class="button-next volunteers-arrows">
+            <img src="../assets/slideLeft.svg" slt="" role="presentation" />
+        </div>
+    </div>
 </div>
+
+<script>
+    const swiper2 = new Swiper(".swiper", {
+        // spaceBetween: 30,
+        navigation: {
+            nextEl: ".button-next",
+            prevEl: ".button-prev",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            767: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 480px
+            992: {
+                slidesPerView: 3,
+            },
+            1240: {
+                slidesPerView: 4,
+            },
+        },
+        // when window width is >= 640px
+        on: {
+            resize: function () {
+                swiper2.changeDirection(getDirection());
+            },
+        },
+    });
+
+</script>
