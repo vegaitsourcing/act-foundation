@@ -474,7 +474,7 @@ button {
   .row {
     grid-template-columns: repeat(3, 1fr);
   }
-  .articles-list-item:nth-child(even) {
+  .articles .articles-list-item:nth-child(even) {
     flex-direction: column-reverse;
   }
 
