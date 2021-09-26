@@ -1,12 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContactViewModel>
 
-@if (Model.IsSubmitted)
-{
-    <h2>@Umbraco.GetDictionaryValue("Contact.Form.ThankYouMessage")</h2>
-}
-else {
-<header class="hero"
-     style="
+    <header class="hero"
+            style="
     background: linear-gradient(
         180deg,
         #000000 -33.39%,
@@ -17,16 +12,27 @@ else {
       url('https://ichef.bbci.co.uk/news/976/mcs/media/images/75745000/jpg/_75745654_466377933.jpg')
         no-repeat center / cover;
   ">
-    <h1>@Model.DonateContent.Title</h1>
-    <p>
-        @Model.DonateContent.Description
-    </p>
-    <form method="post" action="/contact" name="RenderMvcPost" id="RenderMvcPost">
-        <input type="text" name="name" placeholder="Vaše Ime">
-        <input type="text" name="email" placeholder="Vaš Email">
-        <input type="text" name="contactReason" placeholder="Razlog kontaktiranja">
-        <textarea name="text" id="" rows="5"></textarea>
-        <button class="bg-yellow" type="submit">@Umbraco.GetDictionaryValue("Contact.Form.SendButton")</button>
-    </form>
-</header>
-}
+        <h1>@Model.DonateContent.Title</h1>
+        <p>
+            @Model.DonateContent.Description
+        </p>
+        
+    @if (Model.SubmitStatus == SubmitStatusEnum.Success)
+    {
+        <h2>@Umbraco.GetDictionaryValue("Contact.Form.ThankYouMessage")</h2>
+    }
+    else if (Model.SubmitStatus == SubmitStatusEnum.Error)
+    {
+        <h2>@Umbraco.GetDictionaryValue("Contact.Form.ErrorMessage")</h2>
+    }
+    else
+    {
+        <form method="post" action="/contact" name="RenderMvcPost" id="RenderMvcPost">
+            <input type="text" name="name" placeholder="Vaše Ime">
+            <input type="text" name="email" placeholder="Vaš Email">
+            <input type="text" name="contactReason" placeholder="Razlog kontaktiranja">
+            <textarea name="text" id="" rows="5"></textarea>
+            <button class="bg-yellow" type="submit">@Umbraco.GetDictionaryValue("Contact.Form.SendButton")</button>
+        </form>
+    }
+    </header>
