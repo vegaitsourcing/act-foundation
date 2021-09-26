@@ -451,6 +451,7 @@
     <Content Include="CustomError400.aspx" />
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="assets\scripts\news.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -517,6 +518,10 @@
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
     <Content Include="Views\Volunteers.cshtml" />
+    <Content Include="Views\Partials\Blocks\_Blog.cshtml" />
+    <Content Include="Views\Partials\Blocks\_News.cshtml" />
+    <Content Include="Views\Partials\News\_GetNews.cshtml" />
+    <Content Include="Views\Partials\News\_GetMoreNews.cshtml" />
     <Content Include="Views\Partials\NestedContent\_GetMoreProjects.cshtml" />
     <Content Include="Views\Donate.cshtml" />
     <Content Include="Views\Article.cshtml" />

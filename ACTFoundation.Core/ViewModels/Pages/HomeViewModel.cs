@@ -5,6 +5,8 @@ using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.Generated;
 using System.Linq;
+using Umbraco.Core.Models.Blocks;
+using Umbraco.Core.Models.PublishedContent;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
@@ -18,6 +20,18 @@ namespace ACTFoundation.Core.ViewModels.Pages
                 BannerCarousel = new BannerCarouselViewModel(bannerCarousel as BannerCarousel);
             }
 
+			var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
+			if (donateBlock != null)
+			{
+				DonateBlock = new DonateBlockViewModel((DonateBlock) donateBlock);
+			}
+
+			var newsBlock = context.Page.MainContent.FirstOrDefault(item => item is News);
+			if (newsBlock != null)
+			{
+				News = new NewsViewModel((News)newsBlock);
+			}
+		
             var partnerLogos = context.Page.MainContent.FirstOrDefault(item => item is PartnerLogosItem);
             if (partnerLogos != null)
             {
@@ -36,13 +50,8 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
                 Volunteers = new VolunteersViewModel(volunteers as Volunteers);
             }
-
-            var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
-            if (donateBlock != null)
-            {
-                DonateBlock = new DonateBlockViewModel((DonateBlock)donateBlock);
-            }
         }
+		public NewsViewModel News { get; }
 
         public BannerCarouselViewModel BannerCarousel { get; set; }
 

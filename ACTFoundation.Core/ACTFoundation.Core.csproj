@@ -318,6 +318,7 @@
     <Compile Include="Controllers\RenderMvc\DonateController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
+    <Compile Include="Controllers\Surface\NewsController.cs" />
     <Compile Include="Controllers\RenderMvc\ArticleController.cs" />
     <Compile Include="Controllers\RenderMvc\HomeController.cs" />
     <Compile Include="Controllers\RenderMvc\ProjectsController.cs" />
@@ -346,6 +347,7 @@
     <Compile Include="Models\EmailSettings.cs" />
     <Compile Include="Models\IPagination.cs" />
     <Compile Include="Models\IReadOnlyPagedCollection.cs" />
+    <Compile Include="Models\LoadmorePagination.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Pagination.cs" />
     <Compile Include="Models\ReadOnlyPagedCollection.cs" />
@@ -353,6 +355,10 @@
     <Compile Include="SmtpHelper.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
+    <Compile Include="ViewModels\Blocks\BlogViewModel.cs" />
+    <Compile Include="ViewModels\Blocks\ArticleCardViewModel.cs" />
+    <Compile Include="ViewModels\Blocks\LoadNewsViewModel.cs" />
+    <Compile Include="ViewModels\Blocks\NewsViewModel.cs" />
     <Compile Include="ViewModels\Pages\ArticlePreviewViewModel.cs" />
     <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
     <Compile Include="ViewModels\Blocks\DonateBlockViewModel.cs" />
