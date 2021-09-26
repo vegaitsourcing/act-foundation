@@ -7,14 +7,43 @@
         @Html.Raw(Model.TopText)
     </div>
 </div>
-
-@foreach (var image in Model.Gallery)
-{
-    <img src="@image.Url()" />
-}
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="story-galleries">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            @if (Model.Gallery != null)
+            {
+                foreach (var image in Model.Gallery)
+                {
+                    <div class="swiper-slide">
+                        <img src="@image.Url()" alt="">
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
 
 <div class="story-box bg-orange">
     <div class="regular-text">
         @Html.Raw(Model.BottomText)
     </div>
 </div>
+
+<script>
+    const swiper = new Swiper(".swiper", {
+        autoplay: {
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            },
+        },
+    });
+</script>
