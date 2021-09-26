@@ -17,9 +17,12 @@
             <p>
                 @Model.Description
             </p>
-            @foreach (var buttonLink in Model.ButtonLinks)
-            {
-                Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
-            }
+            <div style="display: flex; align-items: center;">
+                @foreach (var buttonLink in Model.ButtonLinks)
+                {
+                    Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
+                }
+            </div>
+            
         </div>
     }
