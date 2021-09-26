@@ -31,7 +31,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
 			{
 				News = new NewsViewModel((News)newsBlock);
 			}
-		}
+		
             var partnerLogos = context.Page.MainContent.FirstOrDefault(item => item is PartnerLogosItem);
             if (partnerLogos != null)
             {
@@ -44,20 +44,14 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
                 Testimonials = new TestimonialsViewModel(testimonials as Testimonials);
             }
-		public NewsViewModel News { get; }
 
             var volunteers = context.Page.MainContent.FirstOrDefault(item => item is Volunteers);
             if (volunteers != null)
             {
                 Volunteers = new VolunteersViewModel(volunteers as Volunteers);
             }
-
-            var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
-            if (donateBlock != null)
-            {
-                DonateBlock = new DonateBlockViewModel((DonateBlock)donateBlock);
-            }
         }
+		public NewsViewModel News { get; }
 
         public BannerCarouselViewModel BannerCarousel { get; set; }
 
