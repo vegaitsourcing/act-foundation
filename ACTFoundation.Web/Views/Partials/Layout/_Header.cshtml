@@ -7,7 +7,9 @@
         <p></p>
     </div>
     <nav>
-        <img src=@Model.Logo.Url />
+        <a href="/">
+            <img src=@Model.Logo.Url />
+        </a>
 
         @if (@Model.MainNavigationLinks != null && @Model.MainNavigationLinks.Any())
         {
@@ -18,7 +20,9 @@
         }
         @if (@Model.MainNavigationButton != null)
         {
-            <a href="@Model.MainNavigationButton.Url" class="bg-orange cl-white">@Model.MainNavigationButton.Content</a>
+            <a href="@Model.MainNavigationButton.Url">
+                <button class="bg-orange cl-white">@Model.MainNavigationButton.Content</button>
+            </a>
         }
     </nav>
 </div>
