@@ -1,11 +1,11 @@
 ﻿using System;
-using Umbraco.Web;
+using ACTFoundation.Core.Caching;
 using ACTFoundation.Core.Contexts;
 using ACTFoundation.Core.Extensions;
 using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.DocumentTypes;
-using ACTFoundation.Models.Extensions;
 using ACTFoundation.Models.Generated;
+using Umbraco.Web;
 
 namespace ACTFoundation.Core.ViewModels.Partials.Layout
 {
@@ -21,7 +21,16 @@ namespace ACTFoundation.Core.ViewModels.Partials.Layout
 			//TODO if Open Graph Image is null use banner image
 			Image = context.Page.OpenGraphImage.ToViewModel();
 			Locale = context.Page.GetCultureFromDomains();
-		}
+
+            SiteSettings settings = CacheHelper.Instance.TryRead("siteSettings") as SiteSettings;
+            if (settings == null)
+            {
+				settings = UmbracoDictionary.UmbracoHelper.ContentSingleAtXPath("//siteSettings") as SiteSettings;
+				CacheHelper.Instance.Write("siteSettings", settings);
+            }
+
+            this.SiteName = settings.SiteName;
+        }
 
 		public string Title { get; }
 		public string Description { get; }
