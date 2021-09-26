@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using System.Web;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
+using Umbraco.Core;
 
 namespace ACTFoundation.Core.ViewModels.Blocks
 {
 	public class ArticleCardViewModel
     {
+
+		private const int ShortTextLength = 208;
+
 		public ArticleCardViewModel(Article article)
 		{
 			PageTitle = article.PageTitle;
@@ -17,7 +21,7 @@ namespace ACTFoundation.Core.ViewModels.Blocks
 			Author = article.Author;
 			MainImage = new ImageViewModel(article.MainImage);
 			Tags = article.Tags;
-			Text = article.Text;
+			Text = GetTextPreview(article.Text.ToHtmlString().StripHtml());
 			Url = article.Url();
 		}
 
@@ -29,5 +33,10 @@ namespace ACTFoundation.Core.ViewModels.Blocks
 		public IEnumerable<IPublishedContent> Tags { get; set; } //UPDATE
 		public IHtmlString Text { get; set; }
 		public string Url { get; set; }
+
+		private IHtmlString GetTextPreview(string text)
+		{
+			return text.Length < ShortTextLength ? new HtmlString(text) : new HtmlString(text.Substring(0, ShortTextLength) + "...");
+		}
 	}
 }

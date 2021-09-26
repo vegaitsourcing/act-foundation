@@ -5,7 +5,6 @@
 {
     foreach (var item in Model.Items)
     {
-        var description = new HtmlString( item.Text.ToString().Length > 208 ? item.Text.ToString().Substring(0, 208) + "..." : item.Text.ToString());
         <div class="articles-list-item col-1-of-3">
             <div class="article-image">
                 <img src="@item.MainImage.Url"
@@ -14,7 +13,7 @@
             <div class="article-body">
                 <h4 class="m-text">@item.PageTitle</h4>
                 <p class="regular-text">
-                    @description
+                    @Html.Raw(@item.Text)
                 </p>
                 <a class="small-text uppercase" href="@item.Url">@Umbraco.GetDictionaryValue("News.ReadMore")</a>
             </div>
