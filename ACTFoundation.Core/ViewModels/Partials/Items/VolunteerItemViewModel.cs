@@ -7,7 +7,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Items
     {
         public VolunteerItemViewModel(VolunteerItem volunteerItem)
         {
-            ContactLink = new LinkViewModel(volunteerItem.ContactLink);
+            ContactLink = volunteerItem.ContactLink != null ? new LinkViewModel(volunteerItem.ContactLink) : null;
             Description = volunteerItem.Description;
             FullName = volunteerItem.FullName;
             Occupation = volunteerItem.Occupation;
