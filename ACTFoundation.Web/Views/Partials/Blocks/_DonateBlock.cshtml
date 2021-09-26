@@ -8,7 +8,9 @@
         <p class="m-text">
             @Html.Raw(Model.Text)
         </p>
-        <button class="bg-orange cl-white">@Model.SeeMoreLink.Name</button>
+        <a href="/donations">
+            <button class="bg-orange cl-white">@Model.SeeMoreLink.Name</button>
+        </a>
     </div>
     <div class="donate-images">
         @foreach (var link in @Model.images)
