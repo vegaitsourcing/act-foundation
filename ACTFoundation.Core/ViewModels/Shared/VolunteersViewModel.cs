@@ -9,7 +9,7 @@ namespace ACTFoundation.Core.ViewModels.Shared
     {
         public VolunteersViewModel(Volunteers volunteers)
         {
-            Volunteers = volunteers != null ? volunteers?.VolunteersContent.Select(item => new VolunteersSharedViewModel(item as VolunteersShared)) : Array.Empty<VolunteersSharedViewModel>();
+                Volunteers = volunteers?.VolunteersContent?.Select(item => new VolunteersSharedViewModel(item as VolunteersShared)) ?? Array.Empty<VolunteersSharedViewModel>();
         }
 
         public IEnumerable<VolunteersSharedViewModel> Volunteers { get; }
