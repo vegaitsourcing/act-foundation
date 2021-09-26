@@ -50,7 +50,7 @@ namespace ACTFoundation.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("donateContent")]
-		public IPublishedElement DonateContent => this.Value<IPublishedElement>("donateContent");
+		public IEnumerable<IPublishedElement> DonateContent => this.Value<IEnumerable<IPublishedElement>>("donateContent");
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
