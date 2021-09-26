@@ -22,6 +22,7 @@
 
     if (Model.HasMore())
     {
+        <div id="load-more-news-div"></div>
         <button id="load-more-news" data-loadmore rel="nofollow"
                 onclick="loadMoreNews('@Model.ParentId', @(Model.Page + 1))">
             @Umbraco.GetDictionaryValue("News.LoadMore")
