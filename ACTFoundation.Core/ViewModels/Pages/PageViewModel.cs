@@ -40,7 +40,6 @@ namespace ACTFoundation.Core.ViewModels.Pages
 		private Lazy<MetaTagsViewModel> MetaTagsLazy { get; }
 		private Lazy<OpenGraphViewModel> OpenGraphLazy { get; }
 
-		private Lazy<DonateBlockViewModel> DonateBlockLazy { get; }
 		private Lazy<HeaderViewModel> HeaderLazy { get; }
 		private Lazy<FooterViewModel> FooterLazy { get; }
 		private Lazy<TopBottomSocialLinksViewModel> TopBottomSocialLinksLazy { get; }
