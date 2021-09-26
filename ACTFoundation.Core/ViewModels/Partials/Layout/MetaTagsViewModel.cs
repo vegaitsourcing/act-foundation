@@ -16,7 +16,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Layout
 		{
 			if (context == null) throw new ArgumentNullException(nameof(context));
 
-			//Title = context.Seo.GetFormattedSeoTitle(context.CurrentPage, context.SiteSettings.SiteName);
+			Title = context.CurrentPage.PageTitle;
 			Description = context.Seo.SeoDescription;
 			Keywords = context.Seo.SeoKeywords;
 			//CanonicalLink = context.Seo.GetCanonicalUrl(context.SiteSettings.CanonicalDomain);
