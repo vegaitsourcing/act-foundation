@@ -20,6 +20,9 @@
     <a href="#" class="btn btn-fixed-width bg-blue uppercase">Priključi se</a>
   </div>
   <div class="volunteers">
+    <div class="button-prev volunteers-arrows">
+      <img src="../assets/slideLeft.svg" slt="" role="presentation" />
+    </div>
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="volunteer-card swiper-slide">
@@ -112,7 +115,7 @@
         </div>
         <div class="volunteer-card swiper-slide">
           <img src="https://source.unsplash.com/random/600x400" />
-
+          <p class="bold m-text">Silvia Mcan</p>
           <p class="regular-text">TITLE</p>
           <p class="regular-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -125,8 +128,9 @@
           >
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="button-next volunteers-arrows">
+      <img src="../assets/slideLeft.svg" slt="" role="presentation" />
     </div>
   </div>
 </div>
@@ -135,8 +139,8 @@
   const swiper = new Swiper(".swiper", {
     // spaceBetween: 30,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
     },
     breakpoints: {
       // when window width is >= 320px
