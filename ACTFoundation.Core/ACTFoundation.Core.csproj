@@ -307,7 +307,8 @@
     <Compile Include="Composers\HandlePublishedComposer.cs" />
     <Compile Include="Components\NewsletterSubscriptionComponent.cs" />
     <Compile Include="Composers\MapHttpRoutesComposer.cs" />
-    <Compile Include="Composers\NewsletterSubscriptionComposer.cs" />    <Compile Include="Composers\SearchComposer.cs" />
+    <Compile Include="Composers\NewsletterSubscriptionComposer.cs" />
+    <Compile Include="Composers\SearchComposer.cs" />
     <Compile Include="Contexts\IPageContext.cs" />
     <Compile Include="Contexts\ISeoContext.cs" />
     <Compile Include="Contexts\ISiteContext.cs" />
@@ -366,6 +367,7 @@
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\VolunteerViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\OurMissionViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\DonateAccountsBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\ProjectCardViewModel.cs" />
