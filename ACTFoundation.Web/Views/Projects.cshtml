@@ -1,5 +1,10 @@
 ﻿@inherits UmbracoViewPage<ProjectsViewModel>
 
+@if (Model.BannerItem != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.BannerItem);
+}
+
 <div class="articles" id="projects">
     <div class="heading-articles">
         <p class="m-text uppercase">BLOG</p>
