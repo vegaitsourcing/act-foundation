@@ -1,0 +1,16 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.BlogViewModel>
+
+<div class="articles">
+    <div class="heading-articles">
+        <p class="m-text uppercase">@Model.Title</p>
+        <h2 class="heading-secondary xl-text uppercase">@Model.Headline</h2>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.Articles)
+        {
+            Html.RenderPartial("~/Views/Partials/Blocks/_Article.cshtml", item);
+        }
+    </div>
+</div>
+
+

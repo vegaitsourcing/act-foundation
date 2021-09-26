@@ -1,6 +1,6 @@
 ﻿using ACTFoundation.Core.Contexts;
+using ACTFoundation.Core.ViewModels.Partials.Items;
 using ACTFoundation.Models.Generated;
-using Umbraco.Core.Models.PublishedContent;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
@@ -8,12 +8,19 @@ namespace ACTFoundation.Core.ViewModels.Pages
     {
         public ContactViewModel(IPageContext<Contact> context) : base(context)
         {
-            MainContent = context.Page.ContactContent;
-            IsSubmitted = false;
+            DonateContent = new BannerCarouselItemViewModel(context.Page.ContactContent);
+            SubmitStatus = SubmitStatusEnum.Default;
         }
 
-        public IPublishedElement MainContent { get; set; }
+        public BannerCarouselItemViewModel DonateContent { get; set; }
 
-        public bool IsSubmitted { get; set; }
+        public SubmitStatusEnum SubmitStatus{ get; set; }
+    }
+
+    public enum SubmitStatusEnum
+    {
+        Default,
+        Success,
+        Error
     }
 }

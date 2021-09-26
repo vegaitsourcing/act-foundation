@@ -1,5 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="../../ACTFoundation.Web/assets/css/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<meta charset="UTF-8" />
 
 <div class="volunteers-wrapper">
   <div
@@ -15,9 +17,12 @@
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat.
     </p>
-    <button class="bg-blue">PRIKLJUCI SE</button>
+    <a href="#" class="btn btn-fixed-width bg-blue uppercase">Priključi se</a>
   </div>
   <div class="volunteers">
+    <div class="button-prev volunteers-arrows">
+      <img src="../assets/slideLeft.svg" slt="" role="presentation" />
+    </div>
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="volunteer-card swiper-slide">
@@ -31,7 +36,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="bg-white cl-black border-black">KONTAKT</button>
+          <a
+            href="#"
+            class="btn btn-fixed-width uppercase bg-white cl-black border-black"
+            >Kontakt</a
+          >
         </div>
         <div class="volunteer-card swiper-slide">
           <img
@@ -45,7 +54,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="bg-white cl-black border-black">KONTAKT</button>
+          <a
+            href="#"
+            class="btn btn-fixed-width uppercase bg-white cl-black border-black"
+            >Kontakt</a
+          >
         </div>
         <div class="volunteer-card swiper-slide">
           <img
@@ -59,7 +72,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="bg-white cl-black border-black">KONTAKT</button>
+          <a
+            href="#"
+            class="btn btn-fixed-width uppercase bg-white cl-black border-black"
+            >Kontakt</a
+          >
         </div>
         <div class="volunteer-card swiper-slide">
           <img
@@ -73,7 +90,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="bg-white cl-black border-black">KONTAKT</button>
+          <a
+            href="#"
+            class="btn btn-fixed-width uppercase bg-white cl-black border-black"
+            >Kontakt</a
+          >
         </div>
         <div class="volunteer-card swiper-slide">
           <img
@@ -86,21 +107,30 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="bg-white cl-black border-black">KONTAKT</button>
+          <a
+            href="#"
+            class="btn btn-fixed-width uppercase bg-white cl-black border-black"
+            >Kontakt</a
+          >
         </div>
         <div class="volunteer-card swiper-slide">
           <img src="https://source.unsplash.com/random/600x400" />
-
+          <p class="bold m-text">Silvia Mcan</p>
           <p class="regular-text">TITLE</p>
           <p class="regular-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button class="bg-white cl-black border-black">KONTAKT</button>
+          <a
+            href="#"
+            class="btn btn-fixed-width uppercase bg-white cl-black border-black"
+            >Kontakt</a
+          >
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="button-next volunteers-arrows">
+      <img src="../assets/slideLeft.svg" slt="" role="presentation" />
     </div>
   </div>
 </div>
@@ -109,8 +139,8 @@
   const swiper = new Swiper(".swiper", {
     // spaceBetween: 30,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
     },
     breakpoints: {
       // when window width is >= 320px

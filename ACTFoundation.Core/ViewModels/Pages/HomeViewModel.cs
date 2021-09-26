@@ -1,9 +1,12 @@
 ﻿using ACTFoundation.Core.Contexts;
 using ACTFoundation.Core.ViewModels.Blocks;
+using ACTFoundation.Core.ViewModels.Partials.Layout;
 using ACTFoundation.Core.ViewModels.Partials.Testimonials;
 using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.Generated;
 using System.Linq;
+using Umbraco.Core.Models.Blocks;
+using Umbraco.Core.Models.PublishedContent;
 
 namespace ACTFoundation.Core.ViewModels.Pages
 {
@@ -17,6 +20,25 @@ namespace ACTFoundation.Core.ViewModels.Pages
                 BannerCarousel = new BannerCarouselViewModel(bannerCarousel as BannerCarousel);
             }
 
+			var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
+			if (donateBlock != null)
+			{
+				DonateBlock = new DonateBlockViewModel((DonateBlock) donateBlock);
+			}
+
+			var newsBlock = context.Page.MainContent.FirstOrDefault(item => item is News);
+			if (newsBlock != null)
+			{
+				News = new NewsViewModel((News)newsBlock);
+			}
+		
+            var partnerLogos = context.Page.MainContent.FirstOrDefault(item => item is PartnerLogosItem);
+            if (partnerLogos != null)
+            {
+                PartnerLogos = new PartnerLogosViewModel(partnerLogos as PartnerLogosItem);
+            }
+
+
             var testimonials = context.Page.MainContent.FirstOrDefault(item => item is Testimonials);
             if (testimonials != null)
             {
@@ -28,13 +50,8 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
                 Volunteers = new VolunteersViewModel(volunteers as Volunteers);
             }
-
-            var donateBlock = context.Page.MainContent.FirstOrDefault(item => item is DonateBlock);
-            if (donateBlock != null)
-            {
-                DonateBlock = new DonateBlockViewModel((DonateBlock)donateBlock);
-            }
         }
+		public NewsViewModel News { get; }
 
         public BannerCarouselViewModel BannerCarousel { get; set; }
 
@@ -43,5 +60,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public VolunteersViewModel Volunteers { get; }
 
         public DonateBlockViewModel DonateBlock { get; }
+
+        public PartnerLogosViewModel PartnerLogos { get; }
     }
 }

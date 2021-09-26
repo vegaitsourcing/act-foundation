@@ -1,5 +1,22 @@
 ﻿@inherits UmbracoViewPage<ProjectsViewModel>
 
+@if (Model.BannerItem != null)
+{
+    Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", Model.BannerItem);
+}
+
+<div class="articles" id="projects">
+    <div class="heading-articles">
+        <p class="m-text uppercase">BLOG</p>
+        <h2 class="heading-secondary xl-text uppercase">Vesti</h2>
+    </div>
+    @if (Model.ProjectsId.HasValue)
+    {
+        Html.RenderAction<ProjectsListingController>(c => nameof(c.GetMoreProjects), new { projectsId = Model.ProjectsId.Value });
+    }
+</div>
+
+
 @if (Model.DonateAccountsBlock != null)
 {
     Html.RenderPartial("_DonateAccountsBlock", Model.DonateAccountsBlock);

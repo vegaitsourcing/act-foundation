@@ -1,0 +1,40 @@
+﻿@using ACTFoundation.Core.Controllers.Surface
+@inherits UmbracoViewPage<ACTFoundation.Core.Models.LoadmorePagination<ACTFoundation.Core.ViewModels.Partials.Blocks.ProjectCardViewModel>>
+
+@{ 
+    var index = 0;
+    var rows = Model.Items.GroupBy(s => index++ / 3).Select(g => g.ToArray()).ToArray();
+}
+
+<script>
+    var pageNumber = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Page + 1));
+    var projectId = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ParentId));
+</script>
+
+@if (Model.Items != null && Model.Items.Any())
+{
+    foreach (var rowItems in rows)
+    {
+    <div class="row">
+        @foreach (var item in rowItems)
+        {
+            <div class="articles-list-item">
+                <div class="article-image">
+                    <img src="@item.Image.Url" alt="" />
+                </div>
+                <div class="article-body">
+                    <h4 class="m-text">@item.Title</h4>
+                    <p class="regular-text">
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+    }
+}
+
+@if (Model.HasMore())
+{
+    <button id="loadMore" class="small-text uppercase" onclick="loadMore(projectId, pageNumber)">@Umbraco.GetDictionaryValue("Projects.LoadMore")</button>
+}

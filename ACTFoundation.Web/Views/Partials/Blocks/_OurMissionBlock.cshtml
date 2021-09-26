@@ -1,0 +1,20 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.OurMissionViewModel>
+
+<div class="story-box bg-yellow">
+    <span class="m-text">@Model.Subtitle</span>
+    <h2 class="xl-text">@Model.Title</h2>
+    <div class="regular-text">
+        @Html.Raw(Model.TopText)
+    </div>
+</div>
+
+@foreach (var image in Model.Gallery)
+{
+    <img src="@image.Url()" />
+}
+
+<div class="story-box bg-orange">
+    <div class="regular-text">
+        @Html.Raw(Model.BottomText)
+    </div>
+</div>

@@ -7,7 +7,7 @@ const del = require("del");
 const { src, dest } = gulp;
 
 gulp.task("build", (done) => {
-  gulp.series("clean", gulp.parallel("pug", "css"))(done);
+  gulp.series("clean", "pug")(done);
 });
 
 gulp.task("pug", () => src("./src/*.pug").pipe(pug()).pipe(dest("./dist")));
