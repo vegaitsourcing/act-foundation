@@ -40,6 +40,7 @@ namespace ACTFoundation.Core.Controllers.Surface
             {
                 var blogPage = Umbraco.Content(blogId) as Blog;
                 articles = blogPage.DescendantsOfType(Article.ModelTypeAlias)
+                    .OrderByDescending(x => x.UpdateDate)
                     .Select(x => new ArticleCardViewModel(x as Article))
                     .ToList();
 
