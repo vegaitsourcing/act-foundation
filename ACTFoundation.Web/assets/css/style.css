@@ -734,10 +734,19 @@ form button {
   margin-bottom: 6px;
 }
 
-.footer-form {
-  margin-top: 20px;
-  display: flex;
+ @media only screen and (max-width: 767px) {
+  .footer-form > .input { 
+   margin-bottom: 1rem; 
+ }	
+} 
+
+ @media only screen and (min-width: 768px) {
+  .footer-form {
+	margin-top: 20px;
+    display: flex;
+  }
 }
+
 .footer-form input {
   flex-grow: 1;
   margin-right: 21px;
