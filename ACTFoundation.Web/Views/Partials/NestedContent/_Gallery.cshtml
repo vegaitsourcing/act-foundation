@@ -5,7 +5,7 @@
         <h2 class="heading-secondary xl-text uppercase">@Model.Title</h2>
     </div>
     <div class="gallery-box-swiper">
-        <div class="swiper">
+        <div class="swiper swiper-galery">
             <div class="swiper-wrapper">
                 
                 @foreach (var galleryItem in Model.GalleryItems)
@@ -29,7 +29,7 @@
     </div>
 </div>
 <script>
-    const swiper = new Swiper(".swiper", {
+    const swiperGalery = new Swiper(".swiper-galery", {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -37,7 +37,7 @@
         slidesPerView: 1,
         on: {
             resize: function () {
-                swiper.changeDirection(getDirection());
+                swiperGalery.changeDirection(getDirection());
             },
         },
     });

@@ -9,7 +9,7 @@
 </div>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <div class="story-galleries">
-    <div class="swiper">
+    <div class="swiper swiper-mission">
         <div class="swiper-wrapper">
             @if (Model.Gallery != null)
             {
@@ -31,7 +31,7 @@
 </div>
 
 <script>
-    const swiper = new Swiper(".swiper", {
+    const swiperMission = new Swiper(".swiper-mission", {
         autoplay: {
             delay: 3000,
         },
@@ -42,7 +42,7 @@
         slidesPerView: 1,
         on: {
             resize: function () {
-                swiper.changeDirection(getDirection());
+                swiperMission.changeDirection(getDirection());
             },
         },
     });
