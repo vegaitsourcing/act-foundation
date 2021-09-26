@@ -425,6 +425,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\scripts\default.js" />
     <Content Include="assets\scripts\donateAccountsBlock.js" />
     <Content Include="assets\scripts\navigation.js" />
     <Content Include="config\grid.editors.config.js" />
