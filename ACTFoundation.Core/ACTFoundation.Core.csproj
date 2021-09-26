@@ -356,6 +356,7 @@
     <Compile Include="SmtpHelper.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
+    <Compile Include="ViewModels\Blocks\OurStoryViewModel.cs" />
     <Compile Include="ViewModels\Blocks\BlogViewModel.cs" />
     <Compile Include="ViewModels\Blocks\ArticleCardViewModel.cs" />
     <Compile Include="ViewModels\Blocks\LoadNewsViewModel.cs" />
