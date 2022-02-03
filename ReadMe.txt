@@ -1,1 +1,1 @@
-Umbraco credentials:
+Umbraco credentials: s.brzak@vegait.rs | umbracoact
