@@ -14,7 +14,7 @@
         rgba(0, 0, 0, 0.4) 61.3%,
         #000000 105.39%
       ),
-      url(@Model.MainImage.Url) no-repeat center;">
+      url(@(Model.MainImage?.Url ?? string.Empty)) no-repeat center;">
     <div class="chips">
         @if (Model.Tags != null)
         {
@@ -60,20 +60,23 @@
             </div>
         </div>
 
-        @foreach (var article in Model.RelatedProjects)
+        @if (Model.RelatedProjects != null && Model.RelatedProjects.Any())
         {
-            <div class="articles-list-item">
-                <div class="article-image">
-                    <img src=@article.MainImage.Url alt="" />
+            foreach (var article in Model.RelatedProjects)
+            {
+                <div class="articles-list-item">
+                    <div class="article-image">
+                        <img src=@article.MainImage.Url alt="" />
+                    </div>
+                    <div class="article-body">
+                        <h4 class="m-text">@article.Title</h4>
+                        <p class="regular-text">
+                            @Html.Raw(article.TextPreview)
+                        </p>
+                        <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
+                    </div>
                 </div>
-                <div class="article-body">
-                    <h4 class="m-text">@article.Title</h4>
-                    <p class="regular-text">
-                        @Html.Raw(article.TextPreview)
-                    </p>
-                    <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
-                </div>
-            </div>
+            }
         }
     </div>
  </div>
