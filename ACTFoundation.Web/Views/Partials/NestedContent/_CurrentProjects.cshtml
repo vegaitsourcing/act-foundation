@@ -6,21 +6,21 @@
         <h2 class="heading-secondary xl-text">@Model.Title</h2>
     </div>
     <div class="row">
-        @foreach (var project in Model.Projects)
-        {
-            <div class="articles-list-item col-1-of-3">
-                <div class="article-image">
-                    <img  src="@project.MainImage.Url"
-                         alt="" />
+        @if(Model.Projects != null && Model.Projects.Any()) {
+            foreach (var project in Model.Projects)
+            {
+                <div class="articles-list-item col-1-of-3">
+                    <div class="article-image">
+                        @UIHelper.RenderImage(project.MainImage, "")
+                    </div>
+                    <div class="article-body">
+                        @UIHelper.RenderText(Html, project.Title,"h4", "m=text")
+                        @UIHelper.RenderText(Html,project.ShortText, "p","regular-text")
+
+                        <a class="small-text color-blue" href="@(project.Url ?? string.Empty)">@Umbraco.GetDictionaryValue("CurrentProjects.FindOutMore")</a>
+                    </div>
                 </div>
-                <div class="article-body">
-                    <h4 class="m-text">@project.Title</h4>
-                    <p class="regular-text">
-                        @project.ShortText...
-                    </p>
-                    <a class="small-text color-blue" href="@project.Url">@Umbraco.GetDictionaryValue("CurrentProjects.FindOutMore")</a>
-                </div>
-            </div>
+            }
         }
     </div>
 </section>

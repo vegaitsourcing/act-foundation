@@ -13,16 +13,16 @@
             url(@Model.BackgroundImage.Url)
               no-repeat center / cover;
           ">
-            <h1>@Model.Title!</h1>
-            <p>
-                @Model.Description
-            </p>
+            @UIHelper.RenderText(Html,Model.Title,"h1","")
+            @UIHelper.RenderText(Html,Model.Description, "p", "")
             <div style="display: flex; align-items: center;">
-                @foreach (var buttonLink in Model.ButtonLinks)
+                @if(Model.ButtonLinks.Any() && Model.ButtonLinks != null)
                 {
-                    Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
+                    foreach (var buttonLink in Model.ButtonLinks)
+                    {
+                        Html.RenderPartial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
+                    }
                 }
             </div>
-            
         </div>
     }

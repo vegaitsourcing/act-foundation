@@ -14,9 +14,8 @@
 
     </div>
     <div class="bg-yellow donate-content">
-        <h3 class="l-text bold">@Model.Title</h3>
-        <p class="m-text">
-            @Html.Raw(Model.Text)
-        </p>
+        @UIHelper.RenderText(Html, Model.Title, "h3", "l-text bold")
+        @UIHelper.RenderText(Html, Model.Text.ToHtmlString(),"p", "m-text")
+
     </div>
 </div>

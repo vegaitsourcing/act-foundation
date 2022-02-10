@@ -20,13 +20,19 @@
         <div id="" class="categories__rounded categories__category categories__category--active" onclick="filterByCategory(this, projectsId, 1, this.id)">
             @Umbraco.GetDictionaryValue("Categories.AllCategoriesCtaText")
         </div>
-        @foreach (var category in Model.Categories)
+        @if (Model.Categories.Any() && Model.Categories != null)
         {
-            <div id="@category.Name" class="categories__rounded categories__category" 
-                 onclick="filterByCategory(this, projectsId, 1, this.id)"
-            >
-                @category.Name
-            </div>
+            foreach (var category in Model.Categories)
+            {
+                if (!category.Name.IsNullOrWhiteSpace())
+                {
+
+                    <div id="@category.Name" class="categories__rounded categories__category"
+                         onclick="filterByCategory(this, projectsId, 1, this.id)">
+                        @category.Name
+                    </div>
+                }
+            }
         }
     </div>
 </div>

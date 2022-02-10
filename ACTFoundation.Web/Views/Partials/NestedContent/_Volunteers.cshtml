@@ -1,6 +1,7 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Shared.VolunteersViewModel>
-
-@foreach (var item in Model?.Volunteers)
-{
-    Html.RenderPartial("~/Views/Partials/NestedContent/_VolunteersShared.cshtml", item);
+@if( Model.Volunteers.Any() && Model.Volunteers != null) {
+    foreach (var item in Model?.Volunteers)
+    {
+        Html.RenderPartial("~/Views/Partials/NestedContent/_VolunteersShared.cshtml", item);
+    }
 }

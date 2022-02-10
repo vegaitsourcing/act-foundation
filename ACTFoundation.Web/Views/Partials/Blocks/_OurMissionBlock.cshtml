@@ -1,11 +1,10 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.OurMissionViewModel>
 
 <div class="story-box bg-yellow">
-    <span class="m-text">@Model.Subtitle</span>
-    <h2 class="xl-text">@Model.Title</h2>
-    <div class="regular-text">
-        @Html.Raw(Model.TopText)
-    </div>
+    @UIHelper.RenderText(Html, Model.Subtitle, "span", "m-text")
+    @UIHelper.RenderText(Html, Model.Title, "h2", "xl-text")
+    @UIHelper.RenderText(Html, Model.TopText.ToHtmlString(), "div", "regular-text")
+
 </div>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <div class="story-galleries">
@@ -25,9 +24,7 @@
 </div>
 
 <div class="story-box bg-orange">
-    <div class="regular-text">
-        @Html.Raw(Model.BottomText)
-    </div>
+    @UIHelper.RenderText(Html, Model.BottomText.ToHtmlString(), "div", "regular-text")
 </div>
 
 <script>

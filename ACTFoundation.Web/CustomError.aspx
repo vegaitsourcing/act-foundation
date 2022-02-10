@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div>
-		<div>Unespected fault happend</div>
+		<div>Unexpected fault happend</div>
 	</div>
 </body>
 </html>

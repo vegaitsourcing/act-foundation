@@ -1,25 +1,20 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Testimonials.TestimonialsViewModel>
 
 <div class="testemonials">
-    <p class="testemonials-subtitle m-text">@Model.Title</p>
-    <p class="testemonials-title xl-text bold">@Model.Subtitle</p>
-    <p class="testemonials-content m-text">
-        @Model.Description.StripHtml()
-    </p>
+    @UIHelper.RenderText(Html, Model.Title, "p", "testemonials-subtitle m-text")
+    @UIHelper.RenderText(Html, Model.Subtitle, "p", "testemonials-title xl-text bold")
+    @UIHelper.RenderText(Html, Model.Description.StripHtml() , "p", "testemonials-content m-text")
+
     <div class="testemonials-profiles">
-        @foreach (var item in Model.TestimonialItems)
-        {
-            <div class="testemonial-profile">
-                <img class="testemonials-profile-img"
-                     alt="@item.Picture.AlternateText"
-                     src="@item.Picture.Url" />
-                <p class="testemonial-profile-description regular-text">
-                    @item.TestimonialText
-                </p>
-                <p class="testemonial-profile-name m-text">
-                    @item.FullName
-                </p>
-            </div>
+        @if (Model.TestimonialItems != null && Model.TestimonialItems.Any()) {
+            foreach (var item in Model.TestimonialItems)
+            {
+                <div class="testemonial-profile">
+                    @UIHelper.RenderImage(item.Picture, "testemonials-profile-img")
+                    @UIHelper.RenderText(Html, item.TestimonialText, "p", "testemonial-profile-description regular-text")
+                    @UIHelper.RenderText(Html, item.FullName, "p", "testemonial-profile-name m-text")
+                </div>
+            }
         }
     </div>
 </div>

@@ -11,17 +11,19 @@
             rgba(0, 0, 0, 0.4) 61.3%,
             #000000 105.39%
           ),
-          url('@Model.VolunteerContent.BackgroundImage.Url')
+          url('@(Model.VolunteerContent?.BackgroundImage?.Url ?? string.Empty)')
             no-repeat center / cover;
       ">
-    <h1 class="hero-title xl-text bold">@Model.VolunteerContent.Title</h1>
-    <p class="hero-content regular-text">
-        @Model.VolunteerContent.Description
-    </p>
-    <p class="hero-buttons reagular-text">
-        @foreach (var buttonLink in Model.VolunteerContent.ButtonLinks)
-        {
-            @Html.Partial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
-        }
-    </p>
-</div>}
+    @UIHelper.RenderText(Html, Model.VolunteerContent.Title, "h1", "hero-title xl-text bold")
+    @UIHelper.RenderText(Html, Model.VolunteerContent.Description, "p", "hero-content regular-text")
+    @if (Model.VolunteerContent.ButtonLinks != null && Model.VolunteerContent.ButtonLinks.Any())
+    {
+        <p class="hero-buttons reagular-text">
+            @foreach (var buttonLink in Model.VolunteerContent.ButtonLinks)
+            {
+                @Html.Partial("~/Views/Partials/NestedContent/_ButtonLinkItem.cshtml", buttonLink);
+            }
+        </p>
+    }
+</div>
+}

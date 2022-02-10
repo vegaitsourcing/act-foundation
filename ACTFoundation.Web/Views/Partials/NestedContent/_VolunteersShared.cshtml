@@ -29,12 +29,11 @@
 <div class="volunteers-wrapper">
     <div class="volunteers-hero"
          style="
-      background-image: url('@Model.BackgroundImage.Url');">
-        <h2 class="xl-text bold">@Model.Title</h2>
-        <p class="m-text">
-            @Model.Description
-        </p>
-        <a href="@Model.Link.Url" class="btn btn-fixed-width bg-blue uppercase">@Model.Link.Content</a>
+      background-image: url('@(Model.BackgroundImage.Url ?? string.Empty)');">
+        @UIHelper.RenderText(Html,Model.Title, "h2", "xl-text bold")
+        @UIHelper.RenderText(Html, Model.Description, "p" ,"m-text")
+
+        <a href="@(Model.Link.Url ?? string.Empty)" class="btn btn-fixed-width bg-blue uppercase">@(Model.Link.Content ?? string.Empty)</a>
     </div>
     <div class="volunteers">
         <div class="button-prev volunteers-arrows">
@@ -42,9 +41,12 @@
         </div>
         <div class="swiper swiper2">
             <div class="swiper-wrapper">
-                @foreach (var item in Model.Volunteers)
+                @if (Model.Volunteers != null && Model.Volunteers.Any())
                 {
-                    Html.RenderPartial("~/Views/Partials/NestedContent/_VolunteerItem.cshtml", item);
+                    foreach (var item in Model.Volunteers)
+                    {
+                        Html.RenderPartial("~/Views/Partials/NestedContent/_VolunteerItem.cshtml", item);
+                    }
                 }
             </div>
         </div>

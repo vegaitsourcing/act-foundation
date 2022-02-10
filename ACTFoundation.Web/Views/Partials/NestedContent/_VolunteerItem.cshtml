@@ -1,14 +1,13 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Items.VolunteerItemViewModel>
 
 <div class="volunteer-card swiper-slide">
-    <img class="volunteer-img"
-         src="@Model.Picture.Url" />
-    <p class="bold m-text">@Model.FullName</p>
-    @Model.Occupation
-    <p class="regular-text">
-        @Model.Description
-    </p>
-    @if (Model.ContactLink != null)
+
+    @UIHelper.RenderImage(Model.Picture, "volunteer-img")
+    @UIHelper.RenderText(Html, Model.FullName, "p", "bold m-text")
+    @UIHelper.RenderText(Html, Model.Occupation, "text", "")
+    @UIHelper.RenderText(Html,Model.Description, "p", "regular-text")
+
+    @if (Model?.ContactLink?.Url != null && !Model.ContactLink.Content.IsNullOrWhiteSpace())
     {
 
         <a href="@Model.ContactLink.Url" class="btn btn-fixed-width uppercase bg-white cl-black border-black">@Model.ContactLink.Content</a>

@@ -16,11 +16,14 @@
       ),
       url(@(Model.MainImage?.Url ?? string.Empty)) no-repeat center;">
     <div class="chips">
-        @if (Model.Tags != null)
+        @if (Model.Tags != null && Model.Tags.Any())
         {
             foreach (var tag in Model.Tags)
             {
-                <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+                if (!tag.Color.IsNullOrWhiteSpace() && !tag.Name.IsNullOrWhiteSpace())
+                {
+                    <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+                }
             }
         }
     </div>
@@ -28,12 +31,11 @@
 
 <div class="article-section">
     <div class="article">
-        <h1>@Model.Title</h1>
-        @Html.Raw(Model.Text)
+        @UIHelper.RenderText(Html, Model.Title, "h1", "")
+        @UIHelper.RenderText(Html, Model.Text.ToHtmlString(),"p","")
     </div>
 
     <div class="article-sidebar">
-
         <div class="articles-list-item">
             <div class="article-body">
                 <h4 class="m-text">@Umbraco.GetDictionaryValue("Project.Donate.Title")</h4>
@@ -65,16 +67,20 @@
             foreach (var article in Model.RelatedProjects)
             {
                 <div class="articles-list-item">
-                    <div class="article-image">
-                        <img src=@article.MainImage.Url alt="" />
-                    </div>
-                    <div class="article-body">
-                        <h4 class="m-text">@article.Title</h4>
-                        <p class="regular-text">
-                            @Html.Raw(article.TextPreview)
-                        </p>
+                    @if (article?.MainImage?.Url!=null)
+                    {
+                        <div class="article-image">
+                            <img src=@(article?.MainImage?.Url ?? string.Empty) alt="" />
+                        </div>
+                    }
+                <div class="article-body">
+                    @UIHelper.RenderText(Html, article.Title, "h4", "m-text")
+                    @UIHelper.RenderText(Html, article.TextPreview.ToHtmlString(), "p", "regular-text")
+                    @if (!article.Link.IsNullOrWhiteSpace())
+                    {
                         <a class="small-text uppercase" href="@article.Link">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
-                    </div>
+                    }
+                </div>
                 </div>
             }
         }

@@ -60,7 +60,6 @@ namespace ACTFoundation.Core.ViewModels.Pages
                 .Select(project => new ProjectPreviewViewModel(project))
                 .ToArray();
         }
-        
         private bool MatchingProvidedTags(TagItem tag, IEnumerable<TagViewModel> tags)
             => tags.Any(t => t.Name == tag.Name);
 

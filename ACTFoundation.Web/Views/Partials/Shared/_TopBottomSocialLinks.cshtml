@@ -1,17 +1,17 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Layout.TopBottomSocialLinksViewModel>
 <header class="header">
-    <a href="@Model.DonateLink.Url">
-        <button class="header-btn-donate">@Model.DonateLink.Content</button>
+    <a href="@(Model.DonateLink.Url ?? string.Empty)">
+        @UIHelper.RenderText(Html,Model.DonateLink.Content,"button", "header-btn-donate")
     </a>
     <div class="header-media-links">
         <span class="bold">Povezite se!</span>
-        <a href="@Model.FacebookLink" target="_blank">
+        <a href="@(Model.FacebookLink ?? string.Empty)" target="_blank">
             <img src="~/assets/media/facebook.svg" alt="facebook" class="header-media-link" />
         </a>
-        <a href="@Model.LinkedinLink" target="_blank">
+        <a href="@(Model.LinkedinLink ?? string.Empty)" target="_blank">
             <img src="~/assets/media/linkedin.svg" alt="linkedin" class="header-media-link" />
         </a>
-        <a href="@Model.InstagramLink" target="_blank">
+        <a href="@(Model.InstagramLink?? string.Empty)" target="_blank">
             <img src="~/assets/media/instagram.svg" alt="linkedin" class="header-media-link" />
         </a>
     </div>

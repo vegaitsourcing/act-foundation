@@ -8,14 +8,14 @@
     </div>
     <nav>
         <a href="/">
-            <img src=@Model.Logo.Url />
+            <img src=@(Model.Logo.Url ?? string.Empty) />
         </a>
 
         @if (@Model.MainNavigationLinks != null && @Model.MainNavigationLinks.Any())
         {
             foreach (var link in @Model.MainNavigationLinks)
             {
-                <a href="@link.Url" class="regular-text cl-white">@link.Content</a>
+                <a href="@(link.Url ?? string.Empty)" class="regular-text cl-white">@(link.Content ?? string.Empty)</a>
             }
         }
         @if (@Model.MainNavigationButton != null)

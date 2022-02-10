@@ -2,19 +2,14 @@
 <footer class="footer">
     <div class="footer-left">
         <div class="footer-branding">
-            <img class="footer-logo"
-                 src="@Model.FooterCompanyLogo.Url" />
+            @UIHelper.RenderImage(Model.FooterCompanyLogo, "footer-logo")
             <span>
-                <h3 class="footer-branding-title uppercase m-text">@Model.FooterCompanyName</h3>
-                <div class="footer-branding-title-subtext uppercase">
-                    @Model.FooterCompanyMoto
-                </div>
+                @UIHelper.RenderText(Html, Model.FooterCompanyName, "h3", "footer-branding-title uppercase m-text")
+                @UIHelper.RenderText(Html, Model.FooterCompanyMoto, "div", "footer-branding-title-subtext uppercase")
             </span>
         </div>
-        <div class="footer-description">
-            @Html.Raw(Model.FooterCompanyDescription)
-        </div>
-        <a href="@Model.FooterFindOutMoreButton.Url">
+        @UIHelper.RenderText(Html,Model.FooterCompanyDescription.ToHtmlString(),  "div", "footer-description")
+        <a href="@(Model.FooterFindOutMoreButton.Url ?? string.Empty)">
             <div class="footer-cta-more-button uppercase small-text bold">
                 @Umbraco.GetDictionaryValue("Footer.FindOutMore")
             </div>
@@ -23,9 +18,12 @@
     <div class="footer-right">
         <h3 class="footer-partners-title uppercase m-text">@Umbraco.GetDictionaryValue("OurPartners.Title")</h3>
         <div class="footer-partners-wrapper">
-            @foreach (var element in Model.FooterPartnerLogos)
+            @if(Model.FooterPartnerLogos != null && Model.FooterPartnerLogos.Any())
             {
-                <img class="footer-partner" src="@element.Url()" />
+               foreach (var element in Model.FooterPartnerLogos)
+                {
+                    <img class="footer-partner" src="@(element.Url()??string.Empty)" />
+                }
             }
         </div>
         @if (Model.ShowNewsletterBox)

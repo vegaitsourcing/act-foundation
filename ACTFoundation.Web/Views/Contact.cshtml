@@ -9,14 +9,13 @@
         rgba(0, 0, 0, 0.4) 61.3%,
         #000000 105.39%
       ),
-      url('https://ichef.bbci.co.uk/news/976/mcs/media/images/75745000/jpg/_75745654_466377933.jpg')
+      url('@(Model.DonateContent.BackgroundImage.Url ?? string.Empty)')
         no-repeat center / cover;
   ">
-        <h1>@Model.DonateContent.Title</h1>
-        <p>
-            @Model.DonateContent.Description
-        </p>
-        
+        @UIHelper.RenderText(Html,Model.DonateContent.Title, "h1", "")
+        @UIHelper.RenderText(Html,Model.DonateContent.Description, "p","")
+
+
     @if (Model.SubmitStatus == SubmitStatusEnum.Success)
     {
         <h2>@Umbraco.GetDictionaryValue("Contact.Form.ThankYouMessage")</h2>

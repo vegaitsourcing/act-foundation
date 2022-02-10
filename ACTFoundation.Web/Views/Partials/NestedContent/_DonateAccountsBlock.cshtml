@@ -2,7 +2,7 @@
 
 <script src="@Url.Content("~/assets/scripts/donateAccountsBlock.js")" ></script>
 
-@{ 
+@{
     var defaultAccount = Model.DonateAccounts.ElementAt(0);
 }
 
@@ -12,13 +12,19 @@
 
 <div class="payment-slip">
     <div class="payment-slip__donate">
-        <h2>@Model.Title</h2>
-        <p>@Model.Description</p>
+        @UIHelper.RenderText(Html, Model.Title, "h2", "")
+        @UIHelper.RenderText(Html,Model.Description, "p", "")
+
         <select name="project" id="project-select" onchange="selectProject()">
             @{
-                foreach (var donateAccount in Model.DonateAccounts)
+                if (Model.DonateAccounts.Any() && Model.DonateAccounts != null)
                 {
-                    <option value="@donateAccount.Id">@donateAccount.Title</option>
+                    foreach (var donateAccount in Model.DonateAccounts)
+                    {
+                    if (!donateAccount.Title.IsNullOrWhiteSpace()) {
+                        <option value="@donateAccount.Id">@donateAccount.Title</option>
+                        }
+                    }
                 }
             }
         </select>

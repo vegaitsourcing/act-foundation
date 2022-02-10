@@ -3,8 +3,8 @@
 
 <div class="articles">
     <div class="heading-articles">
-        <p class="m-text uppercase">@Model.Blog.Title</p>
-        <h2 class="heading-secondary xl-text uppercase">@Model.Blog.Headline</h2>
+        @UIHelper.RenderText(Html,Model?.Blog?.Title, "p","m-text uppercase")
+        @UIHelper.RenderText(Html, Model?.Blog?.Headline,"h2", "heading-secondary xl-text uppercase")
     </div>
     <div class="row">
         @Html.Partial("~/Views/Partials/News/_GetMoreNews.cshtml", Model.LoadPaginationItems)

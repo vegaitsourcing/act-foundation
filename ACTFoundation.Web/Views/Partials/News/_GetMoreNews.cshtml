@@ -7,15 +7,13 @@
     {
         <div class="articles-list-item col-1-of-3">
             <div class="article-image">
-                <img src="@item.MainImage.Url"
-                     alt="" />
+                @UIHelper.RenderImage(item?.MainImage, "")
             </div>
             <div class="article-body">
-                <h4 class="m-text">@item.PageTitle</h4>
-                <p class="regular-text">
-                    @Html.Raw(@item.Text)
-                </p>
-                <a class="small-text uppercase" href="@item.Url">@Umbraco.GetDictionaryValue("News.ReadMore")</a>
+                @UIHelper.RenderText(Html, item.PageTitle, "h4", "m-text")
+                @UIHelper.RenderText(Html,item.Text.ToHtmlString(),"p","regular-text")
+
+                <a class="small-text uppercase" href="@(item.Url ?? string.Empty)">@Umbraco.GetDictionaryValue("News.ReadMore")</a>
             </div>
         </div>
     }

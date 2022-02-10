@@ -2,9 +2,11 @@
 
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-        @foreach (var item in Model.Items)
-        {
-            Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", item);
+        @if(Model.Items.Any() && Model.Items != null) {
+            foreach (var item in Model.Items)
+            {
+                Html.RenderPartial("~/Views/Partials/NestedContent/_BannerDefault.cshtml", item);
+            }
         }
     </div>
     <div class="swiper-pagination"></div>

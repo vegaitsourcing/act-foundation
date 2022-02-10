@@ -1,6 +1,6 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.Models.LoadmorePagination<ACTFoundation.Core.ViewModels.Partials.Blocks.ProjectCardViewModel>>
 
-@{ 
+@{
     var index = 0;
     var rows = Model.Items.GroupBy(s => index++ / 3).Select(g => g.ToArray()).ToArray();
 }
@@ -15,11 +15,12 @@
     foreach (var rowItems in rows)
     {
     <div class="row">
-        @foreach (var item in rowItems)
+        @if(rowItems.Any() && rowItems != null) {
+        foreach (var item in rowItems)
         {
             <div class="articles-list-item">
                 <div class="article-image" style="position: relative">
-                    <img src="@item.Image.Url" alt="" />
+                    <img src="@(item.Image.Url ?? string.Empty)" alt="" />
                     <div class="chips chips-top">
                         @foreach (var tag in item.Tags)
                         {
@@ -31,14 +32,13 @@
                     </div>
                 </div>
                 <div class="article-body">
-                    <h4 class="m-text">@item.Title</h4>
-                    <p class="regular-text">
-                        @item.Description
-                    </p>
-                    <a class="small-text uppercase" href="@item.Url">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
+                    @UIHelper.RenderText(Html, item.Title, "h4", "m-text")
+                    @UIHelper.RenderText(Html,item.Description, "p", "regular-text")
+
+                    <a class="small-text uppercase" href="@(item.Url?? string.Empty)">@Umbraco.GetDictionaryValue("Projects.ReadMoreCtaText")</a>
                 </div>
             </div>
-        }
+        }}
     </div>
     }
 }

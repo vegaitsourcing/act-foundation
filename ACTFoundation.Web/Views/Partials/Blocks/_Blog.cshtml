@@ -2,8 +2,8 @@
 
 <div class="articles">
     <div class="heading-articles">
-        <p class="m-text uppercase">@Model.Title</p>
-        <h2 class="heading-secondary xl-text uppercase">@Model.Headline</h2>
+        @UIHelper.RenderText(Html,Model.Title,"p", "m-text uppercase")
+        @UIHelper.RenderText(Html,Model.Headline,"h2","heading-secondary xl-text uppercase")
     </div>
     <div class="row">
         @foreach (var item in Model.Articles)

@@ -4,20 +4,22 @@
 
 <div class="donate-wrapper">
     <div class="bg-yellow donate-content">
-        <h3 class="l-text bold">@Model.Title</h3>
-        <p class="m-text">
-            @Html.Raw(Model.Text)
-        </p>
+        @UIHelper.RenderText(Html,Model.Title, "h3", "l-text bold")
+        @UIHelper.RenderText(Html,Model.Text, "p","m-text")
+
         <a href="/donations">
             <button class="bg-orange cl-white">@Model.SeeMoreLink.Name</button>
         </a>
     </div>
     <div class="donate-images">
-        @foreach (var link in @Model.images)
+        @if (Model.images.Any() && Model.images != null)
         {
-            <div>
-                <img src=@link.Url() />
-            </div>
+            foreach (var link in @Model.images)
+            {
+                <div>
+                    <img src=@(link.Url() ?? string.Empty) />
+                </div>
+            }
         }
     </div>
 </div>

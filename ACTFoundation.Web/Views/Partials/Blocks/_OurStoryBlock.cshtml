@@ -1,10 +1,9 @@
 ﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.OurStoryViewModel>
 <div class="story-box">
-    <span class="m-text">@Model.Subtitle</span>
-    <h2 class="xl-text">@Model.Title</h2>
-    <div class="regular-text">
-        @Html.Raw(Model.Text)
-    </div>
+    @UIHelper.RenderText(Html,Model.Subtitle,"span", "m-text")
+    @UIHelper.RenderText(Html,Model.Title,"h2","xl-text")
+    @UIHelper.RenderText(Html,Model.Text.ToHtmlString(),"div","regular-text")
+
 </div>
 <div class="story-logo-wrapper">
     @if (Model.Image != null)
