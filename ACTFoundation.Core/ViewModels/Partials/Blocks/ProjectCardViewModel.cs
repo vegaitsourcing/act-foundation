@@ -14,7 +14,9 @@ namespace ACTFoundation.Core.ViewModels.Partials.Blocks
         public ProjectCardViewModel(Project project)
         {
             Title = project.Title;
-            Description = project.Text.ToHtmlString().StripHtml().Substring(0, ShortTextLength);
+            string temp = project.Text.ToHtmlString().StripHtml();
+            Description = (temp.Length > ShortTextLength) ? temp.Substring(0, ShortTextLength) : temp;
+
             Url = Current.UmbracoContext.UrlProvider.GetUrl(project.Id);
             Image = new ImageViewModel(project.MainImage);
             Tags = (project.ProjectContent.FirstOrDefault(content => content is ProjectTags) as ProjectTags)?

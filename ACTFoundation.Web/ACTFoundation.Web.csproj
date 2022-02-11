@@ -569,7 +569,6 @@
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
     <Content Include="Views\Partials\Shared\_TopBottomSocialLinks.cshtml" />
     <Content Include="Views\Partials\PublishedElement.cshtml" />
-    <Content Include="Views\Partials\Testimonials.cshtml" />
     <Content Include="Views\Partials\NestedContent\_DonateBlock.cshtml" />
     <Content Include="Views\Partials\NestedContent\_CurrentProjects.cshtml" />
     <Content Include="Views\Partials\Forms\_ContactThankYou.cshtml" />
@@ -578,7 +577,6 @@
     <Content Include="Views\Partials\DonateBlock.cshtml" />
     <Content Include="Views\Partials\Volunteers.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Testimonials.cshtml" />
-    <Content Include="Views\Volunteers.cshtml" />
     <Content Include="Views\Partials\Blocks\_Blog.cshtml" />
     <Content Include="Views\Partials\Blocks\_News.cshtml" />
     <Content Include="Views\Partials\News\_GetNews.cshtml" />
