@@ -1,9 +1,15 @@
-﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.DonateAccountsBlockViewModel>
+﻿@using  ACTFoundation.Core.ViewModels.Shared
+@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.DonateAccountsBlockViewModel>
 
-<script src="@Url.Content("~/assets/scripts/donateAccountsBlock.js")" ></script>
+<script src="@Url.Content("~/assets/scripts/donateAccountsBlock.js")"></script>
 
 @{
-    var defaultAccount = Model.DonateAccounts.ElementAt(0);
+    DonateAccountInfoViewModel defaultAccount = null;
+    if (Model.DonateAccounts.Any() && Model.DonateAccounts != null)
+    {
+
+        defaultAccount = Model.DonateAccounts.ElementAt(0);
+    }
 }
 
 <script>
@@ -13,7 +19,7 @@
 <div class="payment-slip">
     <div class="payment-slip__donate">
         @UIHelper.RenderText(Html, Model.Title, "h2", "")
-        @UIHelper.RenderText(Html,Model.Description, "p", "")
+        @UIHelper.RenderText(Html, Model.Description, "p", "")
 
         <select name="project" id="project-select" onchange="selectProject()">
             @{
@@ -21,29 +27,33 @@
                 {
                     foreach (var donateAccount in Model.DonateAccounts)
                     {
-                    if (!donateAccount.Title.IsNullOrWhiteSpace()) {
-                        <option value="@donateAccount.Id">@donateAccount.Title</option>
+                        if (!donateAccount.Title.IsNullOrWhiteSpace())
+                        {
+                            <option value="@donateAccount.Id">@donateAccount.Title</option>
                         }
                     }
                 }
             }
         </select>
-        <a id="more-info" href="@defaultAccount.Url">@Model.CtaText</a>
+        <a id="more-info" href="@(defaultAccount?.Url ?? string.Empty)">@Model.CtaText</a>
     </div>
-    <div class="payment-slip__details">
-        <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Recepient")</p>
-        <p class="payment-slip__details__value" id="recepient">@defaultAccount.Recepient</p>
-        <div class="payment-slip__details__model">
-            <div>
-                <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Model")</p>
-                <p class="payment-slip__details__value" id="calling-number">@defaultAccount.CallNumber</p>
+    @if(defaultAccount != null)
+    {
+        <div class="payment-slip__details">
+            <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Recepient")</p>
+            <p class="payment-slip__details__value" id="recepient">@(defaultAccount?.Recepient ?? string.Empty)</p>
+            <div class="payment-slip__details__model">
+                <div>
+                    <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Model")</p>
+                    <p class="payment-slip__details__value" id="calling-number">@(defaultAccount?.CallNumber ?? string.Empty)</p>
+                </div>
+                <div class="payment-slip__reference-number">
+                    <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.CallingModel")</p>
+                    <p class="payment-slip__details__value" id="reference-number">@(defaultAccount?.CallingModel ?? string.Empty)</p>
+                </div>
             </div>
-            <div class="payment-slip__reference-number">
-                <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.CallingModel")</p>
-                <p class="payment-slip__details__value" id="reference-number">@defaultAccount.CallingModel</p>
-            </div>
+            <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Account")</p>
+            <p class="payment-slip__details__value" id="account">@(defaultAccount?.Account ?? string.Empty)</p>
         </div>
-        <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Account")</p>
-        <p class="payment-slip__details__value" id="account">@defaultAccount.Account</p>
-    </div>
+        }
 </div>
