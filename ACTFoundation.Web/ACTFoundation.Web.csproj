@@ -593,7 +593,6 @@
     <Content Include="Views\Partials\NestedContent\_Gallery.cshtml" />
     <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <Content Include="Views\Project.cshtml" />
-    <None Include="Properties\PublishProfiles\actsrbija.rs - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -611,7 +610,9 @@
       <Name>ACTFoundation.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
