@@ -98,7 +98,7 @@ button {
   /* COLORS */
   --color-yellow: #f6d335;
   --color-yellow-light: rgba(255, 239, 168, 0.4);
-  --color-orange: #f15e24;
+  --color-orange: #ff7c28;
   --color-black: #000000;
   --color-white: #ffffff;
   --color-blue: #0156a3;
@@ -273,7 +273,7 @@ button {
 }
 
 .chip--orange {
-  background-color: #f15e24;
+  background-color: #ff7c28;
 }
 
 .chip--green {
@@ -776,7 +776,7 @@ form button {
 .footer-cta-more-button {
   margin-top: 40px;
   padding: 13px 45px;
-  background: orangered;
+  background: #ff7c28;
   border-radius: 25px;
   display: inline-flex;
 }
@@ -1584,7 +1584,7 @@ nav button {
 .gallery-box-swiper .swiper-slide {
   width: 100%;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -1609,11 +1609,11 @@ nav button {
   .gallery-box-swiper > .swiper > .swiper-button-next {
     top: 90%;
   }
-  
+
   .gallery-box-swiper > .swiper > .swiper-button-prev {
     top: 90%;
   }
-  
+
 
   .swiper-slide-text {
     background: rgba(0, 0, 0, 0.5);
@@ -1657,7 +1657,7 @@ nav button {
   .story-galleries {
     height: 450px;
   }
-  
+
   .story-galleries .swiper-slide img {
     height: 450px;
   }
@@ -1667,7 +1667,7 @@ nav button {
   .story-galleries {
     height: 560px;
   }
-  
+
   .story-galleries .swiper-slide img {
     height: 560px;
   }

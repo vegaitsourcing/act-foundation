@@ -1,0 +1,7 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Partials.Blocks.OurVisionViewModel>
+
+<div class="story-box">
+    @UIHelper.RenderText(Html, Model.Subtitle, "span", "m-text")
+    @UIHelper.RenderText(Html, Model.Title, "h2", "xl-text")
+    @UIHelper.RenderText(Html, Model.Text.ToHtmlString(), "div", "regular-text")
+</div>

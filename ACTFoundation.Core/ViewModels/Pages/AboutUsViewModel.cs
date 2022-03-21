@@ -41,9 +41,16 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
                 OurMission = new OurMissionViewModel(ourMission as OurMissionBlock);
             }
+
+            var ourVision = context.Page.Content.FirstOrDefault(item => item is OurVisionBlock);
+            if (bannerCarousel != null)
+            {
+                OurVision = new OurVisionViewModel(ourVision as OurVisionBlock);
+            }
+
         }
 
-        //private TViewModel GetViewModel<TGenerated, TViewModel>(IPublishedElement element) 
+        //private TViewModel GetViewModel<TGenerated, TViewModel>(IPublishedElement element)
         //{
         //    return element is TGenerated ? (TViewModel)Activator.CreateInstance(typeof(TViewModel), element) : null;
         //}
@@ -55,5 +62,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public OurStoryViewModel OurStory { get; set; }
 
         public OurMissionViewModel OurMission { get; set; }
+
+        public OurVisionViewModel OurVision { get; }
     }
 }

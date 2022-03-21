@@ -379,6 +379,7 @@
     <Compile Include="ViewModels\Pages\SearchResultsViewModel.cs" />
     <Compile Include="ViewModels\Pages\VolunteerViewModel.cs" />
     <Compile Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Blocks\OurVisionViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\ProjectsCategoriesViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\OurMissionViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\GalleryItemViewModel.cs" />

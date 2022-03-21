@@ -5,9 +5,8 @@
     @UIHelper.RenderText(Html,Model.Text.ToHtmlString(),"div","regular-text")
 
 </div>
+@if (!Model.Image.Url.IsNullOrWhiteSpace()) {
 <div class="story-logo-wrapper">
-    @if (Model.Image != null)
-    {
         <img src="@Model.Image.Url" />
-    }
 </div>
+}

@@ -20,6 +20,11 @@
     Html.RenderPartial("~/Views/Partials/Blocks/_OurStoryBlock.cshtml", Model.OurStory);
 }
 
+@if(Model.OurVision != null)
+{
+    Html.RenderPartial("/Views/Partials/Blocks/_OurVisionBlock.cshtml", Model.OurVision);
+}
+
 @if (Model.OurMission != null)
 {
     Html.RenderPartial("~/Views/Partials/Blocks/_OurMissionBlock.cshtml", Model.OurMission);
