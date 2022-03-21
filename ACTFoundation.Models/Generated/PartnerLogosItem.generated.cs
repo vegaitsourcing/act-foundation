@@ -11,17 +11,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Web;
-using Umbraco.Core.Models;
 using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web;
 using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
+using Umbraco.Web;
 
 namespace ACTFoundation.Models.Generated
 {
-	/// <summary>Partner logos</summary>
-	[PublishedModel("partnerLogosItem")]
+    /// <summary>Partner logos</summary>
+    [PublishedModel("partnerLogosItem")]
 	public partial class PartnerLogosItem : PublishedElementModel
 	{
 		// helpers
@@ -51,5 +49,12 @@ namespace ACTFoundation.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("partnerLogos")]
 		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> PartnerLogos => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("partnerLogos");
+
+
+		
+
+
+
+
 	}
 }

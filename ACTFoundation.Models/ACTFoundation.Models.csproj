@@ -502,6 +502,7 @@
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\PartnerLogosItem.cs" />
     <Compile Include="Generated\PartnerLogosItem.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

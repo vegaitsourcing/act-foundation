@@ -7,6 +7,7 @@ using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.DocumentTypes;
 using ACTFoundation.Models.Generated;
 using ACTFoundation.Search.Models;
+using Umbraco.Web.Models;
 
 namespace ACTFoundation.Core.Extensions
 {
@@ -32,5 +33,12 @@ namespace ACTFoundation.Core.Extensions
 
 			return items.Select(ToViewModel);
 		}
+
+		public static IEnumerable<LinkViewModel> ToViewModel(this IEnumerable<Link> links)
+        {
+			return links.Any() && links != null
+				? links.Select(x => new LinkViewModel(x))
+				: Enumerable.Empty<LinkViewModel>();
+        }
 	}
 }
