@@ -1457,6 +1457,10 @@ nav button {
   display: block !important;
 }
 
+.swiper-wrapper{
+    align-items : baseline;
+}
+
 .volunteer-card img {
   max-width: 20rem;
   height: 20rem;
