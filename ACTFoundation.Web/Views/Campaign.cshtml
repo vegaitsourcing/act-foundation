@@ -1,0 +1,62 @@
+﻿@inherits UmbracoViewPage<CampaignViewModel>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300&display=swap"
+      rel="stylesheet" />
+
+<header class="hero hero--article"
+        style="
+        background: linear-gradient(
+        180deg,
+        #000000 -33.39%,
+        rgba(0, 0, 0, 0.4) 23.71%,
+        rgba(0, 0, 0, 0.4) 61.3%,
+        #000000 105.39%
+      ),
+      url(@(Model?.MainImage?.Url ?? string.Empty)) no-repeat center;">
+    <div class="chips">
+        @if (Model.Tags != null && Model.Tags.Any())
+        {
+            foreach (var tag in Model.Tags)
+            {
+                if (!tag.Name.IsNullOrWhiteSpace() && !tag.Color.IsNullOrWhiteSpace())
+                {
+                    <div class="chip" style="background-color: @tag.Color">@tag.Name</div>
+                }
+            }
+        }
+        <div class="chips__author">
+            <p>
+                by
+                @UIHelper.RenderText(Html, Model.Author, "span", "")
+                <br />@Model.CreateDate.ToString("HH:mm dd.MM.yyyy")
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="article-section">
+    <div class="article">
+        @UIHelper.RenderText(Html, Model.Title, "h1", "")
+        @UIHelper.RenderText(Html, Model.Text.ToHtmlString(), "p", "")
+    </div>
+    @if (Model.RelatedCampaigns != null && Model.RelatedCampaigns.Any())
+    {
+        <div class="article-sidebar">
+            @foreach (var campaign in Model.RelatedCampaigns)
+            {
+                <div class="articles-list-item">
+                    <div class="article-image">
+                        @UIHelper.RenderImage(campaign.MainImage, "")
+                    </div>
+                    <div class="article-body">
+                        @UIHelper.RenderText(Html, campaign.Title, "h1", "m-text")
+                        @UIHelper.RenderText(Html, campaign.TextPreview.ToHtmlString(), "p", "regular-text")
+                        <a class="small-text uppercase" href="@(campaign.Link ?? string.Empty)">@Umbraco.GetDictionaryValue("Article.ReadMoreLink.Text")</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -435,6 +435,8 @@
     <Compile Include="Generated\ButtonLinkItem.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\Campaign.cs" />
+    <Compile Include="Generated\Campaigns.cs" />
     <Compile Include="Generated\Contact.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

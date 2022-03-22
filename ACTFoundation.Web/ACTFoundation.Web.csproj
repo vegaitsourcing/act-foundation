@@ -593,6 +593,8 @@
     <Content Include="Views\Partials\Blocks\_DonateBlock.cshtml" />
     <Content Include="Views\Project.cshtml" />
     <Content Include="Views\Partials\Blocks\_OurVisionBlock.cshtml" />
+    <Content Include="Views\Partials\Blocks\_Campaigns.cshtml" />
+    <Content Include="Views\Campaign.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

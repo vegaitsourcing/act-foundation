@@ -16,7 +16,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public ArticlePreviewViewModel(Article article)
         {
             Title = article.Title;
-            TextPreview = GetTextPreview(article.Text.ToHtmlString().StripHtml());
+            TextPreview = new HtmlString(article.Text.ToHtmlString().StripHtml().GetTextPreview(ShortTextLength));
             MainImage = article.MainImage.ToViewModel();
             Tags = article.Tags?.Select(tag => new TagViewModel(tag as TagItem));
             Link = article.Url();
@@ -28,6 +28,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public IHtmlString TextPreview { get; }
         public string Link { get; }
 
+        //The method has been moved to ACTFoundation.Core.Extensions/StringExtensions to avoid code duplication
         private IHtmlString GetTextPreview(string text)
         {
             return text.Length < ShortTextLength ? new HtmlString(text) : new HtmlString(text.Substring(0, ShortTextLength) + "...");
