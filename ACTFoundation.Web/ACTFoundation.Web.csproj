@@ -478,6 +478,7 @@
     <Content Include="assets\media\facebook.svg" />
     <Content Include="assets\media\instagram.svg" />
     <Content Include="assets\media\linkedin.svg" />
+    <Content Include="assets\scripts\campaigns.js" />
     <Content Include="assets\scripts\default.js" />
     <Content Include="assets\scripts\donateAccountsBlock.js" />
     <Content Include="assets\scripts\navigation.js" />
@@ -595,6 +596,9 @@
     <Content Include="Views\Partials\Blocks\_OurVisionBlock.cshtml" />
     <Content Include="Views\Partials\Blocks\_Campaigns.cshtml" />
     <Content Include="Views\Campaign.cshtml" />
+    <Content Include="Views\Partials\Blocks\_CurrentCampaigns.cshtml" />
+    <Content Include="Views\Partials\CurrentCampaigns\_GetCampaigns.cshtml" />
+    <Content Include="Views\Partials\CurrentCampaigns\_GetMoreCampaigns.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

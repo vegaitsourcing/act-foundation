@@ -31,7 +31,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
 			{
 				News = new NewsViewModel((News)newsBlock);
 			}
-		
+
             var partnerLogos = context.Page.MainContent.FirstOrDefault(item => item is PartnerLogosItem);
             if (partnerLogos != null)
             {
@@ -50,6 +50,12 @@ namespace ACTFoundation.Core.ViewModels.Pages
             {
                 Volunteers = new VolunteersViewModel(volunteers as Volunteers);
             }
+
+            var currentCampaigns = context.Page.MainContent.FirstOrDefault(item => item is CurrentCampaigns);
+            if (currentCampaigns != null)
+            {
+                CurrentCampaigns = new CurrentCampaignsViewModel(currentCampaigns as CurrentCampaigns);
+            }
         }
 		public NewsViewModel News { get; }
 
@@ -62,5 +68,7 @@ namespace ACTFoundation.Core.ViewModels.Pages
         public DonateBlockViewModel DonateBlock { get; }
 
         public PartnerLogosViewModel PartnerLogos { get; }
+
+        public CurrentCampaignsViewModel CurrentCampaigns { get; }
     }
 }

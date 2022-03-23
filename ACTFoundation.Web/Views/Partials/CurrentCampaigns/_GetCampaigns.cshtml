@@ -1,0 +1,11 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.LoadCampaignsViewModel>
+
+<div class="campaigns">
+    <div class="heading-articles">
+        @UIHelper.RenderText(Html, Model?.Campaigns?.Title, "p", "m-text uppercase");
+        @UIHelper.RenderText(Html, Model?.Campaigns?.Headline, "h2", "heading-secondary xl-text uppercase");
+    </div>
+    <div class="row">
+        @Html.Partial("~/Views/Partials/CurrentCampaigns/_GetMoreCampaigns.cshtml", Model.LoadPaginationItems);
+    </div>
+</div>

@@ -29,3 +29,8 @@
 {
     Html.RenderPartial("~/Views/Partials/Blocks/_News.cshtml", Model.News);
 }
+
+@if(Model.CurrentCampaigns != null)
+{
+    Html.RenderPartial("~/Views/Partials/Blocks/_CurrentCampaigns.cshtml", Model.CurrentCampaigns);
+}

@@ -1,0 +1,7 @@
+﻿@using ACTFoundation.Core.Controllers.Surface
+@inherits UmbracoViewPage<ACTFoundation.Core.ViewModels.Blocks.CurrentCampaignsViewModel>
+
+@if (Model.CampaignId.HasValue)
+{
+    Html.RenderAction<CurrentCampaignsController>(c => nameof(c.GetCampaigns), new { campaignId = Model.CampaignId.Value });
+}

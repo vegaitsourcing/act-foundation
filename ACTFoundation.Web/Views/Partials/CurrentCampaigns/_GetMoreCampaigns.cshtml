@@ -1,0 +1,29 @@
+﻿@inherits UmbracoViewPage<ACTFoundation.Core.Models.LoadmorePagination<ACTFoundation.Core.ViewModels.Pages.CampaignPreviewViewModel>>
+
+
+@if (Model.Items != null && Model.Items.Any())
+{
+    foreach (var item in Model.Items)
+    {
+        <div class="articles-list-item col-1-of-3">
+            <div class="article-image">
+                @UIHelper.RenderImage(item?.MainImage, "")
+            </div>
+            <div class="article-body">
+                @UIHelper.RenderText(Html, item.Title, "h4", "m-text")
+                @UIHelper.RenderText(Html, item.TextPreview.ToHtmlString(), "p", "regular-text")
+
+                <a class="small-text uppercase" href="@(!string.IsNullOrWhiteSpace(item.Link) ? item.Link: string.Empty)">@Umbraco.GetDictionaryValue("News.ReadMore")</a>
+            </div>
+        </div>
+    }
+
+    if (Model.HasMore())
+    {
+        <div id="load-more-campaigns-div"></div>
+        <button id="load-more-campaigns" data-loadmore rel="nofollow"
+                onclick="loadMoreCampaigns('@Model.ParentId', @(Model.Page + 1))">
+            @Umbraco.GetDictionaryValue("News.LoadMore")
+        </button>
+    }
+}

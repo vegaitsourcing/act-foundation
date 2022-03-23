@@ -440,6 +440,7 @@
     <Compile Include="Generated\Contact.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\CurrentCampaigns.cs" />
     <Compile Include="Generated\CurrentProjects.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
