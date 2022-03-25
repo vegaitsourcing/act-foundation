@@ -15,7 +15,6 @@
     </div>
     <div class="bg-yellow donate-content">
         @UIHelper.RenderText(Html, Model.Title, "h3", "l-text bold")
-        @UIHelper.RenderText(Html, Model.Text.ToHtmlString(),"p", "m-text")
-
+        @UIHelper.RenderText(Html, Model.Text.ToHtmlString().StripHtml(),"p", "m-text")
     </div>
 </div>

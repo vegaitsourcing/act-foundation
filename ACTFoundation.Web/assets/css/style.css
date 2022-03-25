@@ -116,6 +116,10 @@ button {
 .bg-yellow {
   background-color: var(--color-yellow);
 }
+.bg-blue {
+    background-color: var(--color-blue);
+    color: rgb(255, 255, 255);
+}
 .cl-white {
   color: var(--color-white);
 }
@@ -197,7 +201,7 @@ button {
 }
 .hero h1 {
   margin: 0;
-  font-size: var(--xl-text);
+  font-size: 2.9rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -383,6 +387,10 @@ button {
 }
 .articles {
   padding: var(--default-spacing);
+}
+
+.campaigns {
+    padding: var(--default-spacing);
 }
 
 .heading-articles {
@@ -1119,6 +1127,10 @@ nav button {
   font-size: var(--m-text);
   font-weight: 700;
   opacity: 0.36;
+}
+
+.payment-slip__details__purpose{
+    margin-top: 45px;
 }
 
 .payment-slip__details__value {

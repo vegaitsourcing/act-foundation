@@ -14,8 +14,8 @@
 
 <script>
     var serializedProjects = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.DonateAccounts));
+    var serializedPurposes = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Purposes));
 </script>
-
 <div class="payment-slip">
     <div class="payment-slip__donate">
         @UIHelper.RenderText(Html, Model.Title, "h2", "")
@@ -35,25 +35,50 @@
                 }
             }
         </select>
+        @if (Model.Purposes.Any() && Model.Purposes != null)
+        {
+            <select name="purpose" id="purpose-select" onchange="selectPurpose()">
+                @{
+                    foreach (var item in Model.Purposes)
+                    {
+                        if (!item.Purpose.IsNullOrWhiteSpace())
+                        {
+                            <option value="@item.Purpose">@item.Purpose</option>
+                        }
+                    }
+                }
+            </select>
+        }
         <a id="more-info" href="@(defaultAccount?.Url ?? string.Empty)">@Model.CtaText</a>
+        @if (Model.Purposes != null && Model.Purposes.Any())
+        {
+            <p id="purpose-details">@Model.Purposes.First().Description</p>
+        }
     </div>
     @if(defaultAccount != null)
     {
-        <div class="payment-slip__details">
-            <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Recepient")</p>
-            <p class="payment-slip__details__value" id="recepient">@(defaultAccount?.Recepient ?? string.Empty)</p>
-            <div class="payment-slip__details__model">
-                <div>
-                    <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Model")</p>
-                    <p class="payment-slip__details__value" id="calling-number">@(defaultAccount?.CallNumber ?? string.Empty)</p>
-                </div>
-                <div class="payment-slip__reference-number">
-                    <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.CallingModel")</p>
-                    <p class="payment-slip__details__value" id="reference-number">@(defaultAccount?.CallingModel ?? string.Empty)</p>
-                </div>
+    <div class="payment-slip__details">
+        <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Recepient")</p>
+        <p class="payment-slip__details__value" id="recepient">@(defaultAccount?.Recepient ?? string.Empty)</p>
+        <div class="payment-slip__details__model">
+            <div>
+                <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Model")</p>
+                <p class="payment-slip__details__value" id="calling-number">@(defaultAccount?.CallNumber ?? string.Empty)</p>
             </div>
-            <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Account")</p>
-            <p class="payment-slip__details__value" id="account">@(defaultAccount?.Account ?? string.Empty)</p>
+            <div class="payment-slip__reference-number">
+                <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.CallingModel")</p>
+                <p class="payment-slip__details__value" id="reference-number">@(defaultAccount?.CallingModel ?? string.Empty)</p>
+            </div>
         </div>
+        <p class="payment-slip__details__label">@Umbraco.GetDictionaryValue("DonateAccount.Account")</p>
+        <p class="payment-slip__details__value" id="account">@(defaultAccount?.Account ?? string.Empty)</p>
+        @if(Model.Purposes != null && Model.Purposes.Any())
+        {
+            <div class="payment-slip__details__purpose">
+                <p class="payment-slip__details__label">@*Svrha uplate:*@@Umbraco.GetDictionaryValue("DonateAccount.Purpose")</p>
+                <p class="payment-slip__details__value" id="purpose-label">@(Model?.Purposes?.First()?.Purpose ?? string.Empty)</p>
+            </div>
         }
+    </div>
+    }
 </div>

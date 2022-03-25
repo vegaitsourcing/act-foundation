@@ -395,6 +395,7 @@
     <Compile Include="ViewModels\Partials\Items\BannerCarouselItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\DonateAccountsBlockViewModel.cs" />
     <Compile Include="ViewModels\Partials\Blocks\ProjectCardViewModel.cs" />
+    <Compile Include="ViewModels\Partials\Items\PurposeOfPaymentViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\TestimonialItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Items\VolunteerItemViewModel.cs" />
     <Compile Include="ViewModels\Partials\Layout\FooterViewModel.cs" />

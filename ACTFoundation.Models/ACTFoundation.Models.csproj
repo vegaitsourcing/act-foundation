@@ -520,6 +520,8 @@
     <Compile Include="Generated\ProjectTags.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\PurposeOfPayment.cs" />
+    <Compile Include="Generated\PurposeOfPaymentPage.cs" />
     <Compile Include="Generated\SearchResults.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

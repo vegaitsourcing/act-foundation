@@ -1,7 +1,10 @@
-﻿using ACTFoundation.Core.ViewModels.Shared;
+﻿using ACTFoundation.Core.Extensions;
+using ACTFoundation.Core.ViewModels.Partials.Items;
+using ACTFoundation.Core.ViewModels.Shared;
 using ACTFoundation.Models.Generated;
 using System.Collections.Generic;
 using System.Linq;
+using Umbraco.Web;
 using Umbraco.Web.Composing;
 
 namespace ACTFoundation.Core.ViewModels.Partials.Blocks
@@ -26,6 +29,8 @@ namespace ACTFoundation.Core.ViewModels.Partials.Blocks
                     Url = Current.UmbracoContext.UrlProvider.GetUrl(project.Id)
                 };
             });
+            Purposes = Current.PublishedContentQuery.ContentAtRoot().FirstOrDefault(x => x.IsDocumentType("siteSettings")).Children(x => x.IsDocumentType("purposeOfPaymentPage")).FirstOrDefault().ToViewModel();
+
         }
 
         public string Title { get; }
@@ -33,5 +38,7 @@ namespace ACTFoundation.Core.ViewModels.Partials.Blocks
 
         public string CtaText { get;  }
         public IEnumerable<DonateAccountInfoViewModel> DonateAccounts { get; }
+
+        public IEnumerable<PurposeOfPaymentViewModel> Purposes { get; }
     }
 }

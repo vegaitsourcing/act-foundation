@@ -8,6 +8,7 @@ using ACTFoundation.Models.DocumentTypes;
 using ACTFoundation.Models.Generated;
 using ACTFoundation.Search.Models;
 using Umbraco.Web.Models;
+using ACTFoundation.Core.ViewModels.Partials.Items;
 
 namespace ACTFoundation.Core.Extensions
 {
@@ -40,5 +41,18 @@ namespace ACTFoundation.Core.Extensions
 				? links.Select(x => new LinkViewModel(x))
 				: Enumerable.Empty<LinkViewModel>();
         }
+
+		public static IEnumerable<PurposeOfPaymentViewModel> ToViewModel(this IPublishedContent purposesPage)
+        {
+			if(purposesPage != null)
+            {
+				var page = purposesPage as PurposeOfPaymentPage;
+				return page.PurposesOfPayment != null && page.PurposesOfPayment.Any()
+					? page.PurposesOfPayment.Select(x => new PurposeOfPaymentViewModel(x))
+					: Enumerable.Empty<PurposeOfPaymentViewModel>();
+
+			}
+			return Enumerable.Empty<PurposeOfPaymentViewModel>();
+		}
 	}
 }

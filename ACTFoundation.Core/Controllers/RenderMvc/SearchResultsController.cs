@@ -9,7 +9,7 @@ namespace ACTFoundation.Core.Controllers.RenderMvc
 	{
 		public ActionResult Index(SearchResults model)
 			=> CurrentTemplate(
-				new SearchResultsViewModel(CreatePageContext(model), 
+				new SearchResultsViewModel(CreatePageContext(model),
 				Request.GetQueryParameter(),
 				Request.GetPageParameter()));
 	}
